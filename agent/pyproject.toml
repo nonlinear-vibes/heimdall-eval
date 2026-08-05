@@ -1,0 +1,12 @@
+[project]
+name = "test-agent"
+version = "0.1.0"
+description = "Agent and test harness to generate evaluation dataset"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "docker>=7.2.0",
+    "openai>=2.48.0",
+    "python-dotenv==1.1.0",
+    "pyyaml>=6.0.3",
+]
