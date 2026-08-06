@@ -1,0 +1,11 @@
+# config/judges.yaml
+judges:
+  - judge_slug: google_gemma-3-27b-it
+    judge_id: google/gemma-3-27b-it
+    display_name: "Gemma 3 27B (free)"
+    provider: openrouter
+
+  - judge_slug: openai_gpt-oss-20b-free
+    judge_id: openai/gpt-oss-20b:free
+    display_name: "GPT-OSS 20B (free)"
+    provider: openrouter
