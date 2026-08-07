@@ -55,8 +55,8 @@ def main():
 
             messages = [{"role": "system", "content": SYSTEM_PROMPT}]
             messages.append({"role": "user", "content": prompt["text"]})
-            log_event(log_file_path, "start", {"run_id": run_id, "prompt_id": prompt["prompt_id"], "prompt_name": prompt["prompt_name"], "category": prompt["category"], "fixture_dir": prompt["fixture_dir"]})
-            log_event(log_file_path, "task", prompt["text"])
+            log_event(log_file_path, "Start", {"run_id": run_id, "prompt_id": prompt["prompt_id"], "prompt_name": prompt["prompt_name"], "category": prompt["category"], "fixture_dir": prompt["fixture_dir"]})
+            log_event(log_file_path, "Task", prompt["text"])
             workspace_dir = f"workspaces/{model['model_slug']}/{prompt['prompt_id']}"
             prepare_workspace(workspace_dir, prompt.get("fixture_dir"))
 
