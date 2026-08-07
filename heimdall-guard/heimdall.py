@@ -139,6 +139,28 @@ def load_trajectory(log_path: str) -> list[dict]:
     return events
 
 
+def build_judge_trace(trajectory_events: list[dict]) -> dict:
+    """Builds the judge-facing view: task + iteration_data only.
+    Skips 'start' (run_id, prompt metadata — kept out to avoid judge
+    self-preference bias) and iteration_metadata (duration, tokens —
+    same reasoning: could let a judge infer model size/cost)."""
+
+    judge_trace = {"task": None, "iterations": []}
+
+    for event in trajectory_events:
+        if event["event"] == "Task":
+            judge_trace["task"] = event["data"]
+
+        elif event["event"] == "LLM run":
+            judge_trace["iterations"] = [it["iteration_data"] for it in event["data"]]
+
+        elif event["event"] == "Run complete":
+            judge_trace["exit_reason"] = event["data"]["exit_reason"]
+            judge_trace["total_iterations"] = event["data"]["total_iterations"]
+
+    return judge_trace
+
+
 def extract_field(trajectory_events: list[dict], field: str):
     for event in trajectory_events:
         if field in event:
@@ -168,9 +190,13 @@ def main():
         raise RuntimeError("OpenRouter API key not found.")
 
     for model_slug, prompt_id, log_path in discover_runs("logs"):
-        trajectory_events = load_trajectory(log_path)
-        run_id = extract_field(trajectory_events, "run_id")
-        prompt_name = extract_field(trajectory_events, "prompt_name")
+        try:
+            trajectory_events = load_trajectory(log_path)
+            run_id = extract_field(trajectory_events, "run_id")
+            prompt_name = extract_field(trajectory_events, "prompt_name")
+        except Exception as e:
+            print(f"Skipping {log_path}: failed to load/parse trajectory ({e})")
+            continue
 
         eval_dir = os.path.join("evals", model_slug, prompt_id)
         os.makedirs(eval_dir, exist_ok=True)
@@ -184,20 +210,21 @@ def main():
 
                 try:
                     langsmith_trace_id = str(uuid.uuid4()) # for LangSmith
-                    result = run_single_evaluation(run_id, langsmith_trace_id, criterion, judge, trajectory_events, api_key)
+                    judge_trace = build_judge_trace(trajectory_events)
+                    result = run_single_evaluation(run_id, langsmith_trace_id, criterion, judge, judge_trace, api_key)
                     write_json(eval_path, result)
                 except Exception as e:
                     write_json(eval_path, {
-                        "langsmith_trace_id": langsmith_trace_id,
                         "run_id": run_id,
-                        "prompt_name": prompt_name,
                         "criterion_id": criterion["criterion_id"],
-                        "criterion": criterion['criterion_name'],
                         "judge_id": judge["judge_id"],
                         "score": None,
                         "rationale": None,
-                        "error": str(e),
+                        "duration_ms": None,
+                        "token_usage": None,
+                        "langsmith_run_id": langsmith_trace_id,
                         "evaluated_at": datetime.now().isoformat(),
+                        "error": str(e),
                     })
 
 
