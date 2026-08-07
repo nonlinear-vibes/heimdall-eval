@@ -16,7 +16,7 @@ from system_prompt import SYSTEM_PROMPT
 def main():
 
     BASE_DIR = Path(__file__).resolve().parent
-    LOGS_DIR = BASE_DIR.parent / "logs"
+    LOGS_DIR = BASE_DIR.parent / "heimdall-guard/logs"
 
     with open("test-data/models.yaml") as f:
         models = yaml.safe_load(f)["models"]
@@ -39,9 +39,12 @@ def main():
         print(f"⚠️ {docker_warning} Running without sandboxing for run_python_file.")
 
     for model in models:
-        os.makedirs(f"../logs/{model['model_slug']}", exist_ok=True)
+        slug = model['model_slug']
+        os.makedirs(f"../heimdall-guard/logs/{slug}", exist_ok=True)
         for prompt in prompts:
-            log_file_path = f"{LOGS_DIR}/{model['model_slug']}/{prompt['prompt_id']}.jsonl"
+            prompt_id = prompt['prompt_id']
+            run_id = f"{slug}_{prompt_id}"
+            log_file_path = f"{LOGS_DIR}/{slug}/{prompt_id}.jsonl"
 
             if is_run_complete(log_file_path):
                 print(f"Skipping {log_file_path} (already complete).")
@@ -52,7 +55,8 @@ def main():
 
             messages = [{"role": "system", "content": SYSTEM_PROMPT}]
             messages.append({"role": "user", "content": prompt["text"]})
-            log_event(log_file_path, "User input", prompt)
+            log_event(log_file_path, "start", {"run_id": run_id, "prompt_id": prompt["prompt_id"], "prompt_name": prompt["prompt_name"], "category": prompt["category"], "fixture_dir": prompt["fixture_dir"]})
+            log_event(log_file_path, "task", prompt["text"])
             workspace_dir = f"workspaces/{model['model_slug']}/{prompt['prompt_id']}"
             prepare_workspace(workspace_dir, prompt.get("fixture_dir"))
 

@@ -10,10 +10,11 @@ from agent_tester import log_event
 # agentic loop
 def generate_response(client: OpenAI, model_id: str, messages: list[dict[str, str]], workspace_dir: str, docker_client: DockerClient, log_file_name: str):
         LLM_run = []
-        no_tool_called = True
+        tool_called = False
 
         try:
             for it_num in range(MAX_ITERS):
+                iteration_data = {}
                 start = time.perf_counter()
                 response = client.chat.completions.create(
                     model=model_id,
@@ -30,25 +31,25 @@ def generate_response(client: OpenAI, model_id: str, messages: list[dict[str, st
 
                 message = response.choices[0].message
                 usage = response.usage
-                iteration_log = {
-                    "Duration": duration_ms,
-                    "Token usage": {
-                        "Completion tokens": usage.completion_tokens if usage else None,
-                        "Prompt tokens": usage.prompt_tokens if usage else None,
-                        "Total tokens": usage.total_tokens if usage else None,
+                iteration_metadata = {
+                    "duration": duration_ms,
+                    "token_usage": {
+                        "completion_tokens": usage.completion_tokens if usage else None,
+                        "prompt_tokens": usage.prompt_tokens if usage else None,
+                        "total_tokens": usage.total_tokens if usage else None,
                     },
-                    "Iteration number": it_num,
+                    "iteration_number": it_num,
                 }
-                LLM_run.append(iteration_log)
+                
                 assistant_msg = {"role": "assistant", "content": message.content}
 
                 reasoning = getattr(message, "reasoning", None)
                 if reasoning:
                     assistant_msg["reasoning"] = reasoning
-                    iteration_log["AI reasoning"] = reasoning
+                    iteration_data["reasoning"] = reasoning
 
                 if message.tool_calls:
-                    no_tool_called = False
+                    tool_called = True
                     assistant_msg["tool_calls"] = [
                         {
                             "id": tc.id,
@@ -62,7 +63,7 @@ def generate_response(client: OpenAI, model_id: str, messages: list[dict[str, st
                     ] # list of dicts
                     messages.append(assistant_msg)
 
-                    iteration_log["Function calls"] = []
+                    iteration_data["function_calls"] = []
                     for tool_call in message.tool_calls:
                         function_name = tool_call.function.name
                         call_successful = True
@@ -78,7 +79,7 @@ def generate_response(client: OpenAI, model_id: str, messages: list[dict[str, st
                             result = {"error": str(e)}
                             call_successful = False
 
-                        iteration_log["Function calls"].append({
+                        iteration_data["function_calls"].append({
                             "name": function_name,
                             "args": function_args,
                             "result": result,
@@ -92,18 +93,21 @@ def generate_response(client: OpenAI, model_id: str, messages: list[dict[str, st
                             "content": json.dumps(result)
                         })
 
+                    LLM_run.append({"iteration_metadata": iteration_metadata, "iteration_data": iteration_data})
                     continue
 
                 messages.append(assistant_msg)
-                iteration_log["AI response"] = message.content or ""
+                iteration_data["ai_response"] = message.content or ""
+                LLM_run.append({"iteration_metadata": iteration_metadata, "iteration_data": iteration_data})
+                
                 log_event(log_file_name, "LLM run", LLM_run)
-                log_event(log_file_name, "Run complete", {"exit_reason": "Final answer", "total_iterations": it_num + 1, "no_tool_called": no_tool_called})
+                log_event(log_file_name, "Run complete", {"exit_reason": "Final answer", "total_iterations": it_num + 1, "tool_called": tool_called})
                 return
 
             log_event(log_file_name, "LLM run", LLM_run)
-            log_event(log_file_name, "Run complete", {"exit_reason": "Max iterations reached", "total_iterations": MAX_ITERS, "no_tool_called": no_tool_called})
+            log_event(log_file_name, "Run complete", {"exit_reason": "Max iterations reached", "total_iterations": MAX_ITERS, "tool_called": tool_called})
 
         except Exception as e:
             log_event(log_file_name, "LLM run", LLM_run)
             log_event(log_file_name, "Error", {"message": str(e)})
-            log_event(log_file_name, "Run complete", {"exit_reason": "error", "total_iterations": len(LLM_run), "no_tool_called": no_tool_called})
+            log_event(log_file_name, "Run complete", {"exit_reason": "Error", "total_iterations": len(LLM_run), "tool_called": tool_called})

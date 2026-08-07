@@ -9,4 +9,4 @@ prompts:
     prompt_name: hello-world-check
     category: code_execution
     text: "Build a hello world script and check if it is executing properly."
-    fixture_dir: fixtures/p003_fix-the-bug
+    fixture_dir: fixtures/p002_fix-the-bug
