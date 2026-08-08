@@ -1,0 +1,12 @@
+prompts:
+  - prompt_id: p001
+    prompt_name: haiku-bugfix
+    category: creative_writing
+    text: "Can you write a haiku about bug fixing into a haiku.txt?"
+    fixture_dir: fixtures/p001_haiku-bugfix
+
+  - prompt_id: p002
+    prompt_name: hello-world-check
+    category: code_execution
+    text: "Build a hello world script and check if it is executing properly."
+    fixture_dir: fixtures/p002_fix-the-bug

@@ -5,7 +5,7 @@ import agent
 import docker
 import shutil
 
-from pathlib import Path
+from config import LOGS_DIR
 from openai import OpenAI
 from datetime import datetime
 from dotenv import load_dotenv
@@ -15,13 +15,10 @@ from system_prompt import SYSTEM_PROMPT
 
 def main():
 
-    BASE_DIR = Path(__file__).resolve().parent
-    LOGS_DIR = BASE_DIR.parent / "heimdall-guard/logs"
-
-    with open("test-data/models.yaml") as f:
+    with open("config/models.yaml") as f:
         models = yaml.safe_load(f)["models"]
 
-    with open("test-data/prompts.yaml") as f:
+    with open("config/prompts.yaml") as f:
         prompts = yaml.safe_load(f)["prompts"]
 
     load_dotenv()
@@ -40,7 +37,7 @@ def main():
 
     for model in models:
         slug = model['model_slug']
-        os.makedirs(f"../heimdall-guard/logs/{slug}", exist_ok=True)
+        os.makedirs(f"{LOGS_DIR}/{slug}", exist_ok=True)
         for prompt in prompts:
             prompt_id = prompt['prompt_id']
             run_id = f"{slug}_{prompt_id}"
