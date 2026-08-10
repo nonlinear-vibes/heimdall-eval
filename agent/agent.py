@@ -1,11 +1,12 @@
+# agent.py
 import time
 import json
 
 from openai import OpenAI
 from docker import DockerClient
+from log_utils import log_event
 from config import MAX_ITERS, REASONING_EFFORT
 from call_function import available_functions, call_function
-from agent_tester import log_event
 
 # agentic loop
 def generate_response(client: OpenAI, model_id: str, messages: list[dict[str, str]], workspace_dir: str, docker_client: DockerClient, log_file_name: str):

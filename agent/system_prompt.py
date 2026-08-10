@@ -15,7 +15,7 @@ Technical Constraints:
 - Atomicity: You can call multiple tools in one turn (e.g., list files and read a file simultaneously).
 
 Response Format:
-- If you need more information or need to act, emit the appropriate function calls.
+- If you need more information or need to act, emit the appropriate function calls in the required JSON format.
 - Provide a concise text summary of your progress alongside your calls.
 - Your final response to the user should only be sent once the task is verified via execution.
 """

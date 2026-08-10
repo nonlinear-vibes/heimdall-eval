@@ -1,3 +1,4 @@
+# agent_tester.py
 import os
 import yaml
 import json
@@ -5,20 +6,20 @@ import agent
 import docker
 import shutil
 
-from config import LOGS_DIR
 from openai import OpenAI
-from datetime import datetime
 from dotenv import load_dotenv
 from docker import DockerClient
 from system_prompt import SYSTEM_PROMPT
+from log_utils import log_event, is_run_complete
+from config import LOGS_DIR, AGENT_VERSION, MODELS_YAML, PROMPTS_YAML, WORKSPACES_DIR
 
 
 def main():
 
-    with open("config/models.yaml") as f:
+    with open(MODELS_YAML) as f:
         models = yaml.safe_load(f)["models"]
 
-    with open("config/prompts.yaml") as f:
+    with open(PROMPTS_YAML) as f:
         prompts = yaml.safe_load(f)["prompts"]
 
     load_dotenv()
@@ -36,12 +37,12 @@ def main():
         print(f"⚠️ {docker_warning} Running without sandboxing for run_python_file.")
 
     for model in models:
-        slug = model['model_slug']
-        os.makedirs(f"{LOGS_DIR}/{slug}", exist_ok=True)
+        model_tag = model['model_tag']
+        os.makedirs(f"{LOGS_DIR}/{model_tag}/{AGENT_VERSION}", exist_ok=True)
         for prompt in prompts:
             prompt_id = prompt['prompt_id']
-            run_id = f"{slug}_{prompt_id}"
-            log_file_path = f"{LOGS_DIR}/{slug}/{prompt_id}.jsonl"
+            run_id = f"{model_tag}_{AGENT_VERSION}_{prompt_id}"
+            log_file_path = f"{LOGS_DIR}/{model_tag}/{AGENT_VERSION}/{prompt_id}.jsonl"
 
             if is_run_complete(log_file_path):
                 print(f"Skipping {log_file_path} (already complete).")
@@ -51,10 +52,10 @@ def main():
                 os.remove(log_file_path)  # partial/corrupted run from a previous crash — start clean
 
             messages = [{"role": "system", "content": SYSTEM_PROMPT}]
-            messages.append({"role": "user", "content": prompt["text"]})
-            log_event(log_file_path, "Start", {"run_id": run_id, "prompt_id": prompt["prompt_id"], "prompt_name": prompt["prompt_name"], "category": prompt["category"], "fixture_dir": prompt["fixture_dir"]})
+            messages.append({"role": "user", "content": prompt.get("text")})
+            log_event(log_file_path, "Start", {"run_id": run_id, "agent_version": AGENT_VERSION, "prompt_id": prompt.get("prompt_id"), "prompt_name": prompt.get("prompt_name"), "category": prompt.get("category"), "fixture_dir": prompt.get("fixture_dir")})
             log_event(log_file_path, "Task", prompt["text"])
-            workspace_dir = f"workspaces/{model['model_slug']}/{prompt['prompt_id']}"
+            workspace_dir = WORKSPACES_DIR / model_tag / f"{AGENT_VERSION}" / prompt_id
             prepare_workspace(workspace_dir, prompt.get("fixture_dir"))
 
             try:
@@ -81,34 +82,6 @@ def prepare_workspace(workspace_dir: str, fixture_dir: str | None):
     os.makedirs(workspace_dir, exist_ok=True)
     if fixture_dir and os.path.isdir(fixture_dir):
         shutil.copytree(fixture_dir, workspace_dir, dirs_exist_ok=True)
-
-
-# -------------- Logging helpers --------------
-def log_event(log_file: str, event_type: str, data: dict | str):
-    """Appends a JSON-formatted event to the session-specific log file."""
-    entry = {
-        "timestamp": datetime.now().isoformat(),
-        "event": event_type,
-        "data": data
-    }
-    with open(log_file, "a", encoding="utf-8") as f:
-        f.write(json.dumps(entry) + "\n")
-
-
-def is_run_complete(log_file_path: str) -> bool:
-    """Returns True if the log file exists and its last event is 'Run complete'."""
-    if not os.path.exists(log_file_path):
-        return False
-    try:
-        with open(log_file_path, "r", encoding="utf-8") as f:
-            lines = [line for line in f if line.strip()]
-        if not lines:
-            return False
-        last_entry = json.loads(lines[-1])
-        return last_entry.get("event") == "Run complete"
-    except (json.JSONDecodeError, OSError):
-        # corrupted or unreadable file — treat as incomplete, will be overwritten below
-        return False
         
 
 if __name__ == "__main__":

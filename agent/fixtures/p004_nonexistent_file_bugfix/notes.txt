@@ -1,0 +1,2 @@
+- fix the flaky date parsing in the ingest script (low priority)
+- ask about switching the sample data to parquet

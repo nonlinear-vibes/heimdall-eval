@@ -1,0 +1,3 @@
+- fix the flaky date parsing in the ingest script (low priority)
+- ask about switching the sample data to parquet
+- calculator was moved out of this repo a while back, double check nothing still imports it
