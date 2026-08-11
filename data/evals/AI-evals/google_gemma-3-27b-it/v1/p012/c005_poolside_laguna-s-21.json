@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p012",
+  "criterion_id": "c005",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The trajectory contains only one iteration where the agent generated tool-use instructions in Markdown format instead of actually calling the tool. No tool was ever executed, so no errors occurred during tool usage, but the agent also failed to perform the requested task. Per the rubric, this represents a failure to engage with the task entirely, rather than an error recovery situation.",
+  "duration_ms": 1008.898861000489,
+  "token_usage": {
+    "prompt_tokens": 1039,
+    "completion_tokens": 84,
+    "total_tokens": 1123
+  },
+  "langsmith_run_id": "e4b12b0a-8c31-44a7-948c-f84512c3bd9b",
+  "evaluated_at": "2026-08-12T00:13:12.836323"
+}

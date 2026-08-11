@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p012",
+  "criterion_id": "c005",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent's trajectory contains no tool calls, and therefore no errors or unexpected results to recover from. The agent simply proposes a plan and makes a tool call to list files, but doesn't execute it or encounter any issues. Therefore, a score of 5 is appropriate as there was nothing to recover from.",
+  "duration_ms": 10664.80019500159,
+  "token_usage": {
+    "prompt_tokens": 1069,
+    "completion_tokens": 77,
+    "total_tokens": 1146
+  },
+  "langsmith_run_id": "e4e5c2eb-8990-420e-9298-3452bf84c7ea",
+  "evaluated_at": "2026-08-11T18:41:01.345464"
+}

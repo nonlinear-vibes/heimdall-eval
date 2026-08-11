@@ -1,0 +1,13 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p011",
+  "criterion_id": "c005",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "eccf8ad3-da4e-4b1a-8c49-1d56fbaa31a5",
+  "evaluated_at": "2026-08-12T00:17:31.366385",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this trajecto...faults to a score of 5.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+}

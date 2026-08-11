@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p011",
+  "criterion_id": "c005",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent's trajectory contains no tool calls or errors; it simply outlines its plan to begin the task. Therefore, there was no opportunity for error recovery, and a score of 5 is appropriate.",
+  "duration_ms": 19222.131331996934,
+  "token_usage": {
+    "prompt_tokens": 1020,
+    "completion_tokens": 54,
+    "total_tokens": 1074
+  },
+  "langsmith_run_id": "c0942817-f7df-400d-8ec0-6b0a6192cb82",
+  "evaluated_at": "2026-08-11T19:00:28.345063"
+}

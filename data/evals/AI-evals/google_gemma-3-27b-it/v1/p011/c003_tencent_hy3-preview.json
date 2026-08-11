@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p011",
+  "criterion_id": "c003",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 2,
+  "rationale": "The response only states the agent's intent to read the README and provide a summary, without actually delivering the requested summary. This makes the response too minimal to be useful, as the user receives no information about the project.",
+  "duration_ms": 131881.50280399714,
+  "token_usage": {
+    "prompt_tokens": 1051,
+    "completion_tokens": 8080,
+    "total_tokens": 9131
+  },
+  "langsmith_run_id": "3c83a763-b903-4041-8260-bae5185fdc38",
+  "evaluated_at": "2026-08-11T18:58:15.282815"
+}

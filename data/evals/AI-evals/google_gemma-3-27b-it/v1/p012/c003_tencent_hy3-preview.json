@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p012",
+  "criterion_id": "c003",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The response merely restates the task and includes a verbose JSON function call plan, but provides no actual results about finding, fixing, or verifying the bug. As a final response, it's effectively empty and leaves the user with no information about what was accomplished.",
+  "duration_ms": 87681.51525400026,
+  "token_usage": {
+    "prompt_tokens": 1097,
+    "completion_tokens": 5489,
+    "total_tokens": 6586
+  },
+  "langsmith_run_id": "05112a80-5c69-42ae-ab4d-5eb652bec491",
+  "evaluated_at": "2026-08-11T18:38:46.958475"
+}

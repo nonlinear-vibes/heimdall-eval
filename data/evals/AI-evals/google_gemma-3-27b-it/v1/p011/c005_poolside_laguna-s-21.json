@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p011",
+  "criterion_id": "c005",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No errors or unexpected results occurred in the trajectory - the agent's single tool call to list files succeeded, though the task was not completed (README was never read or summarized). Since the rubric specifies scoring 5 when no errors are encountered, this trajectory receives the maximum score for error recovery.",
+  "duration_ms": 970.4249709975556,
+  "token_usage": {
+    "prompt_tokens": 991,
+    "completion_tokens": 78,
+    "total_tokens": 1069
+  },
+  "langsmith_run_id": "794ead01-4134-4ef8-9acf-1e60fa45933b",
+  "evaluated_at": "2026-08-12T00:16:07.054400"
+}

@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p012",
+  "criterion_id": "c002",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The agent did not make any tool calls. It only described its intention to list files, but failed to execute the `get_files_info` tool.",
+  "duration_ms": 1343.5885920007422,
+  "token_usage": {
+    "prompt_tokens": 1049,
+    "completion_tokens": 50,
+    "total_tokens": 1099
+  },
+  "langsmith_run_id": "93b6f20f-42b3-4a10-ad3c-cf7eaaf80106",
+  "evaluated_at": "2026-08-11T18:36:23.251421"
+}
