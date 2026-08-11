@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemini-2-5-flash_v1_p003",
+  "criterion_id": "c004",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The final response claims fib.py was created with the fib function and that correctness was verified for n=10 returning 55. Both claims are directly supported by the trajectory: write_file successfully created fib.py with the function, and run_python_file on temp.py returned STDOUT: 55, confirming the verification.",
+  "duration_ms": 26250.041331999455,
+  "token_usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 1752,
+    "total_tokens": 3177
+  },
+  "langsmith_run_id": "69f80e20-6ea7-44e5-8634-e9f87650aa3c",
+  "evaluated_at": "2026-08-11T14:42:06.710140"
+}

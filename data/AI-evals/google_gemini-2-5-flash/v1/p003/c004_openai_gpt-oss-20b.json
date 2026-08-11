@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemini-2-5-flash_v1_p003",
+  "criterion_id": "c004",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The final response states that `fib.py` was created and tested for n=10, returning 55. Both the `write_file` call for `fib.py` and the subsequent `run_python_file` execution of `temp.py` (which prints 55) explicitly demonstrate these facts, so every claim is directly supported by the trajectory.}",
+  "duration_ms": 5020.937392999258,
+  "token_usage": {
+    "prompt_tokens": 1458,
+    "completion_tokens": 274,
+    "total_tokens": 1732
+  },
+  "langsmith_run_id": "f39f20ca-7a4b-4052-98e5-310f4097cd74",
+  "evaluated_at": "2026-08-11T14:41:29.796946"
+}
