@@ -1,0 +1,13 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p006",
+  "criterion_id": "c003",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "08b29ccb-6d74-4407-8416-1a4cfdeb61f8",
+  "evaluated_at": "2026-08-12T00:27:37.224489",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"The agent's final respon...te, making it unusable.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+}

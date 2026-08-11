@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p007",
+  "criterion_id": "c007",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No valid final response was produced, so a score of 5 is assigned by default as per the rubric.",
+  "duration_ms": 838.653628998145,
+  "token_usage": {
+    "prompt_tokens": 1158,
+    "completion_tokens": 40,
+    "total_tokens": 1198
+  },
+  "langsmith_run_id": "12fd0b04-fd0d-4073-abec-fe58945b8e67",
+  "evaluated_at": "2026-08-11T21:04:20.344936"
+}

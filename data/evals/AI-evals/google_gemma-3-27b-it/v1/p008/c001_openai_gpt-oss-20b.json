@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p008",
+  "criterion_id": "c001",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 3,
+  "rationale": "The user asked for me..",
+  "duration_ms": 1856.8344969971804,
+  "token_usage": {
+    "prompt_tokens": 1077,
+    "completion_tokens": 17,
+    "total_tokens": 1094
+  },
+  "langsmith_run_id": "6e8bd393-7f33-4048-8169-edb61cfc7024",
+  "evaluated_at": "2026-08-11T20:01:57.616997"
+}

@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p007",
+  "criterion_id": "c007",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No valid final response was produced. The agent's response outlines a plan to locate and read the file but does not answer the user's question about the function's purpose and parameters. This type of failure is evaluated elsewhere per the rubric's guidance.",
+  "duration_ms": 65959.86151700345,
+  "token_usage": {
+    "prompt_tokens": 1119,
+    "completion_tokens": 4089,
+    "total_tokens": 5208
+  },
+  "langsmith_run_id": "fa10aefd-f9cd-4dda-9597-d957f6083c21",
+  "evaluated_at": "2026-08-11T21:05:26.305553"
+}

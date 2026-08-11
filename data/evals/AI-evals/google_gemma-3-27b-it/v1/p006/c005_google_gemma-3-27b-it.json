@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p006",
+  "criterion_id": "c005",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent trajectory contains no tool calls, and thus no errors or unexpected results to recover from. The agent simply initiates a tool call to list files, and the evaluation stops there; there's nothing to assess for error recovery.",
+  "duration_ms": 20253.125613999146,
+  "token_usage": {
+    "prompt_tokens": 946,
+    "completion_tokens": 59,
+    "total_tokens": 1005
+  },
+  "langsmith_run_id": "630dd2f8-8b80-451a-b7d3-310187d8b1de",
+  "evaluated_at": "2026-08-11T19:58:39.224619"
+}

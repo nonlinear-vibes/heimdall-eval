@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p007",
+  "criterion_id": "c001",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The agent produced a 'Final answer' after only one iteration but never actually invoked any tools. The JSON block in its response is just prose describing a planned tool call, not an actual tool invocation. As a result, it provided no information about the calculate_shipping_cost function or its parameters, failing to complete the requested task.",
+  "duration_ms": 17497.760243997618,
+  "token_usage": {
+    "prompt_tokens": 971,
+    "completion_tokens": 1043,
+    "total_tokens": 2014
+  },
+  "langsmith_run_id": "269da2da-3275-4f05-8403-0eba7fbf7a5d",
+  "evaluated_at": "2026-08-12T00:38:07.661527"
+}

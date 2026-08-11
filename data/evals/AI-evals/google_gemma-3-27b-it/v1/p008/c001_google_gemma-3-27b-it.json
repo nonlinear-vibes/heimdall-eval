@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p008",
+  "criterion_id": "c001",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The agent only requested the file content of `broken.py` and did not attempt to run or fix the file. It requested a tool call, but did not proceed with any further actions to address the task of running and fixing the broken code, therefore the task was not completed.",
+  "duration_ms": 2341.4768340007868,
+  "token_usage": {
+    "prompt_tokens": 1073,
+    "completion_tokens": 70,
+    "total_tokens": 1143
+  },
+  "langsmith_run_id": "2ef0e2cf-2de4-48d4-9e2a-539b12030b1f",
+  "evaluated_at": "2026-08-11T20:01:55.759133"
+}

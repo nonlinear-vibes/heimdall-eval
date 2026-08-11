@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p008",
+  "criterion_id": "c005",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No tool calls were made in this trajectory, thus no errors occurred. The agent did not have an opportunity to demonstrate error recovery.",
+  "duration_ms": 850.3631669955212,
+  "token_usage": {
+    "prompt_tokens": 1083,
+    "completion_tokens": 44,
+    "total_tokens": 1127
+  },
+  "langsmith_run_id": "a3df5f5a-54ed-404b-b8e6-f68dbcbbcf60",
+  "evaluated_at": "2026-08-11T20:19:55.646497"
+}

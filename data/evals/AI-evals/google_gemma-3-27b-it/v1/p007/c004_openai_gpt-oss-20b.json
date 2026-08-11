@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p007",
+  "criterion_id": "c004",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The final response contains only a plan to examine the file and does not make any factual claim about what the `calculate_shipping_cost` function does or its parameters. Therefore there are no unsupported or contradictory statements to score against.",
+  "duration_ms": 6360.442473000148,
+  "token_usage": {
+    "prompt_tokens": 1131,
+    "completion_tokens": 434,
+    "total_tokens": 1565
+  },
+  "langsmith_run_id": "03f77b7a-36e7-4e8f-9a12-d7b8be03746a",
+  "evaluated_at": "2026-08-11T21:02:14.339608"
+}
