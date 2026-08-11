@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemini-2-5-flash_v1_p009",
+  "criterion_id": "c001",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The user asked for a Fibonacci function that returns 54 for n=10. The agent implemented the standard Fibonacci logic, which correctly returns 55. It then ran and confirmed this output, stating that 54 is not the correct Fibonacci number. Since the function does not meet the user’s specific expectation and no adjustment was made, the task is not completed.",
+  "duration_ms": 4418.73855599988,
+  "token_usage": {
+    "prompt_tokens": 1429,
+    "completion_tokens": 405,
+    "total_tokens": 1834
+  },
+  "langsmith_run_id": "d77f91d1-da8c-47b1-be54-fc8ea3b67478",
+  "evaluated_at": "2026-08-11T14:31:18.778412"
+}

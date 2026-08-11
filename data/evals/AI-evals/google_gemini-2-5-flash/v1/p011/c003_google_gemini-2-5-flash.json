@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemini-2-5-flash_v1_p011",
+  "criterion_id": "c003",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The response is perfectly concise. It directly answers the user's request for a short summary of the project without any extra information or fluff.",
+  "duration_ms": 1113.9093919991865,
+  "token_usage": {
+    "prompt_tokens": 2041,
+    "completion_tokens": 46,
+    "total_tokens": 2087
+  },
+  "langsmith_run_id": "be78f3cd-d908-4350-ad6f-3af84783f71f",
+  "evaluated_at": "2026-08-11T14:22:23.786816"
+}

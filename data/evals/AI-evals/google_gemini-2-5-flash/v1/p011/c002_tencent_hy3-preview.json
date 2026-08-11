@@ -1,0 +1,13 @@
+{
+  "run_id": "google_gemini-2-5-flash_v1_p011",
+  "criterion_id": "c002",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "bd6a36f3-a8f8-45c0-ad30-fa50ccf82605",
+  "evaluated_at": "2026-08-11T22:21:49.541855",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this trajecto...ing minor inefficiency.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+}
