@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p001",
+  "criterion_id": "c007",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The user’s request was clear and unambiguous, but the agent did not provide a haiku or any output to `haiku.txt`; instead it only outlined a plan. Because no valid final response was produced, this case falls under the rubric’s rule for scoring 5 by default.}",
+  "duration_ms": 8883.27250900329,
+  "token_usage": {
+    "prompt_tokens": 1192,
+    "completion_tokens": 562,
+    "total_tokens": 1754
+  },
+  "langsmith_run_id": "d4496553-a00b-4078-8c6b-dd23a3be956d",
+  "evaluated_at": "2026-08-11T19:28:48.753163"
+}

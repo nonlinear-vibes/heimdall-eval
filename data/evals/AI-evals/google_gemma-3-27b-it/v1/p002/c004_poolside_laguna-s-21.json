@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p002",
+  "criterion_id": "c004",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The agent's final response claims it will list files and create a hello world script, but the trajectory shows it only emitted a JSON-formatted function call description without actually executing any tool calls. No files were listed, no script was created, and no execution verification occurred, making the response's claims entirely unsupported by actual tool results.",
+  "duration_ms": 1241.6185820038663,
+  "token_usage": {
+    "prompt_tokens": 1112,
+    "completion_tokens": 78,
+    "total_tokens": 1190
+  },
+  "langsmith_run_id": "435414dc-25a5-4a1b-a6d3-aa3eeaa55418",
+  "evaluated_at": "2026-08-12T00:35:20.500041"
+}

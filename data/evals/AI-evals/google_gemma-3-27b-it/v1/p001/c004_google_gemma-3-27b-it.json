@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p001",
+  "criterion_id": "c004",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 3,
+  "rationale": "The agent claims it will list files to ensure `haiku.txt` doesn't already exist, create the file, write the haiku, and then verify the content by reading it back. However, the trajectory *only* shows the intention to list the files; no further actions (file creation, writing, or verification) were taken. This makes the claim that it will perform those actions unverified and thus ungrounded.",
+  "duration_ms": 2016.6068299986364,
+  "token_usage": {
+    "prompt_tokens": 1173,
+    "completion_tokens": 101,
+    "total_tokens": 1274
+  },
+  "langsmith_run_id": "0bc4c087-8226-4510-b928-9af08578834c",
+  "evaluated_at": "2026-08-11T19:22:25.688907"
+}
