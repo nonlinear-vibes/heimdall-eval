@@ -1,12 +1,3 @@
-"""
-Builds/rebuilds eval.db from scratch, from the YAML configs (agent + evaluator)
-and the generated logs/evals JSON files. Fully idempotent — safe to rerun any
-time; existing rows are overwritten via INSERT OR REPLACE, matching the
-"database is a disposable index, files are the source of truth" design.
-
-Run from anywhere: paths are resolved relative to this file's location.
-"""
-
 import json
 import sqlite3
 import yaml
@@ -26,7 +17,7 @@ JUDGES_YAML = REPO_ROOT / "heimdall" / "config" / "judges.yaml"
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS models (
-    model_slug      TEXT PRIMARY KEY,
+    model_tag       TEXT PRIMARY KEY,
     model_id        TEXT NOT NULL,
     display_name    TEXT
 );
@@ -40,22 +31,24 @@ CREATE TABLE IF NOT EXISTS prompts (
 );
 
 CREATE TABLE IF NOT EXISTS criteria (
-    criterion_id    TEXT PRIMARY KEY,
-    criterion_name  TEXT,
-    description     TEXT,
-    scale_min       INTEGER,
-    scale_max       INTEGER
+    criterion_id       TEXT PRIMARY KEY,
+    criterion_name     TEXT,
+    description        TEXT,
+    scale_min          INTEGER,
+    scale_max          INTEGER,
+    base_criterion_id  TEXT REFERENCES criteria(criterion_id)   -- NULL for non-variant criteria
 );
 
 CREATE TABLE IF NOT EXISTS judges (
     judge_id        TEXT PRIMARY KEY,
-    judge_slug      TEXT NOT NULL,
+    judge_tag       TEXT NOT NULL,
     display_name    TEXT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS runs (
     run_id              TEXT PRIMARY KEY,
-    model_slug          TEXT NOT NULL REFERENCES models(model_slug),
+    model_tag           TEXT NOT NULL REFERENCES models(model_tag),
+    agent_version       TEXT NOT NULL,
     prompt_id           TEXT NOT NULL REFERENCES prompts(prompt_id),
     exit_reason         TEXT,
     total_iterations    INTEGER,
@@ -64,7 +57,7 @@ CREATE TABLE IF NOT EXISTS runs (
     log_path            TEXT NOT NULL,
     started_at          TEXT,
     ended_at            TEXT,
-    UNIQUE (model_slug, prompt_id)
+    UNIQUE (model_tag, agent_version, prompt_id)
 );
 
 CREATE TABLE IF NOT EXISTS iterations (
@@ -95,6 +88,7 @@ CREATE TABLE IF NOT EXISTS evaluations (
     run_id              TEXT NOT NULL REFERENCES runs(run_id),
     criterion_id        TEXT NOT NULL REFERENCES criteria(criterion_id),
     judge_id            TEXT NOT NULL REFERENCES judges(judge_id),
+    agent_version       TEXT NOT NULL,
     score               INTEGER,
     rationale           TEXT,
     duration_ms         REAL,
@@ -111,6 +105,7 @@ CREATE TABLE IF NOT EXISTS evaluations (
 CREATE TABLE IF NOT EXISTS human_evals (
     run_id              TEXT NOT NULL REFERENCES runs(run_id),
     criterion_id        TEXT NOT NULL REFERENCES criteria(criterion_id),
+    agent_version       TEXT NOT NULL,
     evaluator_id        TEXT NOT NULL DEFAULT 'human_001',
     score               INTEGER,
     rationale           TEXT,
@@ -120,7 +115,7 @@ CREATE TABLE IF NOT EXISTS human_evals (
 
 CREATE INDEX IF NOT EXISTS idx_evaluations_criterion ON evaluations(criterion_id);
 CREATE INDEX IF NOT EXISTS idx_evaluations_judge ON evaluations(judge_id);
-CREATE INDEX IF NOT EXISTS idx_runs_model ON runs(model_slug);
+CREATE INDEX IF NOT EXISTS idx_runs_model ON runs(model_tag);
 """
 
 
@@ -146,8 +141,8 @@ def load_reference_tables(conn: sqlite3.Connection):
     with open(MODELS_YAML) as f:
         for m in yaml.safe_load(f)["models"]:
             conn.execute(
-                "INSERT OR REPLACE INTO models (model_slug, model_id, display_name) VALUES (?, ?, ?)",
-                (m["model_slug"], m["model_id"], m.get("display_name")),
+                "INSERT OR REPLACE INTO models (model_tag, model_id, display_name) VALUES (?, ?, ?)",
+                (m["model_tag"], m["model_id"], m.get("display_name")),
             )
 
     with open(PROMPTS_YAML) as f:
@@ -170,8 +165,8 @@ def load_reference_tables(conn: sqlite3.Connection):
     with open(JUDGES_YAML) as f:
         for j in yaml.safe_load(f)["judges"]:
             conn.execute(
-                "INSERT OR REPLACE INTO judges (judge_id, judge_slug, display_name) VALUES (?, ?, ?)",
-                (j["judge_id"], j["judge_slug"], j["display_name"]),
+                "INSERT OR REPLACE INTO judges (judge_id, judge_tag, display_name) VALUES (?, ?, ?)",
+                (j["judge_id"], j["judge_tag"], j["display_name"]),
             )
 
 
@@ -187,7 +182,7 @@ def load_trajectory(log_path: Path) -> list[dict]:
     return events
 
 
-def ingest_run(conn: sqlite3.Connection, model_slug: str, prompt_id: str, log_path: Path):
+def ingest_run(conn: sqlite3.Connection, model_tag: str, agent_version: str, prompt_id: str, log_path: Path):
     try:
         events = load_trajectory(log_path)
     except (json.JSONDecodeError, OSError) as e:
@@ -219,10 +214,10 @@ def ingest_run(conn: sqlite3.Connection, model_slug: str, prompt_id: str, log_pa
 
     conn.execute(
         "INSERT OR REPLACE INTO runs "
-        "(run_id, model_slug, prompt_id, exit_reason, total_iterations, tool_called, "
+        "(run_id, model_tag, agent_version, prompt_id, exit_reason, total_iterations, tool_called, "
         " error_message, log_path, started_at, ended_at) "
-        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-        (run_id, model_slug, prompt_id, exit_reason, total_iterations, tool_called,
+        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+        (run_id, model_tag, agent_version, prompt_id, exit_reason, total_iterations, tool_called,
          error_message, str(log_path), started_at, ended_at),
     )
 
@@ -259,10 +254,13 @@ def ingest_all_runs(conn: sqlite3.Connection):
     for model_dir in LOGS_DIR.iterdir():
         if not model_dir.is_dir():
             continue
-        for log_path in model_dir.glob("*.jsonl"):
-            prompt_id = log_path.stem
-            print(f"Ingesting run: {model_dir.name}/{prompt_id}")
-            ingest_run(conn, model_dir.name, prompt_id, log_path)
+        for agent_version_dir in model_dir.iterdir():
+            if not agent_version_dir.is_dir():
+                continue
+            for log_path in agent_version_dir.glob("*.jsonl"):
+                prompt_id = log_path.stem
+                print(f"Ingesting run: {model_dir.name}/{agent_version_dir.name}/{prompt_id}")
+                ingest_run(conn, model_dir.name, agent_version_dir.name, prompt_id, log_path)
 
 
 # ---------------- evaluation ingestion ----------------
@@ -279,18 +277,18 @@ def ingest_all_evaluations(conn: sqlite3.Connection):
             print(f"  Skipping {eval_path}: {e}")
             continue
 
-        if not all(k in d for k in ("run_id", "criterion_id", "judge_id")):
+        if not all(k in d for k in ("run_id", "criterion_id", "judge_id", "agent_version")):
             print(f"  Skipping {eval_path}: missing required keys")
             continue
 
         usage = d.get("token_usage") or {}
         conn.execute(
             "INSERT OR REPLACE INTO evaluations "
-            "(run_id, criterion_id, judge_id, score, rationale, duration_ms, "
+            "(run_id, criterion_id, judge_id, agent_version, score, rationale, duration_ms, "
             " prompt_tokens, completion_tokens, total_tokens, langsmith_run_id, "
             " error_message, eval_path, evaluated_at) "
-            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-            (d["run_id"], d["criterion_id"], d["judge_id"], d.get("score"), d.get("rationale"),
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            (d["run_id"], d["criterion_id"], d["judge_id"], d["agent_version"], d.get("score"), d.get("rationale"),
              d.get("duration_ms"), usage.get("prompt_tokens"), usage.get("completion_tokens"),
              usage.get("total_tokens"), d.get("langsmith_run_id"), d.get("error"),
              str(eval_path), d.get("evaluated_at")),
@@ -318,6 +316,7 @@ def ingest_human_evals(conn: sqlite3.Connection):
         evaluator_id = content.get("evaluator_id", yaml_path.stem)
         entries = content["evaluations"]
 
+
         for i, entry in enumerate(entries):
             if not all(k in entry for k in ("run_id", "criterion_id")):
                 print(f"  Skipping entry {i} in {yaml_path}: missing run_id or criterion_id")
@@ -325,11 +324,12 @@ def ingest_human_evals(conn: sqlite3.Connection):
 
             conn.execute(
                 "INSERT OR REPLACE INTO human_evals "
-                "(run_id, criterion_id, evaluator_id, score, rationale, evaluated_at) "
-                "VALUES (?, ?, ?, ?, ?, ?)",
+                "(run_id, criterion_id, agent_version, evaluator_id, score, rationale, evaluated_at) "
+                "VALUES (?, ?, ?, ?, ?, ?, ?)",
                 (
                     entry["run_id"],
                     entry["criterion_id"],
+                    entry["agent_version"],
                     evaluator_id,
                     entry.get("score"),
                     entry.get("rationale"),
@@ -340,6 +340,10 @@ def ingest_human_evals(conn: sqlite3.Connection):
 
 
 def main():
+    if DB_PATH.exists():
+        DB_PATH.unlink()
+        print(f"Removed existing database at {DB_PATH}")
+
     conn = get_connection()
     try:
         conn.executescript(SCHEMA)
