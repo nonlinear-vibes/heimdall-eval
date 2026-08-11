@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p003",
+  "criterion_id": "c001",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent successfully wrote the `fib.py` file containing the `fib` function and then verified its functionality by running the script with `n=10`, which correctly returned `55` as requested. All parts of the task were completed and verified.",
+  "duration_ms": 953.8508159967023,
+  "token_usage": {
+    "prompt_tokens": 1220,
+    "completion_tokens": 71,
+    "total_tokens": 1291
+  },
+  "langsmith_run_id": "48f2656b-674a-45dd-930a-47ac8a9411bf",
+  "evaluated_at": "2026-08-11T21:32:59.785929"
+}

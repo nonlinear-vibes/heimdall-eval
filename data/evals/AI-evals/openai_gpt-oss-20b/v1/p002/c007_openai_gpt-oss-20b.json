@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p002",
+  "criterion_id": "c007",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The request was clear and unambiguous. The agent did not encounter or address any ambiguity or contradiction, so it performed the task directly without any discussion of a judgment call or clarification.",
+  "duration_ms": 3026.0330689998227,
+  "token_usage": {
+    "prompt_tokens": 1216,
+    "completion_tokens": 168,
+    "total_tokens": 1384
+  },
+  "langsmith_run_id": "29431180-0d08-4ab5-93e1-2fb5ed5a129c",
+  "evaluated_at": "2026-08-11T21:57:41.797923"
+}

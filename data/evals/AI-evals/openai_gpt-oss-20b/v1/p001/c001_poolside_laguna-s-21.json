@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p001",
+  "criterion_id": "c001",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The task was completed successfully. The agent wrote a haiku about bug fixing to `haiku.txt`, confirmed by the write_file tool result ('Successfully wrote to haiku.txt (72 characters written)') and verified by the haiku content meeting the 5-7-5 syllable structure.",
+  "duration_ms": 1118.116915000428,
+  "token_usage": {
+    "prompt_tokens": 1009,
+    "completion_tokens": 72,
+    "total_tokens": 1081
+  },
+  "langsmith_run_id": "3cfb6554-222d-4953-ad0f-41af2189cac5",
+  "evaluated_at": "2026-08-12T00:55:14.730397"
+}

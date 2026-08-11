@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p003",
+  "criterion_id": "c001",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent created fib.py with a correct 0-indexed Fibonacci implementation and verified it returns 55 for n=10 via run_python_file, which output 55.",
+  "duration_ms": 522.911378997378,
+  "token_usage": {
+    "prompt_tokens": 1178,
+    "completion_tokens": 49,
+    "total_tokens": 1227
+  },
+  "langsmith_run_id": "523f14fb-49ba-4dab-a9da-33791b0a089b",
+  "evaluated_at": "2026-08-11T21:32:58.831280"
+}

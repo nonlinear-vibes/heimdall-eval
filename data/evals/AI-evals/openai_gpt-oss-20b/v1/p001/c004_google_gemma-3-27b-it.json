@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p001",
+  "criterion_id": "c004",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent claims to have written a haiku to `haiku.txt`, and the trajectory confirms this with a successful `write_file` call and corresponding result. The agent also accurately describes the content of the haiku. There are no unsupported claims.",
+  "duration_ms": 18733.841068999027,
+  "token_usage": {
+    "prompt_tokens": 1175,
+    "completion_tokens": 65,
+    "total_tokens": 1240
+  },
+  "langsmith_run_id": "23b11b0e-22c5-4e3b-a77b-eab7abecf073",
+  "evaluated_at": "2026-08-11T21:23:06.550818"
+}

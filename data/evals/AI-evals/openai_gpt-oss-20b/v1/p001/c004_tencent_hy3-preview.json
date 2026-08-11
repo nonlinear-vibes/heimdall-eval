@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p001",
+  "criterion_id": "c004",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The final response claims the haiku was written to haiku.txt and displays its content; the trajectory shows a successful write_file call with matching content and a success result, fully supporting the claim.",
+  "duration_ms": 16470.694464995177,
+  "token_usage": {
+    "prompt_tokens": 1123,
+    "completion_tokens": 898,
+    "total_tokens": 2021
+  },
+  "langsmith_run_id": "4c540138-88a2-4635-8440-fb91bd65bd52",
+  "evaluated_at": "2026-08-11T21:23:32.878493"
+}

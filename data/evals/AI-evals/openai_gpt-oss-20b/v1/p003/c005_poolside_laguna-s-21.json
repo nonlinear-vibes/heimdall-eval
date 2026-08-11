@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p003",
+  "criterion_id": "c005",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No tool errors or unexpected results occurred in the trajectory — all tool calls succeeded as expected. Per the rubric, this criterion defaults to a score of 5 since there was nothing to recover from.",
+  "duration_ms": 1022.5557339945226,
+  "token_usage": {
+    "prompt_tokens": 1196,
+    "completion_tokens": 53,
+    "total_tokens": 1249
+  },
+  "langsmith_run_id": "26b58948-c089-481b-95c9-92dca6df11a7",
+  "evaluated_at": "2026-08-12T00:56:28.037658"
+}

@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p003",
+  "criterion_id": "c005",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No tool errors or unexpected results occurred during the agent's trajectory; all tool calls succeeded. Thus there was no error to recover from, and the agent earns a score of 5.",
+  "duration_ms": 17377.319626000826,
+  "token_usage": {
+    "prompt_tokens": 1177,
+    "completion_tokens": 993,
+    "total_tokens": 2170
+  },
+  "langsmith_run_id": "48d24d52-f37e-4337-8886-02c45da7aa2d",
+  "evaluated_at": "2026-08-11T21:35:42.369715"
+}

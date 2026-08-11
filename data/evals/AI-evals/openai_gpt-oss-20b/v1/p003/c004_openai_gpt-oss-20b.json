@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p003",
+  "criterion_id": "c004",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The final response states that a `fib.py` file was implemented with a Fibonacci function and a CLI, and that `fib(10)` outputs 55. The trajectory shows the file was written successfully and then executed with argument `10`, producing STDOUT `55`. All claims are directly supported by the tool results, with no unverified or fabricated statements.",
+  "duration_ms": 5611.614438996185,
+  "token_usage": {
+    "prompt_tokens": 1322,
+    "completion_tokens": 420,
+    "total_tokens": 1742
+  },
+  "langsmith_run_id": "b932e52c-934d-46e5-8e66-204c8972dd07",
+  "evaluated_at": "2026-08-11T21:34:39.096592"
+}

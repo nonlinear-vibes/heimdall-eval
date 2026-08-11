@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p003",
+  "criterion_id": "c001",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent successfully wrote a correct 0-indexed fib(n) function in fib.py (confirmed by the successful write_file call and code content matching requirements: fib(0)=0, fib(1)=1). It then explicitly verified the function via a run_python_file call with n=10, which returned STDOUT: 55, exactly matching the requested verification. All task requirements were fully satisfied with concrete tool-based evidence.",
+  "duration_ms": 7601.705512002809,
+  "token_usage": {
+    "prompt_tokens": 1166,
+    "completion_tokens": 821,
+    "total_tokens": 1987
+  },
+  "langsmith_run_id": "d4dcca66-122f-40ef-ad0b-abd55b13710e",
+  "evaluated_at": "2026-08-11T21:33:07.388519"
+}
