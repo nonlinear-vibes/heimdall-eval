@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p001",
+  "criterion_id": "c005",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent's trajectory shows no tool calls or errors. It outlines a plan to create a file but does not actually execute it within this trajectory, so there’s nothing to evaluate for error recovery—it cleanly planned the task.",
+  "duration_ms": 1673.176299998886,
+  "token_usage": {
+    "prompt_tokens": 1064,
+    "completion_tokens": 60,
+    "total_tokens": 1124
+  },
+  "langsmith_run_id": "67b704a1-cf0a-497c-b6eb-d477148fbd06",
+  "evaluated_at": "2026-08-11T19:25:44.265462"
+}
