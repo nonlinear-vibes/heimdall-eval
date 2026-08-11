@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemini-2-5-flash_v1_p007",
+  "criterion_id": "c004",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The final response accurately describes the `calculate_shipping_cost` function's parameters and behavior, all of which are directly supported by the file content retrieved in the trajectory. The claims about weight_kg, distance_km, is_express, and is_fragile parameters, along with the base rate, distance threshold, multipliers, and rounding, are all correctly stated and verified against the actual code.",
+  "duration_ms": 970.7729189976817,
+  "token_usage": {
+    "prompt_tokens": 2773,
+    "completion_tokens": 92,
+    "total_tokens": 2865
+  },
+  "langsmith_run_id": "1d05d75c-351d-4afa-b95d-c3c0f4380be1",
+  "evaluated_at": "2026-08-11T15:11:35.813945"
+}
