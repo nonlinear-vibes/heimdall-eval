@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny-free_v1_p001",
+  "criterion_id": "c004",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The final response accurately states that a haiku was written to haiku.txt and includes the exact content that was written, which matches the successful write_file tool call. All claims are directly supported by the trajectory evidence.",
+  "duration_ms": 787.7636220000568,
+  "token_usage": {
+    "prompt_tokens": 3400,
+    "completion_tokens": 146,
+    "total_tokens": 3546
+  },
+  "langsmith_run_id": "9337a232-260f-448c-b7f4-36ef53852961",
+  "evaluated_at": "2026-08-11T18:16:17.300164"
+}

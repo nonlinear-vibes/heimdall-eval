@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny-free_v1_p001",
+  "criterion_id": "c004",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent's final response accurately reflects the trajectory. It states it wrote a haiku to `haiku.txt`, which is confirmed by the `write_file` tool call and result. It also mentions the haiku follows a 5-7-5 syllable structure, and the reasoning steps show the agent verified this before stating it as fact.",
+  "duration_ms": 2062.2141620006005,
+  "token_usage": {
+    "prompt_tokens": 3398,
+    "completion_tokens": 85,
+    "total_tokens": 3483
+  },
+  "langsmith_run_id": "9aebab1b-f9df-4ac6-b863-19c176c847da",
+  "evaluated_at": "2026-08-11T18:16:16.511199"
+}

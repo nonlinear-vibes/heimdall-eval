@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny-free_v1_p002",
+  "criterion_id": "c001",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent wrote a file `hello_world.py` containing `print(\"Hello, World!\")`, ran it with `run_python_file`, and the tool returned a successful STDOUT of \"Hello, World!\". All requested steps—creation, execution, and verification—were completed successfully.",
+  "duration_ms": 1582.0319000013114,
+  "token_usage": {
+    "prompt_tokens": 1136,
+    "completion_tokens": 196,
+    "total_tokens": 1332
+  },
+  "langsmith_run_id": "c2005515-daa8-4c6c-b3d0-efa99dad3d47",
+  "evaluated_at": "2026-08-11T18:26:14.287366"
+}

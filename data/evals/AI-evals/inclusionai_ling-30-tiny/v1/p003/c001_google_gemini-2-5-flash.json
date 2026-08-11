@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny-free_v1_p003",
+  "criterion_id": "c001",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent successfully wrote the `fib.py` file with the requested function. It then correctly verified the function by running the script and confirming that `fib(10)` returns 55, as shown by the `run_python_file` output.",
+  "duration_ms": 5998.532241999783,
+  "token_usage": {
+    "prompt_tokens": 1508,
+    "completion_tokens": 71,
+    "total_tokens": 1579
+  },
+  "langsmith_run_id": "cb5c90c0-6b05-4aa8-8657-419174923195",
+  "evaluated_at": "2026-08-11T18:20:08.033855"
+}

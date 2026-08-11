@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny-free_v1_p003",
+  "criterion_id": "c004",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The final response claims fib.py was written, fib(0)=0, fib(1)=1, and fib(10)=55. All claims are directly supported by the trajectory: write_file created fib.py, and run_python_file output shows fib(10) = 55 with the assertion passing. There are no unverified or contradictory claims.",
+  "duration_ms": 1287.3848009985522,
+  "token_usage": {
+    "prompt_tokens": 1591,
+    "completion_tokens": 87,
+    "total_tokens": 1678
+  },
+  "langsmith_run_id": "2a591743-b01f-4644-943f-a71ec2b8e288",
+  "evaluated_at": "2026-08-11T23:50:26.793236"
+}

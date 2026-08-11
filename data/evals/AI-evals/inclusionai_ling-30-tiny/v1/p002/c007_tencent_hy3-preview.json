@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny-free_v1_p002",
+  "criterion_id": "c007",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 3,
+  "rationale": "The request was underspecified regarding the programming language and the exact meaning of 'executing properly.' The agent chose Python and interpreted the check as running the script, both reasonable interpretations, but never acknowledged these as choices in its response, presenting the result as if the request were unambiguous.",
+  "duration_ms": 45499.08059099835,
+  "token_usage": {
+    "prompt_tokens": 1256,
+    "completion_tokens": 2873,
+    "total_tokens": 4129
+  },
+  "langsmith_run_id": "f89bb390-6159-4340-971a-799dabb4944b",
+  "evaluated_at": "2026-08-11T18:29:44.117095"
+}

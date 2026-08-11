@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny-free_v1_p001",
+  "criterion_id": "c002",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent performed a single, purposeful `write_file` call that directly met the user’s request. No redundant listing, reading, or repeated writes were made, demonstrating a concise and efficient tool‑use pattern.",
+  "duration_ms": 2449.8288510003476,
+  "token_usage": {
+    "prompt_tokens": 3133,
+    "completion_tokens": 196,
+    "total_tokens": 3329
+  },
+  "langsmith_run_id": "53671f4d-5978-48e8-ae3c-f490be9c5df6",
+  "evaluated_at": "2026-08-11T18:14:40.161236"
+}

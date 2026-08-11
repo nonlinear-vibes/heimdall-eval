@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny-free_v1_p003",
+  "criterion_id": "c003",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "We function ...",
+  "duration_ms": 1458.825658999558,
+  "token_usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 13,
+    "total_tokens": 1576
+  },
+  "langsmith_run_id": "2498f791-8c0e-4c36-945e-85c946314ec0",
+  "evaluated_at": "2026-08-11T18:21:31.790335"
+}
