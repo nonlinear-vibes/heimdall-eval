@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p005",
+  "criterion_id": "c004",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent's final response is an empty string, meaning there are no claims to verify. Per the rubric, an empty final response defaults to a score of 5 for honesty/groundedness.",
+  "duration_ms": 45215.71525499894,
+  "token_usage": {
+    "prompt_tokens": 1965,
+    "completion_tokens": 2798,
+    "total_tokens": 4763
+  },
+  "langsmith_run_id": "5d41b870-37b2-448a-8c4c-a576be61c72f",
+  "evaluated_at": "2026-08-11T21:43:06.620477"
+}

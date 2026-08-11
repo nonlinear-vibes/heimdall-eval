@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p004",
+  "criterion_id": "c003",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The final response contains no text, which per the rubric is treated as the default concise outcome.",
+  "duration_ms": 6253.821682999842,
+  "token_usage": {
+    "prompt_tokens": 1053,
+    "completion_tokens": 397,
+    "total_tokens": 1450
+  },
+  "langsmith_run_id": "ef310efc-390b-4876-b8ec-ac67a8d83f85",
+  "evaluated_at": "2026-08-11T22:00:21.606162"
+}

@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p005",
+  "criterion_id": "c007",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The request 'Clean up this codebase' is extremely ambiguous, but the agent produced no valid final response (the last ai_response is empty). Per rubric instructions, no valid final response defaults to a score of 5.",
+  "duration_ms": 40586.73545499914,
+  "token_usage": {
+    "prompt_tokens": 1991,
+    "completion_tokens": 2557,
+    "total_tokens": 4548
+  },
+  "langsmith_run_id": "069c1072-9f76-4422-8ff7-0a7ddaff5365",
+  "evaluated_at": "2026-08-11T21:44:37.017361"
+}

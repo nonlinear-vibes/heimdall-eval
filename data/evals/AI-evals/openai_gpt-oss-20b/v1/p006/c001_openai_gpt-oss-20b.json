@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p006",
+  "criterion_id": "c001",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "We have exhibited?‑…",
+  "duration_ms": 3553.102112993656,
+  "token_usage": {
+    "prompt_tokens": 1047,
+    "completion_tokens": 76,
+    "total_tokens": 1123
+  },
+  "langsmith_run_id": "618f8a3e-a376-4d35-82e0-c9470fc7fcf1",
+  "evaluated_at": "2026-08-11T21:44:52.061287"
+}

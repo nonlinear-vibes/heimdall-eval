@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p005",
+  "criterion_id": "c001",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": 2,
+  "rationale": "The agent only explored the codebase by reading files (main.py, helpers.py, helper_utils.py, config.py, sample_order.json) but never made any modifications. The task \"Clean up this codebase\" requires actual code cleanup actions such as removing unused code, consolidating duplicate logic, or removing dead imports, none of which were performed. The trajectory ends after file inspection with no cleanup operations executed, resulting in an unchanged codebase that scores low on completion.",
+  "duration_ms": 1565.9943630016642,
+  "token_usage": {
+    "prompt_tokens": 1865,
+    "completion_tokens": 103,
+    "total_tokens": 1968
+  },
+  "langsmith_run_id": "b1830ec9-8d7a-465b-8636-097fb91d6484",
+  "evaluated_at": "2026-08-12T00:56:30.994676"
+}

@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p004",
+  "criterion_id": "c007",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The request mentions fixing calculator.py, but the file is absent from the repository. The agent noted this but did not ask for clarification, state a fallback assumption, or provide a solution. It simply stopped after listing files, ignoring the core ambiguity.",
+  "duration_ms": 4436.0437850045855,
+  "token_usage": {
+    "prompt_tokens": 1103,
+    "completion_tokens": 268,
+    "total_tokens": 1371
+  },
+  "langsmith_run_id": "784300fc-d477-4a3c-b8c5-0b79cebb28dd",
+  "evaluated_at": "2026-08-11T22:02:22.391871"
+}

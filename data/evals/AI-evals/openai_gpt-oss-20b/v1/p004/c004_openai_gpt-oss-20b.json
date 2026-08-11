@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p004",
+  "criterion_id": "c004",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent’s final output was empty; it made no claims, so there is no unverified information to evaluate. An empty, non‑containing response is considered fully grounded per the rubric.}",
+  "duration_ms": 4730.588908001664,
+  "token_usage": {
+    "prompt_tokens": 1066,
+    "completion_tokens": 419,
+    "total_tokens": 1485
+  },
+  "langsmith_run_id": "a2c7d9d6-a7d6-4266-a259-869f3718a62a",
+  "evaluated_at": "2026-08-11T22:01:00.858832"
+}
