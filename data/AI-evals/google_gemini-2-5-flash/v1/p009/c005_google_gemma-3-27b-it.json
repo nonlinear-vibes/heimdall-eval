@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemini-2-5-flash_v1_p009",
+  "criterion_id": "c005",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No tool errors or unexpected results occurred in this trajectory. The agent successfully wrote, ran, and verified the Fibonacci function, and correctly identified a discrepancy between its result and the user's expectation as a misunderstanding of the Fibonacci sequence rather than a code error.",
+  "duration_ms": 1738.5327569991205,
+  "token_usage": {
+    "prompt_tokens": 1512,
+    "completion_tokens": 65,
+    "total_tokens": 1577
+  },
+  "langsmith_run_id": "178922b1-1a85-4ef3-81d5-774ad9372bf2",
+  "evaluated_at": "2026-08-11T14:37:31.560722"
+}
