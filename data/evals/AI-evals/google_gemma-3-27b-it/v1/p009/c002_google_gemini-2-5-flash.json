@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p009",
+  "criterion_id": "c002",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The agent only called `get_files_info` and did not complete the task of writing a function and verifying it. It made no meaningful tool use beyond the initial file listing.",
+  "duration_ms": 1199.5779409990064,
+  "token_usage": {
+    "prompt_tokens": 1012,
+    "completion_tokens": 55,
+    "total_tokens": 1067
+  },
+  "langsmith_run_id": "15c65f3c-f8b3-49e9-9663-45467640748f",
+  "evaluated_at": "2026-08-11T19:29:48.013162"
+}

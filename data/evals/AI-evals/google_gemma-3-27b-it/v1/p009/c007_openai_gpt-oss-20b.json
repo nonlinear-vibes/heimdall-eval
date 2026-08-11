@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p009",
+  "criterion_id": "c007",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The user’s request contains a clear contradiction: Fibonacci numbers give 55 at index 10, yet they insist on verifying 54. The agent ignores this mismatch, proceeds with a function that doesn’t address the contradiction or ask for clarification, and does not communicate any assumptions or choices it might be making about the erroneous expectation.",
+  "duration_ms": 3961.1688500008313,
+  "token_usage": {
+    "prompt_tokens": 1153,
+    "completion_tokens": 387,
+    "total_tokens": 1540
+  },
+  "langsmith_run_id": "af075093-a016-402c-ab31-ec1100965e77",
+  "evaluated_at": "2026-08-11T19:33:52.423581"
+}

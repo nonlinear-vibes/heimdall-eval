@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p010",
+  "criterion_id": "c001",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The agent did not make any progress towards fixing the bug. It only outlined a plan and provided a tool call in its first iteration, but this was the only iteration, and no tools were actually used to implement or verify any changes.",
+  "duration_ms": 1043.4195210036705,
+  "token_usage": {
+    "prompt_tokens": 1037,
+    "completion_tokens": 65,
+    "total_tokens": 1102
+  },
+  "langsmith_run_id": "2f072f0a-9c07-4d12-8fe6-257ec106517b",
+  "evaluated_at": "2026-08-12T00:13:51.650085"
+}

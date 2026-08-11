@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p010",
+  "criterion_id": "c005",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent's trajectory contains no tool calls or errors. Therefore, there was no opportunity for error recovery, and the agent receives a default score of 5 as it performed as expected given the absence of issues.",
+  "duration_ms": 4103.0479580003885,
+  "token_usage": {
+    "prompt_tokens": 1066,
+    "completion_tokens": 56,
+    "total_tokens": 1122
+  },
+  "langsmith_run_id": "7a647e20-d792-4190-b647-022ad0c0d5cc",
+  "evaluated_at": "2026-08-11T18:50:46.981220"
+}

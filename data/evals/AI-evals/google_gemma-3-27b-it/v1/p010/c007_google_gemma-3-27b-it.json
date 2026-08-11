@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p010",
+  "criterion_id": "c007",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 3,
+  "rationale": "The request \"Fix the bug in calculator.py\" is ambiguous because it doesn't specify *what* the bug is. The agent proceeds to examine the code, which is a reasonable interpretation, but doesn't acknowledge that it is making an assumption about needing to *find* the bug before fixing it, nor does it ask for clarification on the bug's nature.",
+  "duration_ms": 9605.88480700244,
+  "token_usage": {
+    "prompt_tokens": 1195,
+    "completion_tokens": 89,
+    "total_tokens": 1284
+  },
+  "langsmith_run_id": "fcffff5e-514e-46d5-91cc-ebb36eaad1bf",
+  "evaluated_at": "2026-08-11T18:52:10.462297"
+}

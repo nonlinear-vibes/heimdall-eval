@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p010",
+  "criterion_id": "c005",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The trajectory contains no evidence of a tool error or unexpected result to recover from. The agent simply laid out a plan without any failed tool calls, so the error‑recovery criterion does not apply, and the default score of 5 is appropriate.",
+  "duration_ms": 4060.404234998714,
+  "token_usage": {
+    "prompt_tokens": 1052,
+    "completion_tokens": 241,
+    "total_tokens": 1293
+  },
+  "langsmith_run_id": "c5dc6210-9000-4272-8db3-7c330e52c16c",
+  "evaluated_at": "2026-08-11T18:50:51.044516"
+}

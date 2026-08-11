@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p010",
+  "criterion_id": "c001",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The user asked to fix the bug in `calculator.py`. The trajectory shows only a plan: the agent identifies that it will list files, read the file, and then modify it, but there are no actual tool calls to read or edit the file, nor any test runs. The final answer contains only a description of intended steps, not the actual bug fix or verification. Therefore the task was not accomplished.",
+  "duration_ms": 3427.3627669972484,
+  "token_usage": {
+    "prompt_tokens": 1043,
+    "completion_tokens": 219,
+    "total_tokens": 1262
+  },
+  "langsmith_run_id": "198d19a3-44ef-4cf4-8167-8424130a476b",
+  "evaluated_at": "2026-08-11T18:44:26.924970"
+}

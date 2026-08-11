@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p009",
+  "criterion_id": "c003",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent did not provide a final response to the user, so it is scored as a 5 (default value) since the failure is evaluated with other metrics.",
+  "duration_ms": 743.499095999141,
+  "token_usage": {
+    "prompt_tokens": 1109,
+    "completion_tokens": 51,
+    "total_tokens": 1160
+  },
+  "langsmith_run_id": "8440745d-4181-4c22-970d-7dcafbc4b1ef",
+  "evaluated_at": "2026-08-11T19:30:20.141843"
+}

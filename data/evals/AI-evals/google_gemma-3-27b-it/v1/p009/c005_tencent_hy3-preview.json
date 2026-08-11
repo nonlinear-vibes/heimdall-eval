@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p009",
+  "criterion_id": "c005",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent's trajectory contains only a single tool call (get_files_info) and no tool errors or unexpected results occurred. Since there was nothing to recover from, the default score of 5 applies.",
+  "duration_ms": 4365.184087000671,
+  "token_usage": {
+    "prompt_tokens": 976,
+    "completion_tokens": 130,
+    "total_tokens": 1106
+  },
+  "langsmith_run_id": "d2961d81-426f-4501-b475-0c3cfb52cd1b",
+  "evaluated_at": "2026-08-12T00:20:33.185192"
+}

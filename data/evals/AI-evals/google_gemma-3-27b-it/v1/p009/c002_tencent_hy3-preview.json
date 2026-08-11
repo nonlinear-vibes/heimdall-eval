@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p009",
+  "criterion_id": "c002",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The agent made only one tool call (get_files_info to list the directory) and then exited with 'Final answer' without ever writing fib.py, creating the Fibonacci function, or verifying the result for n=10. This is essentially no meaningful tool use toward completing the required task.",
+  "duration_ms": 15882.305076000193,
+  "token_usage": {
+    "prompt_tokens": 977,
+    "completion_tokens": 693,
+    "total_tokens": 1670
+  },
+  "langsmith_run_id": "eb145a93-2136-4b4a-91ba-0edb94028ade",
+  "evaluated_at": "2026-08-11T19:30:03.896467"
+}

@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p009",
+  "criterion_id": "c007",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 3,
+  "rationale": "The request asks the agent to *write* a function and *verify* it. It's ambiguous whether the function already exists or not, and the agent only checks for its existence rather than proceeding with writing it if it's missing. It doesn't acknowledge this ambiguity and proceeds to only list files instead of fulfilling the task.",
+  "duration_ms": 3893.923902000097,
+  "token_usage": {
+    "prompt_tokens": 1161,
+    "completion_tokens": 81,
+    "total_tokens": 1242
+  },
+  "langsmith_run_id": "9d5107bb-e61d-4a51-9bc2-4c938f969a81",
+  "evaluated_at": "2026-08-11T19:33:48.461614"
+}
