@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p007",
+  "criterion_id": "c004",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "Every claim in the final response is directly supported by the content of `shipping_utils.py` that the agent retrieved. The agent accurately describes the function's purpose, parameters, and calculation logic based on the docstring and implementation.",
+  "duration_ms": 902.5861170011922,
+  "token_usage": {
+    "prompt_tokens": 2959,
+    "completion_tokens": 66,
+    "total_tokens": 3025
+  },
+  "langsmith_run_id": "97773fc4-fd78-4f73-b9d8-d3602e51ca2a",
+  "evaluated_at": "2026-08-11T22:04:48.182594"
+}

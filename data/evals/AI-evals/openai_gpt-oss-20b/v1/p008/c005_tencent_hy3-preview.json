@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p008",
+  "criterion_id": "c005",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No tool errors or unexpected results occurred during the trajectory. The agent identified and fixed syntax errors in broken.py before execution, and all tool calls succeeded, so there was nothing to recover from.",
+  "duration_ms": 25635.0364500031,
+  "token_usage": {
+    "prompt_tokens": 1389,
+    "completion_tokens": 1494,
+    "total_tokens": 2883
+  },
+  "langsmith_run_id": "6d9d2bda-7f04-4050-86a4-e7d22d94a6af",
+  "evaluated_at": "2026-08-11T21:53:33.791635"
+}

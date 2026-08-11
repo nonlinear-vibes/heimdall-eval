@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p007",
+  "criterion_id": "c004",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent's final response accurately reflects the content of `shipping_utils.py` as retrieved by the `get_file_content` tool call. All claims about the function's parameters, calculations, and return value are directly supported by the code, including the validation checks and handling of express and fragile shipping options. The response doesn't add any information not present in the file content.",
+  "duration_ms": 3134.0206539971405,
+  "token_usage": {
+    "prompt_tokens": 2968,
+    "completion_tokens": 94,
+    "total_tokens": 3062
+  },
+  "langsmith_run_id": "8dc22939-6178-4135-9445-dec0f507646c",
+  "evaluated_at": "2026-08-11T22:04:44.013576"
+}

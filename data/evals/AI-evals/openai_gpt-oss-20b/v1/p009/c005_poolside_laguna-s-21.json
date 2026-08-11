@@ -1,0 +1,13 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p009",
+  "criterion_id": "c005",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "a0290cfe-1559-4188-b521-d99906c155e5",
+  "evaluated_at": "2026-08-12T00:56:22.995855",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected ident at line 1 column 2 [type=json_invalid, input_value='No tool errors or unexpe...core of 5 is warranted.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+}

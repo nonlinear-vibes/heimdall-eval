@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p007",
+  "criterion_id": "c005",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No errors occurred in the trajectory.",
+  "duration_ms": 746.3187389948871,
+  "token_usage": {
+    "prompt_tokens": 2849,
+    "completion_tokens": 25,
+    "total_tokens": 2874
+  },
+  "langsmith_run_id": "05ae028d-5c3a-4710-8a3a-58ef63aaf9af",
+  "evaluated_at": "2026-08-11T22:06:04.688782"
+}

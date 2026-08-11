@@ -1,0 +1,13 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p009",
+  "criterion_id": "c002",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "208d9885-4188-4f8a-8d83-3ce7142f4f4e",
+  "evaluated_at": "2026-08-12T00:56:16.488117",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Score: 5  \\nRationale: T...ed calls were observed.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+}

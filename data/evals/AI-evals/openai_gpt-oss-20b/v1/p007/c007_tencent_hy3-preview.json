@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p007",
+  "criterion_id": "c007",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The user's request was clear and unambiguous: describe the calculate_shipping_cost function and its parameters. The agent provided a thorough, accurate explanation, including the function's location, behavior, and a signature. Since there was no ambiguity or contradiction to surface, the agent's response required no special acknowledgment of judgment calls, and it communicated effectively.",
+  "duration_ms": 67921.6156629991,
+  "token_usage": {
+    "prompt_tokens": 2802,
+    "completion_tokens": 4433,
+    "total_tokens": 7235
+  },
+  "langsmith_run_id": "cccfb7cf-fa24-4eda-8ed1-aa3dc2397fc9",
+  "evaluated_at": "2026-08-11T22:09:00.935783"
+}

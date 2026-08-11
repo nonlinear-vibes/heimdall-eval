@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p009",
+  "criterion_id": "c005",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No tool calls returned errors or unexpected results; all calls succeeded. The only discrepancy was the expected value (54) versus the mathematically correct output (55), which is a specification mismatch, not a tool failure. Consequently, the agent did not need to recover from an error, warranting a score of 5.",
+  "duration_ms": 5448.726140006329,
+  "token_usage": {
+    "prompt_tokens": 1658,
+    "completion_tokens": 428,
+    "total_tokens": 2086
+  },
+  "langsmith_run_id": "3305b80b-e2ce-4f07-8a10-6227c87ca374",
+  "evaluated_at": "2026-08-11T21:30:27.509954"
+}

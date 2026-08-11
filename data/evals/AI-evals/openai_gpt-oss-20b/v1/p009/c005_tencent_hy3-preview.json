@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p009",
+  "criterion_id": "c005",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No tool errors or unexpected results occurred during the trajectory; all tool calls succeeded and returned normal output. The agent implemented a correct Fibonacci function and, when the verification output (55) did not match the user's requested value (54), it explained the discrepancy and offered to adjust, but this was not a tool error or failure to recover from.",
+  "duration_ms": 59022.72269099922,
+  "token_usage": {
+    "prompt_tokens": 1625,
+    "completion_tokens": 3607,
+    "total_tokens": 5232
+  },
+  "langsmith_run_id": "c0c8d525-d011-4b14-86cb-31c16ff918c9",
+  "evaluated_at": "2026-08-11T21:31:28.815832"
+}

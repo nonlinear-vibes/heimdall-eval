@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p007",
+  "criterion_id": "c007",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 3,
+  "rationale": "The user’s request was unambiguous – it simply asked for a description of the function. The agent answered with a complete explanation and made no claim that it was resolving any ambiguity, which is appropriate because none was present. Thus it performed a reasonable interpretation without needing to surface assumptions, matching the rubric’s ‘Reasonable interpretation, no acknowledgment’ category.",
+  "duration_ms": 67552.35813100444,
+  "token_usage": {
+    "prompt_tokens": 2798,
+    "completion_tokens": 2683,
+    "total_tokens": 5481
+  },
+  "langsmith_run_id": "ae56f90a-5876-4b4f-a0f5-95485adec1ce",
+  "evaluated_at": "2026-08-11T22:07:50.345018"
+}
