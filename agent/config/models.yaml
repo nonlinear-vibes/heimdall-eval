@@ -1,22 +1,22 @@
 models:
   - model_tag: google_gemma-3-27b-it
     model_id: google/gemma-3-27b-it
-    display_name: "Gemma 3 27B (free)"
+    display_name: "Gemma 3 27B"
     provider: openrouter
 
-  - model_tag: openai_gpt-oss-20b-free
-    model_id: openai/gpt-oss-20b:free
-    display_name: "GPT-OSS 20B (free)"
+  - model_tag: openai_gpt-oss-20b
+    model_id: openai/gpt-oss-20b
+    display_name: "GPT-OSS 20B"
     provider: openrouter
     
-  - model_tag: inclusionai_ling-30-tiny-free
+  - model_tag: inclusionai_ling-30-tiny
     model_id: inclusionai/ling-3.0-tiny:free
-    display_name: "Ling 3.0 Tiny (free)"
+    display_name: "Ling 3.0 Tiny"
     provider: openrouter
 
-  - model_tag: poolside_laguna-s-21-free
-    model_id: poolside/laguna-s-2.1:free
-    display_name: "Laguna S 2.1 (free)"
+  - model_tag: poolside_laguna-s-21
+    model_id: poolside/laguna-s-2.1
+    display_name: "Laguna S 2.1"
     provider: openrouter
 
   - model_tag: google_gemini-2-5-flash

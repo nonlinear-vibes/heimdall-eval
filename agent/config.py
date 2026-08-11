@@ -4,7 +4,7 @@ AGENT_VERSION = "v1"
 
 # --- Constants & Settings ---
 MAX_CHARS = 10000
-MAX_ITERS = 10
+MAX_ITERS = 20
 REASONING_EFFORT = "low"
 
 # --- Directories ---
