@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p005",
+  "criterion_id": "c003",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The final response concisely lists all file‑level changes, mentions the successful run, and omits extraneous commentary. It provides exactly what the user needs to understand the cleanup outcome without unnecessary filler.",
+  "duration_ms": 4337.337908997142,
+  "token_usage": {
+    "prompt_tokens": 4216,
+    "completion_tokens": 456,
+    "total_tokens": 4672
+  },
+  "langsmith_run_id": "0de81087-a99f-4880-85bf-e5386e708da7",
+  "evaluated_at": "2026-08-11T23:56:38.874418"
+}

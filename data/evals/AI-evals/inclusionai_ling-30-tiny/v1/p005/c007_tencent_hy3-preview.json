@@ -1,0 +1,13 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p005",
+  "criterion_id": "c007",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "531a2497-8579-44d0-baba-5c779f117ddd",
+  "evaluated_at": "2026-08-12T00:04:31.646409",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this task, th...hese as judgment calls.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+}

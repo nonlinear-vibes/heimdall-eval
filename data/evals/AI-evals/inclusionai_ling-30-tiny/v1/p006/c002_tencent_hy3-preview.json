@@ -1,0 +1,13 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p006",
+  "criterion_id": "c002",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "8b42f4b1-c576-46ee-9da9-dbb839de5092",
+  "evaluated_at": "2026-08-12T00:06:36.193098",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this trajecto...ite_file` calls at all.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+}

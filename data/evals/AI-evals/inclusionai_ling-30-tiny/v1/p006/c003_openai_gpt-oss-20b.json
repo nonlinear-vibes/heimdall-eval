@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p006",
+  "criterion_id": "c003",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent did not produce a final response for the user—its trajectory ended with no user-facing output. According to the rubric, a missing or empty final response should be scored with the default value of 5.",
+  "duration_ms": 3972.5817920043482,
+  "token_usage": {
+    "prompt_tokens": 6440,
+    "completion_tokens": 400,
+    "total_tokens": 6840
+  },
+  "langsmith_run_id": "a11c7739-9711-4048-a282-14de1dc11ea3",
+  "evaluated_at": "2026-08-12T00:06:43.922031"
+}

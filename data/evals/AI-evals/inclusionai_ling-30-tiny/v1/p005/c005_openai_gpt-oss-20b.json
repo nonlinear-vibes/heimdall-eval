@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p005",
+  "criterion_id": "c005",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "Throughout the entire trajectory every tool call succeeded—no errors or unexpected results were encountered. The agent executed the cleaning steps flawlessly and confirmed them with a successful run of `main.py`. Therefore, the error‑recovery criterion does not apply, and a perfect score of 5 is warranted.",
+  "duration_ms": 3105.243748999783,
+  "token_usage": {
+    "prompt_tokens": 4137,
+    "completion_tokens": 180,
+    "total_tokens": 4317
+  },
+  "langsmith_run_id": "82c6a6c6-cfb6-43b1-a883-8653b6a86155",
+  "evaluated_at": "2026-08-12T00:00:52.143147"
+}

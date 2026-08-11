@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p005",
+  "criterion_id": "c005",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No errors occurred during the agent's trajectory. All tool calls were successful, and the agent proceeded to complete the task as requested. Therefore, there was no opportunity for error recovery and a score of 5 is appropriate.",
+  "duration_ms": 3049.634024995612,
+  "token_usage": {
+    "prompt_tokens": 4604,
+    "completion_tokens": 58,
+    "total_tokens": 4662
+  },
+  "langsmith_run_id": "a16b00d7-9110-4c42-aa8e-756db6f150f5",
+  "evaluated_at": "2026-08-12T00:00:49.037090"
+}

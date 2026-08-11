@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p006",
+  "criterion_id": "c004",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent produced no final response, so there are no claims to evaluate—by the rubric’s rule, the default score is 5.",
+  "duration_ms": 6614.795299996331,
+  "token_usage": {
+    "prompt_tokens": 6373,
+    "completion_tokens": 301,
+    "total_tokens": 6674
+  },
+  "langsmith_run_id": "812e2160-449e-439c-8d23-72d0bde7ed8e",
+  "evaluated_at": "2026-08-12T00:07:04.023723"
+}
