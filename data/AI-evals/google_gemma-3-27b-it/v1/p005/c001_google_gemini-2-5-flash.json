@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p005",
+  "criterion_id": "c001",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The agent did not call any tools, nor did it complete any part of the requested task. It merely suggested a tool call in its response without executing it.",
+  "duration_ms": 841.5042810011073,
+  "token_usage": {
+    "prompt_tokens": 959,
+    "completion_tokens": 50,
+    "total_tokens": 1009
+  },
+  "langsmith_run_id": "e67ced84-8802-40f0-a700-6bb2caf77c51",
+  "evaluated_at": "2026-08-11T19:43:58.315217"
+}

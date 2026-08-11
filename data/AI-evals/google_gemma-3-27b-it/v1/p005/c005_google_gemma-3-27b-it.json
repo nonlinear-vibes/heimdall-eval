@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p005",
+  "criterion_id": "c005",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent's trajectory contains no tool calls, and therefore no errors or unexpected results to recover from. The agent requested a tool call, but the evaluation stops before the tool is actually called and any response is received, so it can't fail. Therefore, it receives a score of 5 by default.",
+  "duration_ms": 3797.0701410013135,
+  "token_usage": {
+    "prompt_tokens": 988,
+    "completion_tokens": 76,
+    "total_tokens": 1064
+  },
+  "langsmith_run_id": "9f0399aa-6fed-4963-870c-016b2da4e0d4",
+  "evaluated_at": "2026-08-11T19:50:13.699768"
+}

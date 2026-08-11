@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p003",
+  "criterion_id": "c007",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 3,
+  "rationale": "The user’s request was unambiguous—write a Fibonacci function and verify it produces 55 for n=10. The agent proceeded with a reasonable plan (checking for an existing file) but did not comment on any ambiguity, nor did it explicitly state any assumption, which matches the rubric’s definition of a reasonable interpretation with no acknowledgement.",
+  "duration_ms": 11900.796878995607,
+  "token_usage": {
+    "prompt_tokens": 1156,
+    "completion_tokens": 858,
+    "total_tokens": 2014
+  },
+  "langsmith_run_id": "e383e357-196c-483b-bd74-102652b0b3aa",
+  "evaluated_at": "2026-08-11T19:43:37.059841"
+}
