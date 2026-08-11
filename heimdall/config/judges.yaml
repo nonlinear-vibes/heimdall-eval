@@ -1,31 +1,30 @@
-# config/judges.yaml
 judges:
-#  - judge_slug: google_gemma-3-27b-it
-#    judge_id: google/gemma-3-27b-it
-#    display_name: "Gemma 3 27B (free)"
-#    provider: openrouter
+  - judge_tag: google_gemma-3-27b-it # can't call functions, works as a judge
+    judge_id: google/gemma-3-27b-it
+    display_name: "Gemma 3 27B"
+    provider: openrouter
 
-#  - judge_slug: openai_gpt-oss-20b-free
-#    judge_id: openai/gpt-oss-20b:free
-#    display_name: "GPT-OSS 20B (free)"
-#    provider: openrouter
+  - judge_tag: openai_gpt-oss-20b # works as agent and judge
+    judge_id: openai/gpt-oss-20b
+    display_name: "GPT-OSS 20B"
+    provider: openrouter
     
-#  - judge_slug: inclusionai_ling-30-tiny-free
+#  - judge_tag: inclusionai_ling-30-tiny-free
 #    judge_id: inclusionai/ling-3.0-tiny:free
 #    display_name: "Ling 3.0 Tiny (free)"
 #    provider: openrouter
 
-#  - judge_slug: poolside_laguna-s-21-free
-#    judge_id: poolside/laguna-s-2.1:free
-#    display_name: "Laguna S 2.1 (free)"
-#    provider: openrouter
+  - judge_tag: poolside_laguna-s-21 # no structured output
+    judge_id: poolside/laguna-s-2.1
+    display_name: "Laguna S 2.1"
+    provider: openrouter
     
-  - judge_slug: google_gemini-2-5-flash
+  - judge_tag: google_gemini-2-5-flash
     judge_id: google/gemini-2.5-flash
     display_name: "Gemini 2.5 Flash"
     provider: openrouter
 
-  - judge_slug: tencent_hy3-preview # not good for judging (JSON output), good for test subject (function calling) 
+  - judge_tag: tencent_hy3-preview # not good for judging (JSON output), good for test subject (function calling) 
     judge_id: tencent/hy3-preview
     display_name: "Tencent Hy3 preview"
     provider: openrouter

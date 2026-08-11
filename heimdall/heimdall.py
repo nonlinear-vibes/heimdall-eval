@@ -10,32 +10,13 @@ from langchain_openai import ChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage
 from config import LOGS_DIR, EVALS_DIR, CRITERIA_YAML, JUDGES_YAML
 
-
-
-
-
 # --- per-criterion structured output schema ---
 class JudgeVerdict(BaseModel):
     score: int = Field(description="Score from 1 (worst) to 5 (best) per the rubric", ge=1, le=5)
     rationale: str = Field(description="Brief justification for the score, 1-3 sentences")
 
-""" In case we add different scales later:
-from pydantic import create_model
-
-def build_verdict_model(scale_min: int, scale_max: int):
-    return create_model(
-        "JudgeVerdict",
-        score=(int, Field(description=f"Score from {scale_min} to {scale_max} per the rubric", ge=scale_min, le=scale_max)),
-        rationale=(str, Field(description="Brief justification for the score, 1-3 sentences")),
-    )
-
-# per criterion:
-verdict_model = build_verdict_model(*parse_scale(criterion["scale"]))  # e.g. "1-5" → (1, 5)
-llm.with_structured_output(verdict_model)
-"""
-
 # --- single judge call, LangChain + LangSmith ---
-def run_single_evaluation(run_id: str, langsmith_trace_id: str, criterion: dict, judge: dict, trajectory: dict, api_key: str) -> dict:
+def run_single_evaluation(run_id: str, agent_version: str, langsmith_trace_id: str, criterion: dict, judge: dict, trajectory: dict, api_key: str) -> dict:
     with open(criterion["rubric_file"]) as f:
             system_prompt = f.read()
 
@@ -53,7 +34,7 @@ def run_single_evaluation(run_id: str, langsmith_trace_id: str, criterion: dict,
         [SystemMessage(system_prompt), HumanMessage(user_prompt)],
         config={
             "run_id": langsmith_trace_id, # what LangSmith indexes by
-            "tags": ["evaluation", criterion["criterion_id"], judge["judge_slug"]],
+            "tags": ["evaluation", criterion["criterion_id"], judge["judge_tag"]],
             "metadata": {
                 "run_id": run_id,
                 "criterion_id": criterion["criterion_id"],
@@ -70,6 +51,7 @@ def run_single_evaluation(run_id: str, langsmith_trace_id: str, criterion: dict,
         "run_id": run_id,
         "criterion_id": criterion["criterion_id"],
         "judge_id": judge["judge_id"],
+        "agent_version": agent_version,
         "score": verdict.score,
         "rationale": verdict.rationale,
         "duration_ms": duration_ms,
@@ -117,18 +99,20 @@ def extract_usage(raw_message) -> dict:
     }
 
 
-def discover_runs(logs_dir: str = "logs") -> list[tuple[str, str, str]]:
-    """Walk logs/<model_slug>/<prompt_id>.jsonl, returning (model_slug, prompt_id, log_path)."""
+def discover_runs(logs_dir: str = "logs") -> list[tuple[str, str, str, str]]:
+    """Walk logs/<model_tag>/<agent_version>/<prompt_id>.jsonl, returning (model_tag, prompt_id, log_path)."""
     runs = []
-    for model_slug in os.listdir(logs_dir):
-        model_dir = os.path.join(logs_dir, model_slug)
+    for model_tag in os.listdir(logs_dir):
+        model_dir = os.path.join(logs_dir, model_tag)
         if not os.path.isdir(model_dir):
             continue
-        for fname in os.listdir(model_dir):
-            if not fname.endswith(".jsonl"):
-                continue
-            prompt_id = fname[: -len(".jsonl")]
-            runs.append((model_slug, prompt_id, os.path.join(model_dir, fname)))
+        for agent_version in os.listdir(model_dir):
+            version_dir = os.path.join(model_dir, agent_version)
+            for fname in os.listdir(version_dir):
+                if not fname.endswith(".jsonl"):
+                    continue
+                prompt_id = fname[: -len(".jsonl")]
+                runs.append((model_tag, prompt_id, agent_version, os.path.join(version_dir, fname)))
     return runs
 
 
@@ -142,26 +126,40 @@ def load_trajectory(log_path: str) -> list[dict]:
     return events
 
 
-def build_judge_trace(trajectory_events: list[dict]) -> dict:
+def build_judge_trace(trajectory_events: list[dict], required_fields: list[str] | None = None) -> dict:
     """Builds the judge-facing view: task + iteration_data only.
     Skips 'start' (run_id, prompt metadata — kept out to avoid judge
     self-preference bias) and iteration_metadata (duration, tokens —
     same reasoning: could let a judge infer model size/cost)."""
 
-    judge_trace = {"task": None, "iterations": []}
+    full_trace = {"task": None, "iterations": []}
 
     for event in trajectory_events:
         if event["event"] == "Task":
-            judge_trace["task"] = event["data"]
+            full_trace["task"] = event["data"]
 
         elif event["event"] == "LLM run":
-            judge_trace["iterations"] = [it["iteration_data"] for it in event["data"]]
+            full_trace["iterations"] = [it["iteration_data"] for it in event["data"]]
 
         elif event["event"] == "Run complete":
-            judge_trace["exit_reason"] = event["data"]["exit_reason"]
-            judge_trace["total_iterations"] = event["data"]["total_iterations"]
+            full_trace["exit_reason"] = event["data"]["exit_reason"]
+            full_trace["total_iterations"] = event["data"]["total_iterations"]
 
-    return judge_trace
+    if not required_fields:
+        return full_trace
+
+    # restrict to a specific subset
+    restricted = {}
+    if "task" in required_fields:
+        restricted["task"] = full_trace["task"]
+    if "final_response" in required_fields:
+        last_iter = full_trace["iterations"][-1] if full_trace["iterations"] else {}
+        restricted["final_response"] = last_iter.get("ai_response")
+    if "function_calls" in required_fields:
+        restricted["function_calls"] = [
+            fc for it in full_trace["iterations"] for fc in it.get("function_calls", [])
+        ]
+    return restricted
 
 
 def extract_field(trajectory_events: list[dict], field: str):
@@ -181,8 +179,6 @@ def write_json(path: str, data: dict):
 
 # --- main sweep ---
 def main():
-
-
     with open(CRITERIA_YAML) as f:
         criteria = yaml.safe_load(f)["criteria"]
 
@@ -194,36 +190,39 @@ def main():
     if api_key is None:
         raise RuntimeError("OpenRouter API key not found.")
 
-    for model_slug, prompt_id, log_path in discover_runs(LOGS_DIR):
+    for model_tag, prompt_id, agent_version, log_path in discover_runs(LOGS_DIR):
         try:
             trajectory_events = load_trajectory(log_path)
             run_id = extract_field(trajectory_events, "run_id")
-            prompt_name = extract_field(trajectory_events, "prompt_name")
         except Exception as e:
             print(f"Skipping {log_path}: failed to load/parse trajectory ({e})")
             continue
 
-        # eval_dir = os.path.join(EVALS_DIR, model_slug, prompt_id)
-        eval_dir = EVALS_DIR / model_slug / prompt_id
+        eval_dir = EVALS_DIR / model_tag / agent_version / prompt_id
         os.makedirs(eval_dir, exist_ok=True)
 
         for criterion in criteria:
+            applicable = criterion.get("applicable_categories")
+            if applicable and extract_field(trajectory_events, "category") not in applicable:
+                continue
+            required_fields = criterion.get("required_fields")
             for judge in judges:
-                eval_path = os.path.join(eval_dir, f"{criterion['criterion_id']}_{judge['judge_slug']}.json")
+                eval_path = os.path.join(eval_dir, f"{criterion['criterion_id']}_{judge['judge_tag']}.json")
 
                 if is_evaluated(eval_path):
                     continue
 
                 try:
                     langsmith_trace_id = str(uuid.uuid4()) # for LangSmith
-                    judge_trace = build_judge_trace(trajectory_events)
-                    result = run_single_evaluation(run_id, langsmith_trace_id, criterion, judge, judge_trace, api_key)
+                    judge_trace = build_judge_trace(trajectory_events, required_fields)
+                    result = run_single_evaluation(run_id, agent_version, langsmith_trace_id, criterion, judge, judge_trace, api_key)
                     write_json(eval_path, result)
                 except Exception as e:
                     write_json(eval_path, {
                         "run_id": run_id,
                         "criterion_id": criterion["criterion_id"],
                         "judge_id": judge["judge_id"],
+                        "agent_version": agent_version,
                         "score": None,
                         "rationale": None,
                         "duration_ms": None,
