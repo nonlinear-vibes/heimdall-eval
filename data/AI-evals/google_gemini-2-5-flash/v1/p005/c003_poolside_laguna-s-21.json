@@ -1,0 +1,13 @@
+{
+  "run_id": "google_gemini-2-5-flash_v1_p005",
+  "criterion_id": "c003",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "af69a269-1fec-488d-8c1b-50f487ac3a25",
+  "evaluated_at": "2026-08-11T22:28:24.556085",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"## Score: 3\\n\\n### Ratio...t of ideal conciseness.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+}
