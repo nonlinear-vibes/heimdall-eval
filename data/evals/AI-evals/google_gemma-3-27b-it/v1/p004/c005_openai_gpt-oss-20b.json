@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p004",
+  "criterion_id": "c005",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The trajectory shows only the initial intent and a single function call with no reported tool failure or unexpected result. Because no error occurred for the agent to recover from, the rubric defaults to the maximum score.",
+  "duration_ms": 3958.093651002855,
+  "token_usage": {
+    "prompt_tokens": 1007,
+    "completion_tokens": 336,
+    "total_tokens": 1343
+  },
+  "langsmith_run_id": "a5d26ec9-3211-4d58-82b6-80c141975d05",
+  "evaluated_at": "2026-08-11T20:55:21.410492"
+}

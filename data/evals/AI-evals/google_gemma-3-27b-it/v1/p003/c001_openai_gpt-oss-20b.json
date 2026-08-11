@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p003",
+  "criterion_id": "c001",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The trajectory shows only an intention to list files; the `get_files_info` call is presented as a JSON string rather than an actual tool invocation, and no file creation or verification steps are executed. The task of writing `fib.py` and confirming `fib(10)==55` was not performed.",
+  "duration_ms": 3187.614817001304,
+  "token_usage": {
+    "prompt_tokens": 998,
+    "completion_tokens": 284,
+    "total_tokens": 1282
+  },
+  "langsmith_run_id": "91b657a1-c63b-4495-acd2-66d436f34063",
+  "evaluated_at": "2026-08-11T19:36:15.603201"
+}

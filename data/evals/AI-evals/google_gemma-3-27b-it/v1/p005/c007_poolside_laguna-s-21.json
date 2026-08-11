@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p005",
+  "criterion_id": "c007",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The request 'Clean up this codebase' is highly ambiguous — it doesn't specify what kind of cleanup is desired (e.g., removing unused code, reformatting, refactoring, deleting files). The agent made no attempt to clarify or state assumptions about the intended scope of cleanup, instead beginning with a generic file listing without addressing the ambiguity.",
+  "duration_ms": 846.2503610062413,
+  "token_usage": {
+    "prompt_tokens": 1095,
+    "completion_tokens": 79,
+    "total_tokens": 1174
+  },
+  "langsmith_run_id": "7d6c14d7-fb0e-4d9b-8b51-fe16a9d7b8c7",
+  "evaluated_at": "2026-08-11T19:53:07.628407"
+}

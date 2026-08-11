@@ -1,0 +1,16 @@
+{
+  "run_id": "google_gemma-3-27b-it_v1_p005",
+  "criterion_id": "c002",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The agent did not make any tool calls. It only described the tool it intended to use, which does not count as tool use per the rubric.",
+  "duration_ms": 876.6474200019729,
+  "token_usage": {
+    "prompt_tokens": 968,
+    "completion_tokens": 48,
+    "total_tokens": 1016
+  },
+  "langsmith_run_id": "92aab9c4-0931-4a83-b7b7-9fc2e6e1b3d2",
+  "evaluated_at": "2026-08-11T19:44:23.563829"
+}
