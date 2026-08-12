@@ -1,5 +1,5 @@
 {
-  "run_id": "openai_gpt-oss-20b-free_v1_p012",
+  "run_id": "openai_gpt-oss-20b_v1_p012",
   "criterion_id": "c007",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
