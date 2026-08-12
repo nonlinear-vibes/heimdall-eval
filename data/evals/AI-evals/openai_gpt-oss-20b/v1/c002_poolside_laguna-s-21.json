@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b_v1_p010",
+  "criterion_id": "c002",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The agent made only two tool calls — listing directory info and then an unproductive search for calculator.py — but never actually located or read calculator.py, never attempted to fix any bug, and produced no meaningful output. The task required finding and editing a specific file, and the agent failed to take the most basic actions (searching, reading) needed to make progress.",
+  "duration_ms": 1069.1849720024038,
+  "token_usage": {
+    "prompt_tokens": 941,
+    "completion_tokens": 87,
+    "total_tokens": 1028
+  },
+  "langsmith_run_id": "1cfcd45d-a256-4a29-849e-f23d03d689d2",
+  "evaluated_at": "2026-08-12T00:54:56.532930"
+}

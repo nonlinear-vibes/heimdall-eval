@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b_v1_p010",
+  "criterion_id": "c003",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The final response is an empty string, which the rubric specifies should be scored as 5 (default value) when the agent fails to generate a meaningful final response.",
+  "duration_ms": 634.719829999085,
+  "token_usage": {
+    "prompt_tokens": 1033,
+    "completion_tokens": 47,
+    "total_tokens": 1080
+  },
+  "langsmith_run_id": "88377ede-612c-4f0c-a9fe-03fb8de516df",
+  "evaluated_at": "2026-08-11T21:11:53.990509"
+}
