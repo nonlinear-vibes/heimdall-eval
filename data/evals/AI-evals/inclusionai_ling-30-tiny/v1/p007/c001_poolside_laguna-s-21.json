@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p007",
+  "criterion_id": "c001",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent successfully located the `calculate_shipping_cost` function in `shipping_utils.py` using file inspection tools. The function was found near the end of the file, and the agent provided an accurate summary of its behavior: calculating base cost by weight ($2.50/kg), adding $0.05 per km beyond the first 50 km, applying a 1.75x multiplier for express shipping, and adding a $4.00 fragile handling fee. The agent correctly identified all four parameters (`weight_kg`, `distance_km`, `is_express`, `is_fragile`) and accurately described their roles. The response aligns fully with the actual file content returned by the tool.",
+  "duration_ms": 1759.2563790003624,
+  "token_usage": {
+    "prompt_tokens": 2694,
+    "completion_tokens": 158,
+    "total_tokens": 2852
+  },
+  "langsmith_run_id": "7b9736ba-97ac-4939-bc28-7444f6314f09",
+  "evaluated_at": "2026-08-12T19:58:24.369879"
+}

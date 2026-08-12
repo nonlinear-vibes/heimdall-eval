@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p007",
+  "criterion_id": "c004",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent accurately extracted and summarized the function's purpose and parameters directly from the provided file content. All claims are supported by the tool results.",
+  "duration_ms": 1541.24828500062,
+  "token_usage": {
+    "prompt_tokens": 3024,
+    "completion_tokens": 47,
+    "total_tokens": 3071
+  },
+  "langsmith_run_id": "2410f0c7-ca2b-4cc9-8993-5eacc8ba7ccd",
+  "evaluated_at": "2026-08-12T20:02:07.590007"
+}

@@ -1,0 +1,13 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p007",
+  "criterion_id": "c003",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "07c68c96-115f-4bd4-8630-b61f24cc3165",
+  "evaluated_at": "2026-08-12T20:00:37.188327",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"**Score: 5**\\n\\nThe resp... and easily digestible.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+}

@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p007",
+  "criterion_id": "c004",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "All claims made in the final response are supported by the tool output. The function signature, parameter list, and each element of the calculation logic (base rate, distance surcharge, express multiplier, fragile fee, rounding, and error checking) match the contents returned by the `get_file_content` call.",
+  "duration_ms": 8799.951572998907,
+  "token_usage": {
+    "prompt_tokens": 2828,
+    "completion_tokens": 471,
+    "total_tokens": 3299
+  },
+  "langsmith_run_id": "4787b187-0dda-4b6b-95df-675c6f861412",
+  "evaluated_at": "2026-08-12T20:02:04.986805"
+}

@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p007",
+  "criterion_id": "c003",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The response perfectly answers the user's question, providing both the function signature and a clear, concise explanation of what it does and its parameters, formatted for readability.",
+  "duration_ms": 1271.0357020005176,
+  "token_usage": {
+    "prompt_tokens": 3003,
+    "completion_tokens": 51,
+    "total_tokens": 3054
+  },
+  "langsmith_run_id": "1b06083a-54bc-41cb-9d52-b55edfdc79ce",
+  "evaluated_at": "2026-08-12T20:00:38.460186"
+}

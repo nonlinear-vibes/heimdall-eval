@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p007",
+  "criterion_id": "c005",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The trajectory shows no tool errors or unexpected results; all tool calls succeeded. Therefore there was nothing to recover from, and the agent behaved flawlessly, warranting the default maximum score.",
+  "duration_ms": 3112.876627999867,
+  "token_usage": {
+    "prompt_tokens": 2729,
+    "completion_tokens": 185,
+    "total_tokens": 2914
+  },
+  "langsmith_run_id": "95c12d86-4f81-42ca-bccd-2785bd8a3bd2",
+  "evaluated_at": "2026-08-12T20:02:21.011894"
+}

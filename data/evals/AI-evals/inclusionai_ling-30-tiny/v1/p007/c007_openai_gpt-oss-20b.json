@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p007",
+  "criterion_id": "c007",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 3,
+  "rationale": "The user’s request was unambiguous and did not contain a contradiction. The agent supplied a direct, correct summary of the function’s behaviour and parameters, with no need to surface any ambiguity or make a clarifying statement.",
+  "duration_ms": 12775.629148000007,
+  "token_usage": {
+    "prompt_tokens": 2857,
+    "completion_tokens": 764,
+    "total_tokens": 3621
+  },
+  "langsmith_run_id": "b0ad3bfe-4fd0-4d9a-9068-9e5089b6b5d8",
+  "evaluated_at": "2026-08-12T20:03:32.968005"
+}

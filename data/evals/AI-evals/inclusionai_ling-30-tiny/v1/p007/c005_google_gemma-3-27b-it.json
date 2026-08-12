@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p007",
+  "criterion_id": "c005",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No errors occurred during the agent's trajectory. It successfully retrieved the file content and then provided a clear and accurate summary of the `calculate_shipping_cost` function and its parameters. The rubric states to score 5 if there were no errors to recover from, which is the case here.",
+  "duration_ms": 5084.88887799831,
+  "token_usage": {
+    "prompt_tokens": 2930,
+    "completion_tokens": 73,
+    "total_tokens": 3003
+  },
+  "langsmith_run_id": "4f9edad2-7776-422b-8c99-a26ac2fdf356",
+  "evaluated_at": "2026-08-12T20:02:17.898144"
+}
