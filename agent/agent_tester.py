@@ -1,15 +1,14 @@
 import os
 import yaml
-import agent
 import docker
 import shutil
 
 from openai import OpenAI
 from dotenv import load_dotenv
 from docker import DockerClient
+from agent_under_test import agent
 from system_prompt import SYSTEM_PROMPT
-from log_utils import log_event, is_run_complete
-from config import LOGS_DIR, AGENT_VERSION, MODELS_YAML, PROMPTS_YAML, WORKSPACES_DIR
+from config import LOGS_DIR, AGENT_VERSION, MODELS_YAML, PROMPTS_YAML, WORKSPACES_DIR, log_event, is_run_complete
 
 
 def main():
