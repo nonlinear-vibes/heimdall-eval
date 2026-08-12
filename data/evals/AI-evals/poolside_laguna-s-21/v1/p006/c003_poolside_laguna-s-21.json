@@ -1,5 +1,5 @@
 {
-  "run_id": "poolside_laguna-s-21-free_v1_p006",
+  "run_id": "poolside_laguna-s-21_v1_p006",
   "criterion_id": "c003",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "02e2b1df-b825-494a-b312-5d92057f4c33",
-  "evaluated_at": "2026-08-11T23:09:22.413692",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"**Score: 3**\\n\\nThe agen...eing optimally concise.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "0a1e9ddd-5446-4388-961c-3a424fa098ab",
+  "evaluated_at": "2026-08-12T18:38:10.882390",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: trailing characters at line 1 column 3 [type=json_invalid, input_value='5 — The response is ap...ut unnecessary padding.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
