@@ -1,5 +1,5 @@
 {
-  "run_id": "poolside_laguna-s-21-free_v1_p001",
+  "run_id": "poolside_laguna-s-21_v1_p001",
   "criterion_id": "c003",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",

@@ -1,5 +1,5 @@
 {
-  "run_id": "poolside_laguna-s-21-free_v1_p001",
+  "run_id": "poolside_laguna-s-21_v1_p001",
   "criterion_id": "c007",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "a44932a1-f9b2-4ac4-9d46-3d1b34bd1d82",
-  "evaluated_at": "2026-08-11T22:58:58.887825",
-  "error": "'NoneType' object has no attribute 'score'"
+  "langsmith_run_id": "63cfbb37-6fac-42b2-9dbb-2a2083192449",
+  "evaluated_at": "2026-08-12T18:29:01.196293",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this task, I ...unambiguous throughout.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
