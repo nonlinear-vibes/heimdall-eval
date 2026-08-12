@@ -1,5 +1,5 @@
 {
-  "run_id": "inclusionai_ling-30-tiny-free_v1_p001",
+  "run_id": "inclusionai_ling-30-tiny_v1_p001",
   "criterion_id": "c002",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
