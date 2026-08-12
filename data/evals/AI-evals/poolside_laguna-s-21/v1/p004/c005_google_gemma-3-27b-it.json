@@ -1,0 +1,16 @@
+{
+  "run_id": "poolside_laguna-s-21_v1_p004",
+  "criterion_id": "c005",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No tool errors or unexpected results occurred in the agent's trajectory. The agent correctly identified the missing file, explored the available files, and ultimately responded to the user to clarify the situation. Therefore, the error recovery criterion doesn't apply cleanly, and a score of 5 is appropriate.",
+  "duration_ms": 2353.6402829995495,
+  "token_usage": {
+    "prompt_tokens": 2214,
+    "completion_tokens": 72,
+    "total_tokens": 2286
+  },
+  "langsmith_run_id": "3429b4bd-fba3-4d92-8912-a0460723cb81",
+  "evaluated_at": "2026-08-11T16:22:14.354363"
+}

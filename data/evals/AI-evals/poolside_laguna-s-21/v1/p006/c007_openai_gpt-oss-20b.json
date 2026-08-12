@@ -1,0 +1,16 @@
+{
+  "run_id": "poolside_laguna-s-21-free_v1_p006",
+  "criterion_id": "c007",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "...",
+  "duration_ms": 6232.83389900098,
+  "token_usage": {
+    "prompt_tokens": 1386,
+    "completion_tokens": 93,
+    "total_tokens": 1479
+  },
+  "langsmith_run_id": "9c1ebc27-0407-423e-b9da-bcc0ac67c20c",
+  "evaluated_at": "2026-08-11T16:07:54.432636"
+}

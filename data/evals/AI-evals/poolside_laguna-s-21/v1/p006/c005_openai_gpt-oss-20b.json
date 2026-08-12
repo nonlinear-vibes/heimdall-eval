@@ -1,0 +1,16 @@
+{
+  "run_id": "poolside_laguna-s-21-free_v1_p006",
+  "criterion_id": "c005",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 3,
+  "rationale": "We need a score 1–5. The user gave an agent trajectory. the cross‑the‑seed info… ……......",
+  "duration_ms": 2119.0249579994997,
+  "token_usage": {
+    "prompt_tokens": 1249,
+    "completion_tokens": 43,
+    "total_tokens": 1292
+  },
+  "langsmith_run_id": "2b218909-a957-4321-a831-790540ac122a",
+  "evaluated_at": "2026-08-11T16:06:03.648018"
+}

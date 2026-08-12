@@ -1,0 +1,16 @@
+{
+  "run_id": "poolside_laguna-s-21_v1_p004",
+  "criterion_id": "c005",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "We need to see if any tool errors or unexpected results occurred. The tool calls were successful and returned results. No errors. Thus rule says score 5. Provide brief rationale. No error encountered. Score 5.",
+  "duration_ms": 2571.8046789988875,
+  "token_usage": {
+    "prompt_tokens": 2051,
+    "completion_tokens": 55,
+    "total_tokens": 2106
+  },
+  "langsmith_run_id": "728b995a-6ab4-495f-ae2f-074788102768",
+  "evaluated_at": "2026-08-11T16:22:16.926965"
+}
