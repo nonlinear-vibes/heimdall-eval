@@ -3,11 +3,14 @@
   "criterion_id": "c005",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
-  "score": null,
-  "rationale": null,
-  "duration_ms": null,
-  "token_usage": null,
-  "langsmith_run_id": "eccf8ad3-da4e-4b1a-8c49-1d56fbaa31a5",
-  "evaluated_at": "2026-08-12T00:17:31.366385",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this trajecto...faults to a score of 5.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "score": 5,
+  "rationale": "The agent's trajectory contains only a single tool call to get_files_info, and no tool errors or unexpected results occurred. Since there was nothing to recover from, this criterion scores 5 by default.",
+  "duration_ms": 4675.580382001499,
+  "token_usage": {
+    "prompt_tokens": 944,
+    "completion_tokens": 114,
+    "total_tokens": 1058
+  },
+  "langsmith_run_id": "edc1c73d-e8bb-4dcd-9c23-2585fad67778",
+  "evaluated_at": "2026-08-12T20:07:42.680312"
 }

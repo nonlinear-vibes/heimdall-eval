@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "61262fb1-a2d8-4b69-9107-18ff6dbfea11",
-  "evaluated_at": "2026-08-12T00:16:04.991644",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected ident at line 1 column 2 [type=json_invalid, input_value=\"I need to evaluate the f...ccording to the rubric.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "7c514f8d-bc1c-4675-97f9-b90c55d5b15b",
+  "evaluated_at": "2026-08-12T20:07:36.592202",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='```json\\n{\\n  \"score\": 1...onse unusable.\"\\n}\\n```', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
