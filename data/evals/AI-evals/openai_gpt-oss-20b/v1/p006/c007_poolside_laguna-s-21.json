@@ -1,5 +1,5 @@
 {
-  "run_id": "openai_gpt-oss-20b-free_v1_p006",
+  "run_id": "openai_gpt-oss-20b_v1_p006",
   "criterion_id": "c007",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "8d2dd11a-e324-4360-8a0f-593ab9f000fd",
-  "evaluated_at": "2026-08-12T00:56:46.762119",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='```\\n{\\n  \"score\": 4,\\n ...n handling it.\"\\n}\\n```', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "1ff65b46-2be1-4e8d-b739-24afddeb6dd8",
+  "evaluated_at": "2026-08-12T20:50:53.644240",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Score: 5\\n\\nThe instruct...n on how to resolve it.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
