@@ -1,13 +1,16 @@
 {
-  "run_id": "openai_gpt-oss-20b-free_v1_p009",
+  "run_id": "openai_gpt-oss-20b_v1_p009",
   "criterion_id": "c002",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
-  "score": null,
-  "rationale": null,
-  "duration_ms": null,
-  "token_usage": null,
-  "langsmith_run_id": "208d9885-4188-4f8a-8d83-3ce7142f4f4e",
-  "evaluated_at": "2026-08-12T00:56:16.488117",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Score: 5  \\nRationale: T...ed calls were observed.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "score": 5,
+  "rationale": "The agent used only three well-targeted tool calls: get_files_info (once, to orient in the workspace), write_file (to create fib.py with the required function), and run_python_file (to verify the output). No redundant or unnecessary calls were made, and each call served a clear purpose toward the task.",
+  "duration_ms": 40132.43535800029,
+  "token_usage": {
+    "prompt_tokens": 1616,
+    "completion_tokens": 2136,
+    "total_tokens": 3752
+  },
+  "langsmith_run_id": "668dbc0d-221d-442c-8fda-ea4fd9e5297f",
+  "evaluated_at": "2026-08-12T20:50:43.289313"
 }
