@@ -1,5 +1,5 @@
 {
-  "run_id": "poolside_laguna-s-21-free_v1_p003",
+  "run_id": "poolside_laguna-s-21_v1_p003",
   "criterion_id": "c005",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "8d2d9eb4-082b-47a8-ae19-ce0ea19e5308",
-  "evaluated_at": "2026-08-11T23:02:52.788102",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected ident at line 1 column 2 [type=json_invalid, input_value='No errors or unexpected ...ult score of 5 applies.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "39dd7335-92df-4f14-bb70-7424f3e056ff",
+  "evaluated_at": "2026-08-12T18:29:16.275635",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected ident at line 1 column 2 [type=json_invalid, input_value='No errors or unexpected ...eps requiring recovery.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
