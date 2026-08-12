@@ -2,9 +2,23 @@
  
 A project exploring how to systematically evaluate coding-agent behaviour: run a fixed agent against a battery of prompts across multiple LLMs, capture full execution trajectories, then score those trajectories against a rubric using multiple LLM judges, cross-checked against human scoring, to see where models succeed, fail, and disagree.
 
-![overall scores](https://github.com/nonlinear-vibes/heimdall-eval/docs/overall_scores.png)
+<br />
 
-![scores per criteria](https://github.com/nonlinear-vibes/heimdall-eval/docs/scores_per_criteria.png)
+<p align="center">
+  <img src="docs/overall_scores.png" width="500" alt="Overall scores of a few test models"><br>
+  Overall scores of a few test models
+</p>
+
+<br />
+
+<p align="center">
+  <img src="docs/scores_per_criteria.png" width="750" alt="Scores by criteria"><br>
+ Scores by criteria
+</p>
+
+<br />
+
+Note: The judge rubrics and prompts have not yet been iterated on for closer human-AI agreement, possibly leading to rubric ambiguity and judge miscalibration. Furthermore, most of the test prompts were deliberately designed to be tricky (false premises, ambiguity, missing files), which produces edge-case that are hard to score consistently.
 
 This is a work in progress. This README describes the current state, not a finished product.
 
@@ -25,11 +39,9 @@ Evaluating an LLM agent is harder than evaluating a normal program: outputs are 
   be checked directly rather than assumed.
   -->
 
-## Project structure
+## ⚙ Project structure
  
-Two independent sub-projects, connected only through a shared data layer —
-deliberately: the agent and the evaluator have no code dependency on each
-other, only a shared file format.
+Two independent sub-projects, connected only through the shared data: the agent and the evaluator have no code dependency on each other, only a shared file format.
  
 ```
 repo/
@@ -52,14 +64,14 @@ repo/
  
 Each sub-project has its own `pyproject.toml`/`uv.lock`/`.env`: different dependencies (raw OpenAI SDK + Docker for the agent, LangChain + LangSmith for the evaluator)
  
-## How it works
+## 🔧 How it works
  
 ### 1. Agent harness (`agent/`)
  
-The agent is a tool-using coding assistant (file read/write/list, Python execution — optionally sandboxed in Docker) branched from [AI agent](https://github.com/nonlinear-vibes/agentic-AI), built directly on the OpenAI SDK and OpenRouter endpoints. `agent_tester.py` sweeps every `(model, prompt)` pair defined in `config/models.yaml` and `config/prompts.yaml`:
+The agent is a tool-using coding assistant branched from [AI agent](https://github.com/nonlinear-vibes/agentic-AI), built directly with OpenAI SDK and OpenRouter endpoints. `agent_tester.py` sweeps every `(model, prompt)` pair defined in `config/models.yaml` and `config/prompts.yaml`:
  
 - Each prompt gets a fresh, isolated workspace, optionally seeded from a `fixtures/` directory (for tasks like "find the bug in this existing script").
-- Every LLM call and tool call is logged as structured JSON Lines to `data/logs/<model_tag>/<prompt_id>.jsonl` — durations, token usage, reasoning text, tool call arguments/results, and the exit condition (finished normally, hit the iteration cap, or errored).
+- Every LLM call and tool call is logged as structured JSON Lines to `data/logs/<model_tag>/<prompt_id>.jsonl`: durations, token usage, reasoning text, tool call arguments/results, and the exit condition (finished normally, hit the iteration cap, or errored).
 - The sweep is resumable: a run already ending in a completed `"Run complete"` event is skipped; partial/corrupted logs from a crash are cleared and retried.
   
 ### 2. Evaluator - Heimdall (`heimdall/`)
