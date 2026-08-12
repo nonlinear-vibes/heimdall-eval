@@ -3,11 +3,14 @@
   "criterion_id": "c005",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": null,
-  "rationale": null,
-  "duration_ms": null,
-  "token_usage": null,
-  "langsmith_run_id": "35c3377c-78ce-4f84-b662-af411b1d07be",
-  "evaluated_at": "2026-08-11T23:14:18.719532",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='score: 5\\n\\nrationale: N...5 per the instructions.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "score": 5,
+  "rationale": "No errors occurred in the trajectory. The agent successfully read and identified the bug (missing multiplication by quantity in inventory.py), applied the fix correctly, and verified the result by running report.py and manually confirming the expected total of $176.50. There was nothing to recover from.",
+  "duration_ms": 944.847820999712,
+  "token_usage": {
+    "prompt_tokens": 2629,
+    "completion_tokens": 78,
+    "total_tokens": 2707
+  },
+  "langsmith_run_id": "c8ddb0e4-5d6e-4ddd-a830-f0d4972c3ef9",
+  "evaluated_at": "2026-08-12T18:41:32.355371"
 }
