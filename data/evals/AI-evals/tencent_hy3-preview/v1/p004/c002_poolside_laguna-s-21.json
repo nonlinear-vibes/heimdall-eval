@@ -1,0 +1,13 @@
+{
+  "run_id": "tencent_hy3-preview_v1_p004",
+  "criterion_id": "c002",
+  "judge_id": "poolside/laguna-s-2.1",
+  "agent_version": "v1",
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "35e29249-c3de-42fd-bdba-4fc507cda97e",
+  "evaluated_at": "2026-08-11T23:44:16.430470",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 1**\\n\\n**Ration...toward the stated goal.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+}
