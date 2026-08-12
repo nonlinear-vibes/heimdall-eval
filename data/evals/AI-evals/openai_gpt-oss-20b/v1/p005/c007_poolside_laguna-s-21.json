@@ -1,5 +1,5 @@
 {
-  "run_id": "openai_gpt-oss-20b-free_v1_p005",
+  "run_id": "openai_gpt-oss-20b_v1_p005",
   "criterion_id": "c007",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "6e762056-5f1e-4fb1-b920-5ee1b81a7069",
-  "evaluated_at": "2026-08-12T00:56:38.752687",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: trailing characters at line 3 column 1 [type=json_invalid, input_value='5\\n\\nThe task was \"Clean...gned with their intent.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "3ce6d654-46da-491f-919d-8a9cc4301813",
+  "evaluated_at": "2026-08-12T20:50:51.417913",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='## Score: 5\\n\\nThe reque...lign with their vision.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
