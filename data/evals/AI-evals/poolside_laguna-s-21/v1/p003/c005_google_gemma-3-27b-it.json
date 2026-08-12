@@ -1,0 +1,16 @@
+{
+  "run_id": "poolside_laguna-s-21-free_v1_p003",
+  "criterion_id": "c005",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No tool errors or unexpected results occurred in the agent's trajectory. The agent successfully completed the task without any failures to recover from, so a score of 5 is appropriate as there was nothing to evaluate in terms of error recovery.",
+  "duration_ms": 1414.2378229989845,
+  "token_usage": {
+    "prompt_tokens": 1702,
+    "completion_tokens": 60,
+    "total_tokens": 1762
+  },
+  "langsmith_run_id": "09955510-5475-4b22-9388-7aa518fc18c5",
+  "evaluated_at": "2026-08-11T15:50:41.003851"
+}
