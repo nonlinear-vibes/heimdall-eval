@@ -1,0 +1,16 @@
+{
+  "run_id": "tencent_hy3-preview_v1_p003",
+  "criterion_id": "c001",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent successfully created fib.py with a correct fib(n) function implementing 0-indexed Fibonacci numbers (fib(0)=0, fib(1)=1). It then ran the file using run_python_file, and the output confirmed 'fib(10) = 55' and 'Verification: fib(10) == 55 is True', satisfying all requirements with concrete tool-based verification.",
+  "duration_ms": 7086.697889000789,
+  "token_usage": {
+    "prompt_tokens": 1850,
+    "completion_tokens": 201,
+    "total_tokens": 2051
+  },
+  "langsmith_run_id": "4df886bb-780e-48a4-af76-0dfdfc8ac053",
+  "evaluated_at": "2026-08-11T17:21:35.094604"
+}

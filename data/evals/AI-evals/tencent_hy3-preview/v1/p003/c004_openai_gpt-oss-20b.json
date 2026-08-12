@@ -1,0 +1,16 @@
+{
+  "run_id": "tencent_hy3-preview_v1_p003",
+  "criterion_id": "c004",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The final response accurately states that a `fib.py` file was created, that it contains a `fib(n)` function with the specified behavior, and that running the file produced the expected output `fib(10) = 55` and confirmation of correctness. Each of these claims is directly supported by the `write_file` and `run_python_file` results in the trajectory.",
+  "duration_ms": 5480.099156997312,
+  "token_usage": {
+    "prompt_tokens": 2010,
+    "completion_tokens": 315,
+    "total_tokens": 2325
+  },
+  "langsmith_run_id": "d5d1a109-9179-4abe-87b3-c742b5f21990",
+  "evaluated_at": "2026-08-11T17:24:21.135068"
+}

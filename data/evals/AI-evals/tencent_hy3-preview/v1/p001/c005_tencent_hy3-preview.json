@@ -1,0 +1,16 @@
+{
+  "run_id": "tencent_hy3-preview_v1_p001",
+  "criterion_id": "c005",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent's trajectory contains no tool errors or unexpected results, so there were no issues requiring error recovery. All tool calls executed successfully on the first attempt.",
+  "duration_ms": 2663.3231279993197,
+  "token_usage": {
+    "prompt_tokens": 1547,
+    "completion_tokens": 217,
+    "total_tokens": 1764
+  },
+  "langsmith_run_id": "e3b497de-ef24-44f2-bd5e-279d83f9fd40",
+  "evaluated_at": "2026-08-11T17:09:14.287101"
+}

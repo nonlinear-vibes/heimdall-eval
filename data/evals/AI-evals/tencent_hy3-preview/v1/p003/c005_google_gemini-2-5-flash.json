@@ -1,0 +1,16 @@
+{
+  "run_id": "tencent_hy3-preview_v1_p003",
+  "criterion_id": "c005",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No errors were encountered in the trajectory. The agent successfully completed all steps without any tool failures or unexpected results, so this criterion does not apply. It is scored 5 by default.",
+  "duration_ms": 1279.5734370010905,
+  "token_usage": {
+    "prompt_tokens": 2000,
+    "completion_tokens": 55,
+    "total_tokens": 2055
+  },
+  "langsmith_run_id": "e6247c3b-92f9-41cc-8099-a38f78176d63",
+  "evaluated_at": "2026-08-11T17:25:09.022857"
+}
