@@ -1,5 +1,5 @@
 {
-  "run_id": "poolside_laguna-s-21-free_v1_p011",
+  "run_id": "poolside_laguna-s-21_v1_p011",
   "criterion_id": "c002",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "7363ff5a-f4a3-4dc5-99ef-c6d3d0b35b95",
-  "evaluated_at": "2026-08-11T22:51:30.173865",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this trajecto...complete the core task.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "90812e87-af2e-464f-8a48-58615c56cc35",
+  "evaluated_at": "2026-08-12T18:25:06.141717",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this trajecto...bed and actual actions.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
