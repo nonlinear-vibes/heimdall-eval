@@ -3,11 +3,14 @@
   "criterion_id": "c005",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": null,
-  "rationale": null,
-  "duration_ms": null,
-  "token_usage": null,
-  "langsmith_run_id": "c715220f-0c4f-44b5-a38f-e9fadce3bdd4",
-  "evaluated_at": "2026-08-12T00:18:06.308771",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected ident at line 1 column 2 [type=json_invalid, input_value=\"No tool errors or unexpe...faults to a score of 5.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "score": 5,
+  "rationale": "No tool errors or unexpected results occurred in this trajectory. The agent successfully planned and executed the task without encountering any errors to recover from, so it scores 5 by default according to the rubric.",
+  "duration_ms": 772.981019999861,
+  "token_usage": {
+    "prompt_tokens": 1009,
+    "completion_tokens": 53,
+    "total_tokens": 1062
+  },
+  "langsmith_run_id": "73211ea7-0cb3-4d33-b1c9-3390ba6e33a0",
+  "evaluated_at": "2026-08-12T20:19:08.457558"
 }
