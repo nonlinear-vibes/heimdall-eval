@@ -1,5 +1,5 @@
 {
-  "run_id": "openai_gpt-oss-20b-free_v1_p008",
+  "run_id": "openai_gpt-oss-20b_v1_p008",
   "criterion_id": "c005",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
