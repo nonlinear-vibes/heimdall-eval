@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p011",
+  "criterion_id": "c004",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "All claims in the final response are directly supported by the README content retrieved by the get_file_content tool call. The description of the project, its purpose, output file, and configuration location match the README exactly, with no unverified or fabricated statements.",
+  "duration_ms": 888.6087179998867,
+  "token_usage": {
+    "prompt_tokens": 1525,
+    "completion_tokens": 360,
+    "total_tokens": 1885
+  },
+  "langsmith_run_id": "b11dd5ea-3a9c-4141-bbaa-51b78e293f07",
+  "evaluated_at": "2026-08-11T21:17:57.163952"
+}

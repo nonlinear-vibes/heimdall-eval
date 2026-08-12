@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p012",
+  "criterion_id": "c005",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "None of the tool calls in the trajectory produced an error or unexpected result. All actions succeeded, so there was nothing to recover from, and the agent did not encounter any failure that required error handling.",
+  "duration_ms": 2803.3701250024023,
+  "token_usage": {
+    "prompt_tokens": 1389,
+    "completion_tokens": 198,
+    "total_tokens": 1587
+  },
+  "langsmith_run_id": "a77714f9-69cc-4626-aa16-7c32ef996a37",
+  "evaluated_at": "2026-08-11T21:08:10.295606"
+}

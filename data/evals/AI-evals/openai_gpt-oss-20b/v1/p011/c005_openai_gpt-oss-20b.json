@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p011",
+  "criterion_id": "c005",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent executed two tool calls—`get_files_info` and `get_file_content`—both of which returned successful results. Since no tool errors or unexpected results occurred, there was nothing to recover from; thus, the default score is 5.",
+  "duration_ms": 2532.167474004382,
+  "token_usage": {
+    "prompt_tokens": 1259,
+    "completion_tokens": 171,
+    "total_tokens": 1430
+  },
+  "langsmith_run_id": "a329d7fc-183a-4471-8e89-b6852822bb01",
+  "evaluated_at": "2026-08-11T21:18:34.701861"
+}

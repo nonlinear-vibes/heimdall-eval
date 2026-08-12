@@ -1,0 +1,16 @@
+{
+  "run_id": "openai_gpt-oss-20b-free_v1_p010",
+  "criterion_id": "c001",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The agent never located or edited `calculator.py`. After listing project files, it found only five existing files and concluded the file was missing, without attempting a fix or providing a corrected file. Thus the requested bug fix was not performed.",
+  "duration_ms": 8229.782720998628,
+  "token_usage": {
+    "prompt_tokens": 951,
+    "completion_tokens": 134,
+    "total_tokens": 1085
+  },
+  "langsmith_run_id": "5adc8474-8cae-4939-8e00-796077798bd7",
+  "evaluated_at": "2026-08-11T21:10:07.947697"
+}
