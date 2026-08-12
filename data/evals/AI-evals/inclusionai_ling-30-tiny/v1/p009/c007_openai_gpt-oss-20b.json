@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p009",
+  "criterion_id": "c007",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The user‑request is implicitly (… **“?‑?… … … ?? … ?”**… … … …",
+  "duration_ms": 1784.4776310012094,
+  "token_usage": {
+    "prompt_tokens": 2183,
+    "completion_tokens": 52,
+    "total_tokens": 2235
+  },
+  "langsmith_run_id": "5c1d82e0-881d-4a16-9829-2cd911c7f980",
+  "evaluated_at": "2026-08-12T19:31:18.083475"
+}

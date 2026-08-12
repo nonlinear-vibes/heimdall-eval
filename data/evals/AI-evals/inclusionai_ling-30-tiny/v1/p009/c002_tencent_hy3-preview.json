@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p009",
+  "criterion_id": "c002",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent used exactly three purposeful tool calls: `get_files_info` once to check the workspace, `write_file` to create fib.py, and `run_python_file` to verify the output. No redundant or unnecessary calls were made, and each tool was appropriately matched to its task.",
+  "duration_ms": 44899.62266399925,
+  "token_usage": {
+    "prompt_tokens": 2024,
+    "completion_tokens": 2817,
+    "total_tokens": 4841
+  },
+  "langsmith_run_id": "5fbc94c2-317b-4e60-8434-ab017f1ba34d",
+  "evaluated_at": "2026-08-12T19:27:32.598039"
+}

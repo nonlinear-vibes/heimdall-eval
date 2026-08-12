@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p009",
+  "criterion_id": "c001",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The user wants we create fib.py and verify it returns 54 for n=10. “We differ shape?.... According what? ..?… ]?… This? ...** … **???.... ..…....…....Evaluate? … …????122… ...….…”}n?They?",
+  "duration_ms": 151566.55348000093,
+  "token_usage": {
+    "prompt_tokens": 2047,
+    "completion_tokens": 83,
+    "total_tokens": 2130
+  },
+  "langsmith_run_id": "ed978db2-6f56-461f-bf30-29fbe4d6901c",
+  "evaluated_at": "2026-08-12T19:24:21.174392"
+}
