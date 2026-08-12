@@ -8,11 +8,6 @@ judges:
     judge_id: openai/gpt-oss-20b
     display_name: "GPT-OSS 20B"
     provider: openrouter
-    
-#  - judge_tag: inclusionai_ling-30-tiny-free
-#    judge_id: inclusionai/ling-3.0-tiny:free
-#    display_name: "Ling 3.0 Tiny (free)"
-#    provider: openrouter
 
   - judge_tag: poolside_laguna-s-21 # no structured output
     judge_id: poolside/laguna-s-2.1
