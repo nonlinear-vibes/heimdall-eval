@@ -1,0 +1,16 @@
+{
+  "run_id": "tencent_hy3-preview_v1_p007",
+  "criterion_id": "c005",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent made no tool calls that returned errors or unexpected results. It successfully listed the directory, read the file, and produced the correct summary, so there was nothing to recover from.",
+  "duration_ms": 1689.440572001331,
+  "token_usage": {
+    "prompt_tokens": 3385,
+    "completion_tokens": 120,
+    "total_tokens": 3505
+  },
+  "langsmith_run_id": "5ec90fe5-b754-4632-8a38-14b68394c2a6",
+  "evaluated_at": "2026-08-11T18:09:53.526197"
+}

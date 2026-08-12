@@ -1,0 +1,16 @@
+{
+  "run_id": "tencent_hy3-preview_v1_p007",
+  "criterion_id": "c001",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent used the tools to locate and read `shipping_utils.py`, correctly identified the `calculate_shipping_cost` function, and provided a complete explanation of its behavior and the four parameters it considers. All requested information was supplied.",
+  "duration_ms": 4845.236863999162,
+  "token_usage": {
+    "prompt_tokens": 3372,
+    "completion_tokens": 219,
+    "total_tokens": 3591
+  },
+  "langsmith_run_id": "301d1677-c812-4ce2-aa68-851249486205",
+  "evaluated_at": "2026-08-11T18:04:34.248901"
+}

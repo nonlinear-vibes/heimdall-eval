@@ -1,0 +1,16 @@
+{
+  "run_id": "tencent_hy3-preview_v1_p008",
+  "criterion_id": "c001",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent successfully identified all issues in the `broken.py` file, applied the necessary fixes, and verified that the script ran cleanly after the changes. The `run_python_file` tool call confirmed that the script executed without errors and produced the expected output.",
+  "duration_ms": 821.2360050019925,
+  "token_usage": {
+    "prompt_tokens": 2256,
+    "completion_tokens": 72,
+    "total_tokens": 2328
+  },
+  "langsmith_run_id": "74fdd51f-a1a7-42bb-96d7-ce5a69897eb8",
+  "evaluated_at": "2026-08-11T17:47:30.986163"
+}

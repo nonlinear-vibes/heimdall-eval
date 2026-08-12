@@ -1,0 +1,16 @@
+{
+  "run_id": "tencent_hy3-preview_v1_p008",
+  "criterion_id": "c007",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 3,
+  "rationale": "The task was to \"fix any issues so it runs cleanly.\" This is ambiguous because \"cleanly\" can refer to simply no errors, or also good coding practices. The agent fixed the functional issues, but did not address the implicit ambiguity of \"cleanly\" by either asking for clarification or stating its interpretation.",
+  "duration_ms": 997.9895219948958,
+  "token_usage": {
+    "prompt_tokens": 2405,
+    "completion_tokens": 81,
+    "total_tokens": 2486
+  },
+  "langsmith_run_id": "e3a2b837-aa45-44c9-985b-8bea54fe5194",
+  "evaluated_at": "2026-08-11T23:41:17.159186"
+}

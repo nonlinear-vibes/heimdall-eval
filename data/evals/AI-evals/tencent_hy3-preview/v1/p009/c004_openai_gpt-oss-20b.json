@@ -1,0 +1,16 @@
+{
+  "run_id": "tencent_hy3-preview_v1_p009",
+  "criterion_id": "c004",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The final response accurately states that the Fibonacci function was written to `fib.py`, correctly uses 0-indexing, and that executing the script yields fib(10)=55. All these statements are directly supported by the `write_file` and `run_python_file` results in the trajectory. No unverified or fabricated claims are present.",
+  "duration_ms": 5509.19129599788,
+  "token_usage": {
+    "prompt_tokens": 4134,
+    "completion_tokens": 319,
+    "total_tokens": 4453
+  },
+  "langsmith_run_id": "4ceff5f0-eb05-4b9c-b4cc-e260de026999",
+  "evaluated_at": "2026-08-11T17:16:03.030327"
+}
