@@ -1,5 +1,5 @@
 {
-  "run_id": "poolside_laguna-s-21-free_v1_p009",
+  "run_id": "poolside_laguna-s-21_v1_p009",
   "criterion_id": "c005",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "8ff9ae28-debc-4e80-8e6c-3ffdd3664c3a",
-  "evaluated_at": "2026-08-11T23:00:10.866935",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"**Score: 5**\\n\\nNo tool ...ult score of 5 applies.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "0ba3c355-d96f-44cd-9cb8-0500d5f36eda",
+  "evaluated_at": "2026-08-12T18:29:08.781376",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Score: 5\\n\\nRationale: N...ts to 5 per the rubric.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
