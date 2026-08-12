@@ -1,7 +1,5 @@
-# agent_tester.py
 import os
 import yaml
-import json
 import agent
 import docker
 import shutil
