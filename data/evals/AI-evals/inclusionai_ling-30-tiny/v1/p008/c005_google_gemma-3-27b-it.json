@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p008",
+  "criterion_id": "c005",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No errors occurred during the agent's trajectory that required recovery. The agent successfully identified and fixed the issues in `broken.py` after an initial attempt to run the file, which returned a SyntaxError as expected, and then successfully ran the corrected code. The agent diagnosed the error from the STDERR output and adapted its next action by rewriting the file with the necessary fixes.",
+  "duration_ms": 3104.0653529998963,
+  "token_usage": {
+    "prompt_tokens": 2254,
+    "completion_tokens": 89,
+    "total_tokens": 2343
+  },
+  "langsmith_run_id": "7fa11664-a428-4f58-83ba-0bc46bce2b8a",
+  "evaluated_at": "2026-08-12T19:56:24.647215"
+}

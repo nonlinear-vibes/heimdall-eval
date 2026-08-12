@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p008",
+  "criterion_id": "c001",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent successfully ran the `broken.py` file, identified the syntax error and the runtime error, and fixed both issues. It then verified that the script runs cleanly after the fixes, as evidenced by the `run_python_file` tool call showing successful execution and the expected output.",
+  "duration_ms": 1115.7043229995907,
+  "token_usage": {
+    "prompt_tokens": 2227,
+    "completion_tokens": 77,
+    "total_tokens": 2304
+  },
+  "langsmith_run_id": "738cf27d-31a3-43d7-ab14-c7a7cd7183e9",
+  "evaluated_at": "2026-08-12T19:52:32.375222"
+}

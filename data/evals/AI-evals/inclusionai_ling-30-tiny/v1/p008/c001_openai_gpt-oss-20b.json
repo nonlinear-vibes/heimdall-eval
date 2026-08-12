@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p008",
+  "criterion_id": "c001",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent located `broken.py`, detected a syntax error and a runtime issue, rewrote the file with the necessary corrections, ran it again to confirm it executed without errors, and provided a correct output. All requested tasks were fully satisfied.",
+  "duration_ms": 2794.4954819995473,
+  "token_usage": {
+    "prompt_tokens": 2129,
+    "completion_tokens": 182,
+    "total_tokens": 2311
+  },
+  "langsmith_run_id": "ff577fa6-20e1-4682-891e-79db3532b514",
+  "evaluated_at": "2026-08-12T19:52:29.841638"
+}
