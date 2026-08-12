@@ -1,0 +1,16 @@
+{
+  "run_id": "tencent_hy3-preview_v1_p012",
+  "criterion_id": "c005",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No tool errors or unexpected results occurred during the trajectory. All tool calls (get_files_info, get_file_content, write_file, and run_python_file) executed successfully on the first attempt, so there was nothing for the agent to recover from.",
+  "duration_ms": 38648.8804469991,
+  "token_usage": {
+    "prompt_tokens": 2575,
+    "completion_tokens": 2504,
+    "total_tokens": 5079
+  },
+  "langsmith_run_id": "9bd763e9-e6f6-4474-b85a-33116b60997d",
+  "evaluated_at": "2026-08-11T16:36:00.267140"
+}

@@ -1,0 +1,16 @@
+{
+  "run_id": "tencent_hy3-preview_v1_p012",
+  "criterion_id": "c005",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 3,
+  "rationale": "We need...",
+  "duration_ms": 21499.938914999802,
+  "token_usage": {
+    "prompt_tokens": 2577,
+    "completion_tokens": 757,
+    "total_tokens": 3334
+  },
+  "langsmith_run_id": "dff5a1a7-6513-492d-99a4-f7b630afd5d8",
+  "evaluated_at": "2026-08-11T16:35:20.213480"
+}
