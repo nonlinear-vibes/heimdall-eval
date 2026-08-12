@@ -2,6 +2,10 @@
  
 A project exploring how to systematically evaluate coding-agent behaviour: run a fixed agent against a battery of prompts across multiple LLMs, capture full execution trajectories, then score those trajectories against a rubric using multiple LLM judges, cross-checked against human scoring, to see where models succeed, fail, and disagree.
 
+![overall scores](https://github.com/nonlinear-vibes/heimdall-eval/docs/overall_scores.png)
+
+![scores per criteria](https://github.com/nonlinear-vibes/heimdall-eval/docs/scores_per_criteria.png)
+
 This is a work in progress. This README describes the current state, not a finished product.
 
 <!--
