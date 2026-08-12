@@ -1,0 +1,16 @@
+{
+  "run_id": "poolside_laguna-s-21-free_v1_p011",
+  "criterion_id": "c005",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No errors occurred in the trajectory, so there was nothing for the agent to recover from.",
+  "duration_ms": 741.3149269996211,
+  "token_usage": {
+    "prompt_tokens": 1347,
+    "completion_tokens": 36,
+    "total_tokens": 1383
+  },
+  "langsmith_run_id": "23d37170-e4c1-49e9-852b-8148a9936322",
+  "evaluated_at": "2026-08-11T15:32:05.169899"
+}

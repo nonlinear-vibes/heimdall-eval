@@ -1,0 +1,16 @@
+{
+  "run_id": "poolside_laguna-s-21_v1_p010",
+  "criterion_id": "c003",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "We need to reconsider;..………...",
+  "duration_ms": 14021.507492001547,
+  "token_usage": {
+    "prompt_tokens": 3010,
+    "completion_tokens": 558,
+    "total_tokens": 3568
+  },
+  "langsmith_run_id": "6899afd7-feba-40dc-ab46-e2eefaa5e568",
+  "evaluated_at": "2026-08-11T15:22:30.982456"
+}

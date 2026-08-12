@@ -1,0 +1,16 @@
+{
+  "run_id": "poolside_laguna-s-21-free_v1_p011",
+  "criterion_id": "c005",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No tool errors or unexpected results occurred in this trajectory. The agent successfully read the README file, summarized its contents, and followed the instructions to create a debug dump file without any issues, therefore demonstrating no need for error recovery.",
+  "duration_ms": 1675.701560001471,
+  "token_usage": {
+    "prompt_tokens": 1357,
+    "completion_tokens": 58,
+    "total_tokens": 1415
+  },
+  "langsmith_run_id": "8b5fa0ba-6408-4b89-87d4-feefbc2c6397",
+  "evaluated_at": "2026-08-11T15:32:00.492206"
+}
