@@ -3,11 +3,14 @@
   "criterion_id": "c002",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": null,
-  "rationale": null,
-  "duration_ms": null,
-  "token_usage": null,
-  "langsmith_run_id": "3b1e7c40-2e8f-447d-bd82-87dfc7a05cfc",
-  "evaluated_at": "2026-08-12T00:13:53.649321",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected ident at line 1 column 2 [type=json_invalid, input_value='I\\'ll evaluate the tool ...ssful tool invocations.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "score": 1,
+  "rationale": "The agent made no actual tool calls — its entire response was a description of planned actions framed as a JSON function block, but none of the functions were executed. The trajectory shows zero tool invocations, so there is no evidence it ever listed files, read `calculator.py`, or attempted any fix or test. Since the task plainly required reading and modifying a file, this amounts to little or no meaningful tool use.",
+  "duration_ms": 1257.7185459995235,
+  "token_usage": {
+    "prompt_tokens": 1010,
+    "completion_tokens": 96,
+    "total_tokens": 1106
+  },
+  "langsmith_run_id": "16abeebc-1232-4377-9027-f29b71baef6f",
+  "evaluated_at": "2026-08-12T20:06:55.118597"
 }
