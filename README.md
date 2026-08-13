@@ -18,6 +18,13 @@ A project exploring how to systematically evaluate coding-agent behaviour: run a
 
 <br />
 
+<p align="center">
+  <img src="docs/least_squares.png" width="550" alt="Least squares fit"><br>
+ Human-AI agreement
+</p>
+
+<br />
+
 Note: The judge rubrics and prompts have not yet been iterated on for closer human-AI agreement, possibly leading to rubric ambiguity and judge miscalibration. Furthermore, most of the test prompts were deliberately designed to be tricky (false premises, ambiguity, missing files), which produces edge-case that are hard to score consistently.
 
 This is a work in progress. This README describes the current state, not a finished product.
