@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "c58680de-4d0f-41d4-8fc6-2b65e41bd436",
-  "evaluated_at": "2026-08-12T19:58:00.450347",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 5**\\n\\n**Ration...outcomes are described.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "10beafae-6146-4c3e-84c7-e418407ed920",
+  "evaluated_at": "2026-08-13T01:20:06.778640",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: trailing characters at line 1 column 3 [type=json_invalid, input_value=\"5 — Fully grounded. Th...about the missing file.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
