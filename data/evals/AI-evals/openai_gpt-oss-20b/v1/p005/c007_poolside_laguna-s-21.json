@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "3ce6d654-46da-491f-919d-8a9cc4301813",
-  "evaluated_at": "2026-08-12T20:50:51.417913",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='## Score: 5\\n\\nThe reque...lign with their vision.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "fef8eedc-c421-4c80-b946-954e9855e88d",
+  "evaluated_at": "2026-08-13T01:33:58.570527",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: trailing characters at line 1 column 3 [type=json_invalid, input_value='5 — The request \"Clean...ng the ambiguous scope.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
