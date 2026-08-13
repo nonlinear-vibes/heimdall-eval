@@ -20,7 +20,7 @@ A project exploring how to systematically evaluate coding-agent behaviour: run a
 
 <p align="center">
   <img src="docs/least_squares.png" width="550" alt="Least squares fit"><br>
- Human-AI agreement (without fine-tuning)
+ Human-AI agreement without fine-tuning ($R^2 = 0.86$)
 </p>
 
 <br />
