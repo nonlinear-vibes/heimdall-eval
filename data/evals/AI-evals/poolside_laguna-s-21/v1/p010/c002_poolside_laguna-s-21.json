@@ -1,5 +1,5 @@
 {
-  "run_id": "poolside_laguna-s-21_v1_p008",
+  "run_id": "poolside_laguna-s-21_v1_p010",
   "criterion_id": "c002",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "34041621-7e4b-4d56-8d32-9e5270572072",
-  "evaluated_at": "2026-08-12T18:38:12.985635",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"**Score: 5**\\n\\nThe agen... and fixing the issues.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "1a3c7eaa-a400-41e0-8462-13467dafeaa0",
+  "evaluated_at": "2026-08-13T00:15:20.913265",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 3**\\n\\nThe agen...cing the investigation.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
