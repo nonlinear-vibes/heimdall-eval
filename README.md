@@ -20,7 +20,7 @@ A project exploring how to systematically evaluate coding-agent behaviour: run a
 
 <p align="center">
   <img src="docs/least_squares.png" width="550" alt="Least squares fit"><br>
- Human-AI agreement
+ Human-AI agreement (without fine-tuning)
 </p>
 
 <br />
