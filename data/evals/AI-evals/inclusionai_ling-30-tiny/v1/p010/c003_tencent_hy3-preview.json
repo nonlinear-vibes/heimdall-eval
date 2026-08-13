@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p010",
+  "criterion_id": "c003",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent failed to produce a final response to the user, as the trajectory ended after reaching the maximum iterations without any user-facing output. Per the rubric's additional guidance, if the agent failed to generate a meaningful final response (such as an empty string), score it as a 5 (default value), since the failure is evaluated with other metrics.",
+  "duration_ms": 6274.9532609996095,
+  "token_usage": {
+    "prompt_tokens": 3425,
+    "completion_tokens": 138,
+    "total_tokens": 3563
+  },
+  "langsmith_run_id": "6be94ea4-cc41-4d63-8282-a0930bed77ec",
+  "evaluated_at": "2026-08-13T00:57:42.601227"
+}

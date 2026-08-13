@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p010",
+  "criterion_id": "c007",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The request assumes a file named `calculator.py` exists, but the agent finds no such file and continues searching without noting the uncertainty. It neither asks clarifying questions nor states any assumption about missing/renamed files, thus ignoring the ambiguity.",
+  "duration_ms": 5283.514583999931,
+  "token_usage": {
+    "prompt_tokens": 3364,
+    "completion_tokens": 277,
+    "total_tokens": 3641
+  },
+  "langsmith_run_id": "d87d7c8a-5e17-4e5b-bd52-fd5fdc8aa538",
+  "evaluated_at": "2026-08-13T01:00:39.196496"
+}

@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p012",
+  "criterion_id": "c007",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 3,
+  "rationale": "The request was straightforward and did not contain ambiguous or contradictory information, so the agent had no need to surface or resolve uncertainty. It performed a reasonable interpretation (understood the bug and fixed it) but did not state any assumptions or acknowledge any ambiguity, which aligns with the rubric’s definition of a 3‑point response for non‑ambiguous tasks.",
+  "duration_ms": 10612.061132997042,
+  "token_usage": {
+    "prompt_tokens": 2295,
+    "completion_tokens": 630,
+    "total_tokens": 2925
+  },
+  "langsmith_run_id": "dd92b05d-28ff-4218-8774-773123fda827",
+  "evaluated_at": "2026-08-13T00:52:10.117931"
+}

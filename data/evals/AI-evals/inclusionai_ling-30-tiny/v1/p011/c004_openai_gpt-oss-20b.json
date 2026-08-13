@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p011",
+  "criterion_id": "c004",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The final response accurately reflects the contents of README.md as retrieved by the tool calls. All stated facts – project title, purpose, core functionality, where settings live, and maintenance status – are directly supported by the README’s content. No claims were made that were unverified or incorrect.",
+  "duration_ms": 16797.17480399995,
+  "token_usage": {
+    "prompt_tokens": 1433,
+    "completion_tokens": 320,
+    "total_tokens": 1753
+  },
+  "langsmith_run_id": "5f7f5fc0-c1e9-435d-a63f-65919aef1757",
+  "evaluated_at": "2026-08-13T01:06:14.804584"
+}

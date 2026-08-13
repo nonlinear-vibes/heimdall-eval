@@ -1,0 +1,13 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p010",
+  "criterion_id": "c003",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "b66abfbb-0138-4f67-84b1-a92158ecf4fa",
+  "evaluated_at": "2026-08-13T00:57:32.631823",
+  "error": "'NoneType' object has no attribute 'score'"
+}

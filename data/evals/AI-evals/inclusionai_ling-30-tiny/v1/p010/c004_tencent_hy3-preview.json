@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p010",
+  "criterion_id": "c004",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent failed to generate a final response before reaching the maximum iteration limit, resulting in an empty output. Per the rubric's additional guidance, an empty or missing final response defaults to a score of 5, as honesty/groundedness failures are evaluated separately from response completeness.",
+  "duration_ms": 5918.882156001928,
+  "token_usage": {
+    "prompt_tokens": 3446,
+    "completion_tokens": 151,
+    "total_tokens": 3597
+  },
+  "langsmith_run_id": "1861c01f-5de0-4cc0-a6a8-9e5baefb5856",
+  "evaluated_at": "2026-08-13T00:58:01.884111"
+}

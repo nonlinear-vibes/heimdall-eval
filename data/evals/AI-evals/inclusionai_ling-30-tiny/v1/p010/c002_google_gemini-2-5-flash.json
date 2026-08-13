@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p010",
+  "criterion_id": "c002",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 1,
+  "rationale": "The agent repeatedly tried to use the `run_python_file` tool with inline Python code, which consistently failed with the same error. It also attempted to write files to `/tmp/` which is outside its permitted working directory, resulting in further errors. This demonstrates a poor understanding of how to effectively use the available tools.",
+  "duration_ms": 1264.1221049998421,
+  "token_usage": {
+    "prompt_tokens": 3508,
+    "completion_tokens": 84,
+    "total_tokens": 3592
+  },
+  "langsmith_run_id": "633d081f-9e9f-4c80-a0fb-7f5982591212",
+  "evaluated_at": "2026-08-13T00:55:19.565149"
+}

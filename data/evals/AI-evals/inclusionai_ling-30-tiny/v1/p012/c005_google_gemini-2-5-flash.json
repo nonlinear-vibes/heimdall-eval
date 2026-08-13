@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p012",
+  "criterion_id": "c005",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No errors or unexpected results occurred during the trajectory. The agent successfully identified and fixed the bug on its first attempt and verified the solution.",
+  "duration_ms": 838.1471359971329,
+  "token_usage": {
+    "prompt_tokens": 2324,
+    "completion_tokens": 45,
+    "total_tokens": 2369
+  },
+  "langsmith_run_id": "ec390940-cfb7-4c83-a05e-c02f067d4464",
+  "evaluated_at": "2026-08-13T00:51:05.995315"
+}

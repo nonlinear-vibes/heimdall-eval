@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p011",
+  "criterion_id": "c001",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent listed the files, located README.md, retrieved its contents via `get_file_content`, and produced a concise summary. All steps and the final answer directly address the user’s request.",
+  "duration_ms": 2316.087936000258,
+  "token_usage": {
+    "prompt_tokens": 1314,
+    "completion_tokens": 141,
+    "total_tokens": 1455
+  },
+  "langsmith_run_id": "c11b3b2e-9e0c-479c-970a-04b4f166e2c9",
+  "evaluated_at": "2026-08-13T01:03:04.046803"
+}

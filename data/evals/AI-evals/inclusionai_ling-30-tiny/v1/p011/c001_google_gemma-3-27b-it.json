@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p011",
+  "criterion_id": "c001",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent successfully read the README.md file using `get_file_content` and provided a concise and accurate summary of the project's purpose, functionality, configuration, and status, as requested. The summary accurately reflects the content of the README file.",
+  "duration_ms": 5741.403118998278,
+  "token_usage": {
+    "prompt_tokens": 1372,
+    "completion_tokens": 65,
+    "total_tokens": 1437
+  },
+  "langsmith_run_id": "100101a6-9df4-40ea-8235-092c82ae3371",
+  "evaluated_at": "2026-08-13T01:03:01.729729"
+}

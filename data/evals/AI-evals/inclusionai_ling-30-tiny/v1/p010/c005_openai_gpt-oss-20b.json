@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p010",
+  "criterion_id": "c005",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 2,
+  "rationale": "The agent made several attempts to locate `calculator.py` using the `run_python_file` tool, but each attempt produced errors due to improper usage of the tool (incorrect file paths or malformed command strings). After seeing these failures the agent did not change its strategy; it continued to issue the same form of failing calls or tried writing files to disallowed locations (`/tmp`). Consequently, the agent repeated the same mistake rather than diagnosing the cause and adopting a new approach, which results in a level‑2 recovery score. }",
+  "duration_ms": 21204.13104799809,
+  "token_usage": {
+    "prompt_tokens": 3244,
+    "completion_tokens": 412,
+    "total_tokens": 3656
+  },
+  "langsmith_run_id": "07c57d63-20c6-4afb-b72c-b3b60a717a09",
+  "evaluated_at": "2026-08-13T00:58:36.217633"
+}

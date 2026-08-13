@@ -1,0 +1,13 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p012",
+  "criterion_id": "c002",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "52de802d-330f-4a13-b4fe-9dae19ad914d",
+  "evaluated_at": "2026-08-13T00:47:16.938547",
+  "error": "Error code: 404 - {'error': {'message': 'Provider returned error', 'code': 404, 'metadata': {'raw': '{\"error\":{\"message\":\"The model `gemma4-31b-it` does not exist.\",\"type\":\"not_found_error\",\"code\":null,\"param\":null}}', 'provider_name': 'Phala', 'is_byok': False, 'previous_errors': [{'code': 504, 'message': 'The operation was aborted', 'provider_name': 'Nebius'}, {'code': 429, 'message': 'Provider returned error', 'provider_name': 'DeepInfra', 'raw': 'google/gemma-3-27b-it is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations'}, {'code': 429, 'message': 'Provider returned error', 'provider_name': 'Parasail', 'raw': 'google/gemma-3-27b-it is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations'}]}}, 'user_id': 'user_3GvMAYL9DY6ubCajOaLq26OzJeI'}"
+}

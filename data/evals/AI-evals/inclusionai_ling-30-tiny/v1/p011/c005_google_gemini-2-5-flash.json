@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p011",
+  "criterion_id": "c005",
+  "judge_id": "google/gemini-2.5-flash",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No errors occurred in the trajectory, so the agent did not need to perform any error recovery. It successfully read the README.md file and summarized it as requested.",
+  "duration_ms": 806.2645360005263,
+  "token_usage": {
+    "prompt_tokens": 1380,
+    "completion_tokens": 51,
+    "total_tokens": 1431
+  },
+  "langsmith_run_id": "6bcd6f2f-c462-4944-8d74-8a08c20b28fd",
+  "evaluated_at": "2026-08-13T01:07:17.871725"
+}

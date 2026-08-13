@@ -1,0 +1,13 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p012",
+  "criterion_id": "c003",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "a99b826b-d4cf-468f-b6ec-500681753022",
+  "evaluated_at": "2026-08-13T00:48:33.277295",
+  "error": "'NoneType' object is not iterable"
+}

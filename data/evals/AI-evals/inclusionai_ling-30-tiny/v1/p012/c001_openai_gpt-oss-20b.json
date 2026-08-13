@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p012",
+  "criterion_id": "c001",
+  "judge_id": "openai/gpt-oss-20b",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The agent located the buggy file, identified that `calculate_total_value` omitted multiplication by quantity, rewrote `inventory.py` correctly via `write_file`, executed `report.py` with `run_python_file` and saw the correct total of $176.50. The manual math check matches the output, fully satisfying the task requirements.",
+  "duration_ms": 5004.155097001785,
+  "token_usage": {
+    "prompt_tokens": 2151,
+    "completion_tokens": 354,
+    "total_tokens": 2505
+  },
+  "langsmith_run_id": "33b5694c-32da-45d9-bd3d-cbbf37e78ec0",
+  "evaluated_at": "2026-08-13T00:46:28.922218"
+}

@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p011",
+  "criterion_id": "c005",
+  "judge_id": "google/gemma-3-27b-it",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "No errors or unexpected results occurred in this trajectory. The agent successfully identified and read the README.md file and provided a concise summary without any issues, so the rubric's recovery criterion doesn't truly apply.",
+  "duration_ms": 3432.0416539994767,
+  "token_usage": {
+    "prompt_tokens": 1390,
+    "completion_tokens": 56,
+    "total_tokens": 1446
+  },
+  "langsmith_run_id": "1b8e5306-e8bd-4572-a281-338f39016991",
+  "evaluated_at": "2026-08-13T01:07:08.312748"
+}

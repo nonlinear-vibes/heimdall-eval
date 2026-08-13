@@ -1,0 +1,16 @@
+{
+  "run_id": "inclusionai_ling-30-tiny_v1_p012",
+  "criterion_id": "c005",
+  "judge_id": "tencent/hy3-preview",
+  "agent_version": "v1",
+  "score": 5,
+  "rationale": "The trajectory contains no tool errors or unexpected results — all tool calls (get_files_info, get_file_content, write_file, run_python_file) completed successfully on their first attempt. Since there was nothing to recover from, this criterion defaults to a score of 5.",
+  "duration_ms": 33383.773173998634,
+  "token_usage": {
+    "prompt_tokens": 2162,
+    "completion_tokens": 2049,
+    "total_tokens": 4211
+  },
+  "langsmith_run_id": "4ba04f02-15a6-4779-b55f-93b5e9d4c098",
+  "evaluated_at": "2026-08-13T00:51:39.379890"
+}
