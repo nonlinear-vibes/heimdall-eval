@@ -10,10 +10,10 @@ LOGS_DIR = DATA_DIR / "logs"
 EVALS_DIR = DATA_DIR / "evals"
 DB_PATH = DATA_DIR / "eval.db"
 
-MODELS_YAML = REPO_ROOT / "agent" / "config" / "models.yaml"
-PROMPTS_YAML = REPO_ROOT / "agent" / "config" / "prompts.yaml"
-CRITERIA_YAML = REPO_ROOT / "heimdall" / "config" / "criteria.yaml"
-JUDGES_YAML = REPO_ROOT / "heimdall" / "config" / "judges.yaml"
+MODELS_YAML = REPO_ROOT / "agent" / "test_config" / "models.yaml"
+PROMPTS_YAML = REPO_ROOT / "agent" / "test_config" / "prompts.yaml"
+CRITERIA_YAML = REPO_ROOT / "heimdall" / "judge_config" / "criteria.yaml"
+JUDGES_YAML = REPO_ROOT / "heimdall" / "judge_config" / "judges.yaml"
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS models (
@@ -105,7 +105,6 @@ CREATE TABLE IF NOT EXISTS evaluations (
 CREATE TABLE IF NOT EXISTS human_evals (
     run_id              TEXT NOT NULL REFERENCES runs(run_id),
     criterion_id        TEXT NOT NULL REFERENCES criteria(criterion_id),
-    agent_version       TEXT NOT NULL,
     evaluator_id        TEXT NOT NULL DEFAULT 'human_001',
     score               INTEGER,
     rationale           TEXT,
@@ -269,16 +268,40 @@ def ingest_all_evaluations(conn: sqlite3.Connection):
     if not EVALS_DIR.exists():
         print(f"No evals directory found at {EVALS_DIR}, skipping evaluation ingestion.")
         return
+
+    known_run_ids = {row["run_id"] for row in conn.execute("SELECT run_id FROM runs")}
+    known_criterion_ids = {row["criterion_id"] for row in conn.execute("SELECT criterion_id FROM criteria")}
+    known_judge_ids = {row["judge_id"] for row in conn.execute("SELECT judge_id FROM judges")}
+
+    ingested, skipped = 0, 0
+
     for eval_path in EVALS_DIR.rglob("*.json"):
         try:
             with open(eval_path, "r", encoding="utf-8") as f:
                 d = json.load(f)
         except (json.JSONDecodeError, OSError) as e:
             print(f"  Skipping {eval_path}: {e}")
+            skipped += 1
             continue
 
         if not all(k in d for k in ("run_id", "criterion_id", "judge_id", "agent_version")):
             print(f"  Skipping {eval_path}: missing required keys")
+            skipped += 1
+            continue
+
+        if d["run_id"] not in known_run_ids:
+            print(f"  Skipping {eval_path}: run_id '{d['run_id']}' not found in runs")
+            skipped += 1
+            continue
+
+        if d["criterion_id"] not in known_criterion_ids:
+            print(f"  Skipping {eval_path}: criterion_id '{d['criterion_id']}' not found in criteria")
+            skipped += 1
+            continue
+
+        if d["judge_id"] not in known_judge_ids:
+            print(f"  Skipping {eval_path}: judge_id '{d['judge_id']}' not found in judges")
+            skipped += 1
             continue
 
         usage = d.get("token_usage") or {}
@@ -293,13 +316,20 @@ def ingest_all_evaluations(conn: sqlite3.Connection):
              usage.get("total_tokens"), d.get("langsmith_run_id"), d.get("error"),
              str(eval_path), d.get("evaluated_at")),
         )
+        ingested += 1
+
+    print(f"Ingested {ingested} evaluations, skipped {skipped}.")
 
 
 def ingest_human_evals(conn: sqlite3.Connection):
-    human_evals_dir = EVALS_DIR / "human_evals"
+    human_evals_dir = EVALS_DIR / "human-evals"
     if not human_evals_dir.exists():
         print(f"No human_evals directory found at {human_evals_dir}, skipping.")
         return
+
+    # pre-load valid IDs once, so we can check membership without a query per row
+    known_run_ids = {row["run_id"] for row in conn.execute("SELECT run_id FROM runs")}
+    known_criterion_ids = {row["criterion_id"] for row in conn.execute("SELECT criterion_id FROM criteria")}
 
     for yaml_path in human_evals_dir.glob("*.yaml"):
         try:
@@ -315,28 +345,37 @@ def ingest_human_evals(conn: sqlite3.Connection):
 
         evaluator_id = content.get("evaluator_id", yaml_path.stem)
         entries = content["evaluations"]
-
+        ingested = 0
 
         for i, entry in enumerate(entries):
             if not all(k in entry for k in ("run_id", "criterion_id")):
                 print(f"  Skipping entry {i} in {yaml_path}: missing run_id or criterion_id")
                 continue
 
+            if entry["run_id"] not in known_run_ids:
+                print(f"  Skipping entry {i} in {yaml_path}: run_id '{entry['run_id']}' not found in runs")
+                continue
+
+            if entry["criterion_id"] not in known_criterion_ids:
+                print(f"  Skipping entry {i} in {yaml_path}: criterion_id '{entry['criterion_id']}' not found in criteria")
+                continue
+
             conn.execute(
                 "INSERT OR REPLACE INTO human_evals "
-                "(run_id, criterion_id, agent_version, evaluator_id, score, rationale, evaluated_at) "
-                "VALUES (?, ?, ?, ?, ?, ?, ?)",
+                "(run_id, criterion_id, evaluator_id, score, rationale, evaluated_at) "
+                "VALUES (?, ?, ?, ?, ?, ?)",
                 (
                     entry["run_id"],
                     entry["criterion_id"],
-                    entry["agent_version"],
                     evaluator_id,
                     entry.get("score"),
                     entry.get("rationale"),
                     entry.get("evaluated_at", now_isoformat()),
                 ),
             )
-        print(f"Ingested {len(entries)} human evaluations from {yaml_path.name} (evaluator: {evaluator_id})")
+            ingested += 1
+
+        print(f"Ingested {ingested}/{len(entries)} human evaluations from {yaml_path.name} (evaluator: {evaluator_id})")
 
 
 def main():

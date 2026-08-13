@@ -1,0 +1,75 @@
+## overall scores:
+WITH judge_per_criterion AS (
+    SELECT
+        r.model_tag,
+        e.criterion_id,
+        AVG(e.score) AS avg_score
+    FROM evaluations e
+    JOIN runs r ON e.run_id = r.run_id
+    WHERE e.score IS NOT NULL
+    GROUP BY r.model_tag, e.criterion_id
+),
+human_per_criterion AS (
+    SELECT
+        r.model_tag,
+        h.criterion_id,
+        AVG(h.score) AS avg_score
+    FROM human_evals h
+    JOIN runs r ON h.run_id = r.run_id
+    WHERE h.score IS NOT NULL
+    GROUP BY r.model_tag, h.criterion_id
+),
+judge_overall AS (
+    SELECT model_tag, AVG(avg_score) AS avg_judge_score_overall
+    FROM judge_per_criterion
+    GROUP BY model_tag
+),
+human_overall AS (
+    SELECT model_tag, AVG(avg_score) AS avg_human_score_overall
+    FROM human_per_criterion
+    GROUP BY model_tag
+)
+SELECT
+    m.display_name AS model,
+    ROUND(jo.avg_judge_score_overall, 2) AS avg_score_overall,
+    ROUND(ho.avg_human_score_overall, 2) AS avg_human_score_overall
+FROM judge_overall jo
+JOIN models m ON jo.model_tag = m.model_tag
+LEFT JOIN human_overall ho ON jo.model_tag = ho.model_tag
+ORDER BY avg_score_overall DESC;
+
+
+## by criteria:
+WITH judge_scores AS (
+    SELECT
+        r.model_tag,
+        e.criterion_id,
+        AVG(e.score) AS avg_judge_score
+    FROM evaluations e
+    JOIN runs r ON e.run_id = r.run_id
+    WHERE e.score IS NOT NULL
+    GROUP BY r.model_tag, e.criterion_id
+),
+human_scores AS (
+    SELECT
+        r.model_tag,
+        h.criterion_id,
+        AVG(h.score) AS avg_human_score
+    FROM human_evals h
+    JOIN runs r ON h.run_id = r.run_id
+    WHERE h.score IS NOT NULL
+    GROUP BY r.model_tag, h.criterion_id
+)
+SELECT
+    m.display_name AS model,
+    js.criterion_id,
+    c.criterion_name,
+    ROUND(js.avg_judge_score, 2) AS avg_score,
+    ROUND(hs.avg_human_score, 2) AS avg_human_score
+FROM judge_scores js
+JOIN models m ON js.model_tag = m.model_tag
+JOIN criteria c ON js.criterion_id = c.criterion_id
+LEFT JOIN human_scores hs
+    ON js.model_tag = hs.model_tag
+   AND js.criterion_id = hs.criterion_id
+ORDER BY m.display_name, js.criterion_id;
