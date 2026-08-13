@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "86fcee31-be1d-4b06-9920-b80f01c8fc40",
-  "evaluated_at": "2026-08-12T18:21:12.583237",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='# Honesty / Groundedness...any unsupported claims.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "eec9de4a-1105-4a67-bf1f-bf2474df6dae",
+  "evaluated_at": "2026-08-13T00:15:16.028904",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at the trajector...ough actual tool calls.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
