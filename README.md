@@ -6,21 +6,28 @@ A project exploring how to systematically evaluate coding-agent behaviour: run a
 
 <p align="center">
   <img src="docs/overall_scores.png" width="500" alt="Overall scores of a few test models"><br>
-  Overall scores of a few test models
+Overall scores of a few test models
 </p>
 
 <br />
 
 <p align="center">
   <img src="docs/scores_per_criteria.png" width="750" alt="Scores by criteria"><br>
- Scores by criteria
+Scores by criteria
 </p>
 
 <br />
 
 <p align="center">
   <img src="docs/least_squares.png" width="550" alt="Least squares fit"><br>
- Human-AI agreement without fine-tuning ($R^2 = 0.86$)
+Human-AI agreement without fine-tuning ($R^2 = 0.86$)
+</p>
+
+<br />
+
+<p align="center">
+  <img src="docs/metrics.png" width="550" alt="Least squares fit"><br>
+MAE, bias, quadratic-weighted kappa and Krippendorff's alpha compared to human evaluation
 </p>
 
 <br />
