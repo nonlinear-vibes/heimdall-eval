@@ -20,14 +20,14 @@ Scores by criteria
 
 <p align="center">
   <img src="docs/least_squares.png" width="550" alt="Least squares fit"><br>
-Human-AI agreement without fine-tuning ($R^2 = 0.86$)
+Human-AI agreement without fine-tuning ($R^2 = 0.86$, $\alpha = 0.463$)
 </p>
 
 <br />
 
 <p align="center">
   <img src="docs/metrics.png" width="550" alt="Least squares fit"><br>
-MAE, bias, quadratic-weighted kappa and Krippendorff's alpha compared to human evaluation
+MAE, bias and quadratic-weighted kappa compared to human evaluation
 </p>
 
 <br />
