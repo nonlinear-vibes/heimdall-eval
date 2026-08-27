@@ -1,3 +1,4 @@
+import asyncio
 import os
 import yaml
 import json
@@ -16,7 +17,7 @@ class JudgeVerdict(BaseModel):
     rationale: str = Field(description="Brief justification for the score, 1-3 sentences")
 
 # --- single judge call, LangChain + LangSmith ---
-def run_single_evaluation(run_id: str, agent_version: str, langsmith_trace_id: str, criterion: dict, judge: dict, trajectory: dict, api_key: str) -> dict:
+async def run_single_evaluation(run_id: str, agent_version: str, langsmith_trace_id: str, criterion: dict, judge: dict, trajectory: dict, api_key: str) -> dict:
     with open(criterion["rubric_file"]) as f:
             system_prompt = f.read()
 
@@ -30,7 +31,7 @@ def run_single_evaluation(run_id: str, agent_version: str, langsmith_trace_id: s
         ).with_structured_output(JudgeVerdict, include_raw=True)
 
     start = time.perf_counter()
-    result = llm.invoke(
+    result = await llm.ainvoke(
         [SystemMessage(system_prompt), HumanMessage(user_prompt)],
         config={
             "run_id": langsmith_trace_id, # what LangSmith indexes by
@@ -177,8 +178,31 @@ def write_json(path: str, data: dict):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
+# --- single judge, scheduled as a task alongside its sibling judges ---
+async def run_judge_eval(run_id: str, agent_version: str, trajectory_events: list[dict], required_fields: list[str] | None, criterion: dict, judge: dict, eval_path: str, api_key: str):
+    langsmith_trace_id = str(uuid.uuid4())  # for LangSmith
+    try:
+        judge_trace = build_judge_trace(trajectory_events, required_fields)
+        result = await run_single_evaluation(run_id, agent_version, langsmith_trace_id, criterion, judge, judge_trace, api_key)
+        write_json(eval_path, result)
+    except Exception as e:
+        write_json(eval_path, {
+            "run_id": run_id,
+            "criterion_id": criterion["criterion_id"],
+            "judge_id": judge["judge_id"],
+            "agent_version": agent_version,
+            "score": None,
+            "rationale": None,
+            "duration_ms": None,
+            "token_usage": None,
+            "langsmith_run_id": langsmith_trace_id,
+            "evaluated_at": datetime.now().isoformat(),
+            "error": str(e),
+        })
+
+
 # --- main sweep ---
-def main():
+async def main():
     with open(CRITERIA_YAML) as f:
         criteria = yaml.safe_load(f)["criteria"]
 
@@ -206,32 +230,19 @@ def main():
             if applicable and extract_field(trajectory_events, "category") not in applicable:
                 continue
             required_fields = criterion.get("required_fields")
+
+            tasks = []
             for judge in judges:
                 eval_path = os.path.join(eval_dir, f"{criterion['criterion_id']}_{judge['judge_tag']}.json")
 
                 if is_evaluated(eval_path):
                     continue
 
-                try:
-                    langsmith_trace_id = str(uuid.uuid4()) # for LangSmith
-                    judge_trace = build_judge_trace(trajectory_events, required_fields)
-                    result = run_single_evaluation(run_id, agent_version, langsmith_trace_id, criterion, judge, judge_trace, api_key)
-                    write_json(eval_path, result)
-                except Exception as e:
-                    write_json(eval_path, {
-                        "run_id": run_id,
-                        "criterion_id": criterion["criterion_id"],
-                        "judge_id": judge["judge_id"],
-                        "agent_version": agent_version,
-                        "score": None,
-                        "rationale": None,
-                        "duration_ms": None,
-                        "token_usage": None,
-                        "langsmith_run_id": langsmith_trace_id,
-                        "evaluated_at": datetime.now().isoformat(),
-                        "error": str(e),
-                    })
+                tasks.append(run_judge_eval(run_id, agent_version, trajectory_events, required_fields, criterion, judge, eval_path, api_key))
+
+            if tasks:
+                await asyncio.gather(*tasks)  # resync before moving to the next criterion
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
