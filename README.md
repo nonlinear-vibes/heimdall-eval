@@ -19,22 +19,18 @@ Scores by criteria
 <br />
 
 <p align="center">
-  <img src="docs/least_squares.png" width="550" alt="Least squares fit"><br>
-Human-AI agreement without fine-tuning ($R^2 = 0.86$, $\alpha = 0.463$)
+  <img src="docs/metrics_new.png" width="400" alt="Human-AI agreement metrics after prompt optimisation"><br>
+Human-AI agreement metrics (Mean Square Error, Bias, Quadratic-weighted Cohen's Kappa) after prompt optimisation
 </p>
 
 <br />
 
 <p align="center">
-  <img src="docs/metrics.png" width="550" alt="Least squares fit"><br>
-MAE, bias and quadratic-weighted kappa compared to human evaluation
+  <img src="docs/metrics.png" width="400" alt="Human-AI agreement metrics before prompt optimisation"><br>
+Human-AI agreement metrics (Mean Square Error, Bias, Quadratic-weighted Cohen's Kappa) before prompt optimisation
 </p>
 
 <br />
-
-Note: The judge rubrics and prompts have not yet been iterated on for closer human-AI agreement, possibly leading to rubric ambiguity and judge miscalibration. Furthermore, most of the test prompts were deliberately designed to be tricky (false premises, ambiguity, missing files), which produces edge-case that are hard to score consistently.
-
-This is a work in progress. This README describes the current state, not a finished product.
 
 <!--
 ## Evaluation
