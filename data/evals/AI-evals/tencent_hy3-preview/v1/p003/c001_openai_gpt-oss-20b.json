@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The trajectory shows the agent created a fib.py file with a correct fib(n) implementation, ran the file, and the output confirmed fib(10)=55, fulfilling all parts of the request.",
-  "duration_ms": 1652.3138169977756,
+  "rationale": "The agent created a fib.py file (write_file succeeded) containing a correctly implemented fib(n) function with 0‑indexing, then executed the file (run_python_file) which printed `fib(10) = 55` and `Verification: fib(10) == 55 is True`. This directly addresses both the creation of the function and the required verification.",
+  "duration_ms": 3237.8095269996265,
   "token_usage": {
-    "prompt_tokens": 1976,
-    "completion_tokens": 186,
-    "total_tokens": 2162
+    "prompt_tokens": 1847,
+    "completion_tokens": 269,
+    "total_tokens": 2116
   },
-  "langsmith_run_id": "9eb62900-dbc8-405b-b6ae-0759cbc92a79",
-  "evaluated_at": "2026-08-11T17:21:20.593506"
+  "langsmith_run_id": "a6861159-ea29-49ed-bd91-07d6e01f950a",
+  "evaluated_at": "2026-08-27T16:53:27.656788"
 }

@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The consistency...",
-  "duration_ms": 44250.087914002506,
+  "rationale": "The agent created `hello_world.py` via `write_file`, then executed it with `run_python_file`, receiving the expected \"Hello, World!\" output. These tool results confirm the script was built and runs correctly, fully satisfying the task.",
+  "duration_ms": 8012.006730001303,
   "token_usage": {
-    "prompt_tokens": 1492,
-    "completion_tokens": 1102,
-    "total_tokens": 2594
+    "prompt_tokens": 1460,
+    "completion_tokens": 130,
+    "total_tokens": 1590
   },
-  "langsmith_run_id": "80f89aca-9c27-4796-b3f7-66362f14e582",
-  "evaluated_at": "2026-08-11T17:53:17.656163"
+  "langsmith_run_id": "9dd06642-cebb-42bb-b7c2-8d442e642325",
+  "evaluated_at": "2026-08-27T17:12:52.057689"
 }

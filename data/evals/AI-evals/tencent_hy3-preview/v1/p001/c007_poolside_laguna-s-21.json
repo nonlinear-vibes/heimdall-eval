@@ -3,14 +3,11 @@
   "criterion_id": "c007",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 3,
-  "rationale": "The request was clear and unambiguous — write a haiku about bug fixing into haiku.txt — so there was no ambiguity or contradiction for the agent to surface. The agent executed the task competently without needing to make judgment calls, and since no ambiguity existed, the lack of acknowledgment is not a failure mode here.",
-  "duration_ms": 776.9218860012188,
-  "token_usage": {
-    "prompt_tokens": 1696,
-    "completion_tokens": 82,
-    "total_tokens": 1778
-  },
-  "langsmith_run_id": "3208329e-cc97-477e-b5c0-14734502b8c5",
-  "evaluated_at": "2026-08-11T17:09:58.162252"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "baa01f8d-9611-4dac-9a74-f3ae274ef172",
+  "evaluated_at": "2026-08-27T22:34:42.176853",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 5**\\n\\nThe task...re of 5 is appropriate.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

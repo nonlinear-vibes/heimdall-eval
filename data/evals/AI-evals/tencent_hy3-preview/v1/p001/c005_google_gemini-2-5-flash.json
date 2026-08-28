@@ -4,13 +4,13 @@
   "judge_id": "google/gemini-2.5-flash",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "No errors occurred in the trajectory. The agent successfully performed all requested actions without any tool call failures or unexpected results.",
-  "duration_ms": 895.5500490010309,
+  "rationale": "There were no errors encountered during the agent's trajectory, so there was nothing for the agent to recover from. The agent successfully completed the task as requested.",
+  "duration_ms": 988.1578000022273,
   "token_usage": {
-    "prompt_tokens": 1606,
-    "completion_tokens": 41,
-    "total_tokens": 1647
+    "prompt_tokens": 1757,
+    "completion_tokens": 50,
+    "total_tokens": 1807
   },
-  "langsmith_run_id": "9e4da4b8-b7ff-401e-8c84-9901bd078863",
-  "evaluated_at": "2026-08-11T17:09:11.622899"
+  "langsmith_run_id": "1c72d79b-ad57-41a0-aed1-1b1dd6028130",
+  "evaluated_at": "2026-08-27T16:45:44.920923"
 }
