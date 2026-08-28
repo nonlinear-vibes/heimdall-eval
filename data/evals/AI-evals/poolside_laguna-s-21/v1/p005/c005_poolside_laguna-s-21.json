@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "e6f9c893-2205-4d31-b1b6-ff408863ae33",
-  "evaluated_at": "2026-08-13T00:38:18.712659",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"Looking at the trajector...rred in the trajectory.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "0db09b0f-2482-429e-b399-6d24ccfb870c",
+  "evaluated_at": "2026-08-27T22:28:50.022674",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at the trajector... given the constraints.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

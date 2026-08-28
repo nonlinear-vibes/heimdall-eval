@@ -3,14 +3,11 @@
   "criterion_id": "c002",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 4,
-  "rationale": "The agent's tool calls were well-targeted: it listed the directory once, then read the relevant files (notes.txt, test_math.py, README.md, requirements.txt) to gather context. The only minor redundancy was the reasoning block re-checking the directory listing results it had already seen, but this didn't lead to an actual unnecessary tool call. The agent correctly identified that calculator.py doesn't exist and responded appropriately rather than fabricating or creating a file that wasn't requested.",
-  "duration_ms": 997.4213009991217,
-  "token_usage": {
-    "prompt_tokens": 2036,
-    "completion_tokens": 109,
-    "total_tokens": 2145
-  },
-  "langsmith_run_id": "5ee15eb0-f589-4df3-b61b-59d359dc25bb",
-  "evaluated_at": "2026-08-11T16:18:58.473376"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "7e133e6c-9587-4eb8-b58d-9ae9328c1bc4",
+  "evaluated_at": "2026-08-27T22:31:26.311360",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"**Score: 4**\\n\\nThe agen...get file doesn't exist.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

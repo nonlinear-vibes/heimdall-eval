@@ -3,14 +3,11 @@
   "criterion_id": "c004",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "All statements in the final response are directly backed by the trajectory. The rewritten `main.py` shows the merged `process_order` with a discount parameter, the use of `calc_total` from `helpers.py`, removal of dead code and imports, and proper debug gating. `config.py` now uses `os.environ` for all secrets. The updated `helpers.py` has no unused imports or code, and the deprecation notice in `helper_utils.py` matches the new content. The `temp.py` has been emptied, and executing `main.py` produces the expected `Total: $58.96` output, confirming the changes were made and verified.",
-  "duration_ms": 10566.062293997675,
-  "token_usage": {
-    "prompt_tokens": 7122,
-    "completion_tokens": 739,
-    "total_tokens": 7861
-  },
-  "langsmith_run_id": "2a849606-3144-4bd7-b7b0-1ad9b9e09cbd",
-  "evaluated_at": "2026-08-11T15:58:27.054807"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "083fb23c-8a79-469c-826c-9466949bdd8a",
+  "evaluated_at": "2026-08-27T22:28:47.607474",
+  "error": "'NoneType' object has no attribute 'score'"
 }

@@ -3,14 +3,11 @@
   "criterion_id": "c002",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent used tools efficiently throughout: it explored the codebase once with get_files_info, read all files purposefully to understand the cleanup needs, wrote cleaned versions of each file, recovered competently from a permission error when attempting to delete helper_utils.py, and verified its work by running main.py and testing the discount path. The final review (re-listing directory and re-reading files) was reasonable verification, not wasteful redundancy.",
-  "duration_ms": 78092.24203699979,
-  "token_usage": {
-    "prompt_tokens": 7143,
-    "completion_tokens": 5161,
-    "total_tokens": 12304
-  },
-  "langsmith_run_id": "23f8e5dd-c3cc-449e-a2e2-2b1f46cd8d6d",
-  "evaluated_at": "2026-08-12T18:34:13.219528"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "a4597a7f-1c33-4e71-b170-db197e25ebd3",
+  "evaluated_at": "2026-08-27T22:28:25.115948",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"**Score: 4**\\n\\n**Ration...lem-solving, not waste.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
