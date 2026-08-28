@@ -4,6 +4,7 @@ import sqlite3
 from pathlib import Path
 from datetime import datetime
 
+
 DATA_DIR  = Path(__file__).resolve().parent
 REPO_ROOT = DATA_DIR.parent
 LOGS_DIR  = DATA_DIR / "logs"
