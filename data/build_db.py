@@ -1,28 +1,28 @@
 import json
-import sqlite3
 import yaml
+import sqlite3
 from pathlib import Path
 from datetime import datetime
 
-DATA_DIR = Path(__file__).resolve().parent
+DATA_DIR  = Path(__file__).resolve().parent
 REPO_ROOT = DATA_DIR.parent
-LOGS_DIR = DATA_DIR / "logs"
+LOGS_DIR  = DATA_DIR / "logs"
 EVALS_DIR = DATA_DIR / "evals"
-DB_PATH = DATA_DIR / "eval.db"
+DB_PATH   = DATA_DIR / "eval.db"
 
-MODELS_YAML = REPO_ROOT / "agent" / "test_config" / "models.yaml"
-PROMPTS_YAML = REPO_ROOT / "agent" / "test_config" / "prompts.yaml"
+MODELS_YAML   = REPO_ROOT / "agent" / "test_config" / "models.yaml"
+PROMPTS_YAML  = REPO_ROOT / "agent" / "test_config" / "prompts.yaml"
 CRITERIA_YAML = REPO_ROOT / "heimdall" / "judge_config" / "criteria.yaml"
-JUDGES_YAML = REPO_ROOT / "heimdall" / "judge_config" / "judges.yaml"
+JUDGES_YAML   = REPO_ROOT / "heimdall" / "judge_config" / "judges.yaml"
 
 SCHEMA = """
-CREATE TABLE IF NOT EXISTS models (
+CREATE TABLE models (
     model_tag       TEXT PRIMARY KEY,
     model_id        TEXT NOT NULL,
     display_name    TEXT
 );
 
-CREATE TABLE IF NOT EXISTS prompts (
+CREATE TABLE prompts (
     prompt_id       TEXT PRIMARY KEY,
     prompt_name     TEXT,
     category        TEXT,
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS prompts (
     fixture_dir     TEXT
 );
 
-CREATE TABLE IF NOT EXISTS criteria (
+CREATE TABLE criteria (
     criterion_id       TEXT PRIMARY KEY,
     criterion_name     TEXT,
     description        TEXT,
@@ -39,13 +39,13 @@ CREATE TABLE IF NOT EXISTS criteria (
     base_criterion_id  TEXT REFERENCES criteria(criterion_id)   -- NULL for non-variant criteria
 );
 
-CREATE TABLE IF NOT EXISTS judges (
+CREATE TABLE judges (
     judge_id        TEXT PRIMARY KEY,
     judge_tag       TEXT NOT NULL,
     display_name    TEXT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS runs (
+CREATE TABLE runs (
     run_id              TEXT PRIMARY KEY,
     model_tag           TEXT NOT NULL REFERENCES models(model_tag),
     agent_version       TEXT NOT NULL,
@@ -60,31 +60,7 @@ CREATE TABLE IF NOT EXISTS runs (
     UNIQUE (model_tag, agent_version, prompt_id)
 );
 
-CREATE TABLE IF NOT EXISTS iterations (
-    run_id              TEXT NOT NULL REFERENCES runs(run_id),
-    iteration_number    INTEGER NOT NULL,
-    duration_ms         REAL,
-    prompt_tokens       INTEGER,
-    completion_tokens   INTEGER,
-    total_tokens        INTEGER,
-    reasoning_text      TEXT,
-    ai_response_text    TEXT,
-    PRIMARY KEY (run_id, iteration_number)
-);
-
-CREATE TABLE IF NOT EXISTS tool_calls (
-    run_id              TEXT NOT NULL,
-    iteration_number    INTEGER NOT NULL,
-    call_index          INTEGER NOT NULL,
-    function_name       TEXT NOT NULL,
-    args                TEXT,
-    result              TEXT,
-    successful          INTEGER,
-    PRIMARY KEY (run_id, iteration_number, call_index),
-    FOREIGN KEY (run_id, iteration_number) REFERENCES iterations(run_id, iteration_number)
-);
-
-CREATE TABLE IF NOT EXISTS evaluations (
+CREATE TABLE evaluations (
     run_id              TEXT NOT NULL REFERENCES runs(run_id),
     criterion_id        TEXT NOT NULL REFERENCES criteria(criterion_id),
     judge_id            TEXT NOT NULL REFERENCES judges(judge_id),
@@ -102,7 +78,7 @@ CREATE TABLE IF NOT EXISTS evaluations (
     PRIMARY KEY (run_id, criterion_id, judge_id)
 );
 
-CREATE TABLE IF NOT EXISTS human_evals (
+CREATE TABLE human_evals (
     run_id              TEXT NOT NULL REFERENCES runs(run_id),
     criterion_id        TEXT NOT NULL REFERENCES criteria(criterion_id),
     evaluator_id        TEXT NOT NULL DEFAULT 'human_001',
@@ -112,9 +88,9 @@ CREATE TABLE IF NOT EXISTS human_evals (
     PRIMARY KEY (run_id, criterion_id, evaluator_id)
 );
 
-CREATE INDEX IF NOT EXISTS idx_evaluations_criterion ON evaluations(criterion_id);
-CREATE INDEX IF NOT EXISTS idx_evaluations_judge ON evaluations(judge_id);
-CREATE INDEX IF NOT EXISTS idx_runs_model ON runs(model_tag);
+CREATE INDEX idx_evaluations_criterion ON evaluations(criterion_id);
+CREATE INDEX idx_evaluations_judge ON evaluations(judge_id);
+CREATE INDEX idx_runs_model ON runs(model_tag);
 """
 
 
@@ -124,11 +100,9 @@ def get_connection() -> sqlite3.Connection:
     conn.row_factory = sqlite3.Row # dict-style column access
     return conn
 
-
 def parse_scale(scale: str) -> tuple[int, int]:
     lo, hi = scale.split("-")
     return int(lo), int(hi)
-
 
 def now_isoformat() -> str:
     return datetime.now().isoformat()
@@ -190,15 +164,12 @@ def ingest_run(conn: sqlite3.Connection, model_tag: str, agent_version: str, pro
 
     run_id, started_at, ended_at = None, None, None
     exit_reason, total_iterations, tool_called, error_message = None, None, None, None
-    llm_run_data = []
 
     for event in events:
         etype, data = event.get("event"), event.get("data")
         if etype == "Start":
             run_id = data.get("run_id")
             started_at = event.get("timestamp")
-        elif etype == "LLM run":
-            llm_run_data = data or []
         elif etype == "Run complete":
             exit_reason = data.get("exit_reason")
             total_iterations = data.get("total_iterations")
@@ -219,31 +190,6 @@ def ingest_run(conn: sqlite3.Connection, model_tag: str, agent_version: str, pro
         (run_id, model_tag, agent_version, prompt_id, exit_reason, total_iterations, tool_called,
          error_message, str(log_path), started_at, ended_at),
     )
-
-    for it in llm_run_data:
-        meta = it.get("iteration_metadata", {})
-        idata = it.get("iteration_data", {})
-        it_num = meta.get("iteration_number")
-        usage = meta.get("token_usage", {})
-
-        conn.execute(
-            "INSERT OR REPLACE INTO iterations "
-            "(run_id, iteration_number, duration_ms, prompt_tokens, completion_tokens, "
-            " total_tokens, reasoning_text, ai_response_text) "
-            "VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-            (run_id, it_num, meta.get("duration"),
-             usage.get("prompt_tokens"), usage.get("completion_tokens"), usage.get("total_tokens"),
-             idata.get("reasoning"), idata.get("ai_response")),
-        )
-
-        for call_index, fc in enumerate(idata.get("function_calls", [])):
-            conn.execute(
-                "INSERT OR REPLACE INTO tool_calls "
-                "(run_id, iteration_number, call_index, function_name, args, result, successful) "
-                "VALUES (?, ?, ?, ?, ?, ?, ?)",
-                (run_id, it_num, call_index, fc.get("name"),
-                 json.dumps(fc.get("args")), json.dumps(fc.get("result")), int(bool(fc.get("successful")))),
-            )
 
 
 def ingest_all_runs(conn: sqlite3.Connection):
