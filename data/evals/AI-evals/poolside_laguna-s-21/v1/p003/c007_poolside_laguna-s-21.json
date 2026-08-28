@@ -3,11 +3,14 @@
   "criterion_id": "c007",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": null,
-  "rationale": null,
-  "duration_ms": null,
-  "token_usage": null,
-  "langsmith_run_id": "cdab10f8-18ca-471d-b53a-51c59018e4a4",
-  "evaluated_at": "2026-08-13T00:35:01.660766",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"**Score: 5**\\n\\nThe requ..., this is a clean pass.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "score": 5,
+  "rationale": "The task was clear and unambiguous — implement a Fibonacci function and verify fib(10)=55. There were no competing interpretations, no contradictory instructions, and no underspecification requiring a judgment call. Since the request left no ambiguity for the agent to resolve, the Proactive Communication criterion does not apply, and a default score of 5 is appropriate.\n",
+  "duration_ms": 1247.2469300009834,
+  "token_usage": {
+    "prompt_tokens": 1857,
+    "completion_tokens": 92,
+    "total_tokens": 1949
+  },
+  "langsmith_run_id": "770672ae-a32f-4cba-b9ca-6ec37c287925",
+  "evaluated_at": "2026-08-27T16:16:19.740475"
 }

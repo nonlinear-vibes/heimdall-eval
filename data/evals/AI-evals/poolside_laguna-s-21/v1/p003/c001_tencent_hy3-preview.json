@@ -4,13 +4,13 @@
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent fully completed the task: it created fib.py with a correct fib(n) function (0-indexed, fib(0)=0, fib(1)=1) as confirmed by the write_file success result, and explicitly verified fib(10)==55 by running temp.py which output 'fib(10) = 55' and 'All assertions passed!' via the run_python_file tool call.",
-  "duration_ms": 30403.591965001397,
+  "rationale": "The agent wrote fib.py with a correct fib(n) function (verified by tool result showing successful write of 309 chars), then explicitly verified via run_python_file on temp.py which returned STDOUT 'fib(10) = 55' and 'All assertions passed!'. Both required parts of the task—writing the function and verifying fib(10)==55—were concretely accomplished with tool-supported evidence.",
+  "duration_ms": 6941.577096000401,
   "token_usage": {
-    "prompt_tokens": 1599,
-    "completion_tokens": 1973,
-    "total_tokens": 3572
+    "prompt_tokens": 1569,
+    "completion_tokens": 440,
+    "total_tokens": 2009
   },
-  "langsmith_run_id": "cf5f349f-bdf1-49e8-8c24-978dfb4c06e4",
-  "evaluated_at": "2026-08-11T15:47:44.759228"
+  "langsmith_run_id": "946ad8ab-6e4b-41e5-b605-8fe84f780bd8",
+  "evaluated_at": "2026-08-27T16:13:50.833118"
 }

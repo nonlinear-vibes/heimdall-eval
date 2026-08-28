@@ -4,13 +4,13 @@
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent fully completed the task by creating a hello world script (hello.py) with the correct content and then verifying it executed properly. The write_file tool call succeeded (23 characters written), and the run_python_file tool call confirmed the script ran correctly, outputting 'Hello, World!' to STDOUT as shown in the tool results.",
-  "duration_ms": 17631.14935699923,
+  "rationale": "The agent fully completed the task by creating a hello world script (hello.py with print(\"Hello, World!\")) and verifying its execution. The write_file tool call succeeded with 23 characters written, and the run_python_file tool call confirmed the script executed properly, producing 'Hello, World!' in STDOUT.",
+  "duration_ms": 15524.318789000972,
   "token_usage": {
-    "prompt_tokens": 1071,
-    "completion_tokens": 1106,
-    "total_tokens": 2177
+    "prompt_tokens": 1041,
+    "completion_tokens": 983,
+    "total_tokens": 2024
   },
-  "langsmith_run_id": "16e55138-5720-4467-8c51-b41da5397bb6",
-  "evaluated_at": "2026-08-11T16:14:16.348642"
+  "langsmith_run_id": "160d5fac-c619-4bc5-a889-8333fe4aee1e",
+  "evaluated_at": "2026-08-27T16:27:21.310879"
 }

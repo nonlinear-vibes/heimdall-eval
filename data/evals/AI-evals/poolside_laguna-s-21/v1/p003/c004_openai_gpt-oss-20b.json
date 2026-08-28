@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The final response accurately recounts the actions taken and the results observed. All claims—empty directory, creation of `fib.py` with the described iterative function (including the negative‑input check), execution of `temp.py` that prints `fib(10) = 55` and passes all assertions—are directly supported by the recorded tool calls and their outputs. No unverified or fabricated statements are present.",
-  "duration_ms": 5056.932445000712,
+  "rationale": "All statements in the agent's final response are directly supported by the trajectory: the directory was empty, fib.py was written with the described function, temp.py was executed and produced output confirming fib(10)=55 and that the assertions for 0‑3 passed. No claims are fabricated or unsupported.",
+  "duration_ms": 5067.288803998963,
   "token_usage": {
-    "prompt_tokens": 1734,
-    "completion_tokens": 471,
-    "total_tokens": 2205
+    "prompt_tokens": 1661,
+    "completion_tokens": 328,
+    "total_tokens": 1989
   },
-  "langsmith_run_id": "8c0f1eb6-1ad9-4874-a7e2-f26226617f80",
-  "evaluated_at": "2026-08-11T15:49:43.128042"
+  "langsmith_run_id": "f0d7959e-b8db-4742-8577-bb6cf5fae96d",
+  "evaluated_at": "2026-08-27T16:15:21.871773"
 }

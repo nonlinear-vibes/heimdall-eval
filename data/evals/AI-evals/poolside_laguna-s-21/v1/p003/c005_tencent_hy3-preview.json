@@ -4,13 +4,13 @@
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "No tool errors or unexpected results occurred in the trajectory. All tool calls succeeded (successful: true), including the `run_python_file` call that produced 'No output produced' — this was expected behavior for a file that only defines a function, not a tool error. Since there was nothing to recover from, this criterion defaults to 5 per the rubric.",
-  "duration_ms": 100929.89226600184,
+  "rationale": "No tool errors or unexpected results occurred in the trajectory: all tool calls were marked successful, including the run of fib.py that produced no output (a correct result for a script that only defines a function, not an error). There was nothing to recover from, so the default score applies.",
+  "duration_ms": 22544.737289001205,
   "token_usage": {
-    "prompt_tokens": 1610,
-    "completion_tokens": 6322,
-    "total_tokens": 7932
+    "prompt_tokens": 1757,
+    "completion_tokens": 931,
+    "total_tokens": 2688
   },
-  "langsmith_run_id": "ed4de038-d837-42d0-ae4f-97fc67be68dd",
-  "evaluated_at": "2026-08-11T15:52:31.760309"
+  "langsmith_run_id": "c09f4381-0fbe-4af3-bc81-ff5261c843ec",
+  "evaluated_at": "2026-08-27T16:16:18.490930"
 }

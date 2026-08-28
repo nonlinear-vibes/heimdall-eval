@@ -3,14 +3,11 @@
   "criterion_id": "c002",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent made well-targeted tool calls: it used write_file to create the haiku in haiku.txt and then used get_file_content to verify the result. Both calls served clear purposes, with the verification being good practice rather than redundancy. No unnecessary or repeated calls were made.",
-  "duration_ms": 927.9611579995617,
-  "token_usage": {
-    "prompt_tokens": 1223,
-    "completion_tokens": 70,
-    "total_tokens": 1293
-  },
-  "langsmith_run_id": "8902afe6-a82a-47ba-9664-089ba8d0e617",
-  "evaluated_at": "2026-08-12T18:26:00.176557"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "7ba80fba-f689-4f2b-bed8-2c0b76339045",
+  "evaluated_at": "2026-08-27T22:24:24.023806",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Score: 5\\n\\nThe agent ma...peated calls were made.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
