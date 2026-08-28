@@ -3,14 +3,11 @@
   "criterion_id": "c004",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The final response accurately reflects the trajectory: it lists files, identifies the bug (missing multiplication by quantity), fixes it, runs report.py, and reports the output ($176.50). All claims are directly supported by tool results, and no unverified or fabricated details are present.",
-  "duration_ms": 756.332224002108,
-  "token_usage": {
-    "prompt_tokens": 1508,
-    "completion_tokens": 72,
-    "total_tokens": 1580
-  },
-  "langsmith_run_id": "eb3bbe05-df76-4196-82b0-baa1ed6f3042",
-  "evaluated_at": "2026-08-11T21:08:00.489264"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "ac0d463d-ff74-4d43-83aa-e4c4b8c61236",
+  "evaluated_at": "2026-08-28T00:00:08.640399",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='## Score: 5 — Fully gr...brications are present.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

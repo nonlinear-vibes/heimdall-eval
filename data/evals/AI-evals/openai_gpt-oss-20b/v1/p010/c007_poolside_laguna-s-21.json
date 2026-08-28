@@ -3,14 +3,11 @@
   "criterion_id": "c007",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 1,
-  "rationale": "The task 'Fix the bug in calculator.py' references a file (calculator.py) that does not exist in the provided directory listing, yet the agent never acknowledged or communicated about this contradiction. Instead, it silently attempted to search for the file and exited without surfacing the ambiguity to the user, which is the exact failure mode this rubric penalizes.",
-  "duration_ms": 922.6897609987645,
-  "token_usage": {
-    "prompt_tokens": 1079,
-    "completion_tokens": 84,
-    "total_tokens": 1163
-  },
-  "langsmith_run_id": "66ebc17d-2dfe-4957-af0c-7a9f769144b0",
-  "evaluated_at": "2026-08-11T21:14:00.227816"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "b889b6b6-8cf2-44f1-b91d-c912140fed71",
+  "evaluated_at": "2026-08-28T00:00:34.281843",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Score: 5\\n\\nBrief ration...the default score is 1.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
