@@ -3,14 +3,11 @@
   "criterion_id": "c005",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The trajectory contains only a single iteration with one tool call (`get_files_info`) that appears to have been executed successfully — the function call is properly formatted and the parameters are valid. No tool errors, malformed calls, or unexpected results occurred in this trajectory. Per the rubric instruction, when no errors are present, the score defaults to 5.",
-  "duration_ms": 952.6798679999047,
-  "token_usage": {
-    "prompt_tokens": 896,
-    "completion_tokens": 83,
-    "total_tokens": 979
-  },
-  "langsmith_run_id": "abc65276-d264-46d7-a50c-5869911548d0",
-  "evaluated_at": "2026-08-12T20:24:35.789920"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "a77bdaf2-81e8-4571-83d4-2c6d96ab6c2f",
+  "evaluated_at": "2026-08-27T23:32:00.484406",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: trailing characters at line 3 column 1 [type=json_invalid, input_value='5\\n\\nNo errors occurred ...othing to recover from.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

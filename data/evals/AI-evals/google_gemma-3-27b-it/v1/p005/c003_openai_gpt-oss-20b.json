@@ -3,14 +3,11 @@
   "criterion_id": "c003",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
-  "score": 3,
-  "rationale": "The reply only states an initial plan (“list files”) and does not indicate that any cleanup has been performed or provide any results or next steps, making it too brief to inform the user that the task was actually completed. The response lacks the necessary detail to be considered sufficiently complete for the requested code‑base cleanup.",
-  "duration_ms": 5544.386902998667,
-  "token_usage": {
-    "prompt_tokens": 1074,
-    "completion_tokens": 286,
-    "total_tokens": 1360
-  },
-  "langsmith_run_id": "47a4814f-f6c3-412f-a424-402b0ea467f2",
-  "evaluated_at": "2026-08-11T19:46:49.494995"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "e6288562-33e0-46ec-bd8a-550771022b4b",
+  "evaluated_at": "2026-08-27T23:24:29.888862",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 1**\\n\\nThe resp...for the requested task.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

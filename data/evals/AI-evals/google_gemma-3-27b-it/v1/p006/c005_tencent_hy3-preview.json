@@ -4,13 +4,13 @@
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "No tool errors or unexpected results are present in the provided agent trajectory, so the default score of 5 applies as no error recovery was required.",
-  "duration_ms": 15140.619195000909,
+  "rationale": "The provided trajectory contains no tool errors or unexpected results—the only tool call is a correctly formatted get_files_info request with valid parameters and no indicated failure or unexpected output. There is nothing to recover from, so the default score of 5 applies.",
+  "duration_ms": 12719.632202999492,
   "token_usage": {
-    "prompt_tokens": 871,
-    "completion_tokens": 3183,
-    "total_tokens": 4054
+    "prompt_tokens": 1041,
+    "completion_tokens": 1849,
+    "total_tokens": 2890
   },
-  "langsmith_run_id": "32aba6cb-161e-4939-892f-6113c907ad05",
-  "evaluated_at": "2026-08-13T01:29:06.567025"
+  "langsmith_run_id": "92034ce2-a47d-4297-aeee-2fbda83d0e06",
+  "evaluated_at": "2026-08-27T19:11:20.628198"
 }

@@ -4,13 +4,13 @@
   "judge_id": "google/gemma-3-27b-it",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent's trajectory contains no tool calls, and therefore no errors or unexpected results to recover from. The agent requested a tool call, but the evaluation stops before the tool is actually called and any response is received, so it can't fail. Therefore, it receives a score of 5 by default.",
-  "duration_ms": 3797.0701410013135,
+  "rationale": "There were no tool calls in the provided trajectory, and therefore no errors or unexpected results to recover from. The agent simply proposed a first action, so the error recovery criterion doesn't apply here.",
+  "duration_ms": 1497.4846549994254,
   "token_usage": {
-    "prompt_tokens": 988,
-    "completion_tokens": 76,
-    "total_tokens": 1064
+    "prompt_tokens": 1139,
+    "completion_tokens": 53,
+    "total_tokens": 1192
   },
-  "langsmith_run_id": "9f0399aa-6fed-4963-870c-016b2da4e0d4",
-  "evaluated_at": "2026-08-11T19:50:13.699768"
+  "langsmith_run_id": "76b32181-96fb-4a64-8f25-0bd113719785",
+  "evaluated_at": "2026-08-27T19:06:41.342473"
 }

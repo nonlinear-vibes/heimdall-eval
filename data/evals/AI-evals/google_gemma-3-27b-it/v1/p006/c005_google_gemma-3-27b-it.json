@@ -4,13 +4,13 @@
   "judge_id": "google/gemma-3-27b-it",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent trajectory contains no tool calls, and thus no errors or unexpected results to recover from. The agent simply initiates a tool call to list files, and the evaluation stops there; there's nothing to assess for error recovery.",
-  "duration_ms": 20253.125613999146,
+  "rationale": "There were no tool calls in the provided trajectory, and therefore no errors or unexpected results to recover from. The agent only made one call to list the files, and the excerpt ends there, so there was nothing to evaluate regarding error recovery.",
+  "duration_ms": 2103.6296729980677,
   "token_usage": {
-    "prompt_tokens": 946,
-    "completion_tokens": 59,
-    "total_tokens": 1005
+    "prompt_tokens": 1097,
+    "completion_tokens": 61,
+    "total_tokens": 1158
   },
-  "langsmith_run_id": "630dd2f8-8b80-451a-b7d3-310187d8b1de",
-  "evaluated_at": "2026-08-11T19:58:39.224619"
+  "langsmith_run_id": "18080a1b-ace3-404e-905b-e173b31a14ba",
+  "evaluated_at": "2026-08-27T19:11:10.009287"
 }

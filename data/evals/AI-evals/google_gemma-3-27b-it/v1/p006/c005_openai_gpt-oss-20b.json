@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent's trajectory contains no tool errors or unexpected results; it only proposed a file listing action. Since there was nothing to recover from, the default score is 5.",
-  "duration_ms": 720.8641760007595,
+  "rationale": "The trajectory shows a single successful file‑listing call; no tool error or unexpected result occurred. Consequently, there was nothing to recover from, so the default rating is 5.",
+  "duration_ms": 8760.857380999369,
   "token_usage": {
-    "prompt_tokens": 1102,
-    "completion_tokens": 352,
-    "total_tokens": 1454
+    "prompt_tokens": 1092,
+    "completion_tokens": 429,
+    "total_tokens": 1521
   },
-  "langsmith_run_id": "1a8c17a4-bcd9-4ed3-9b59-96c7f67b86a7",
-  "evaluated_at": "2026-08-11T19:58:39.946256"
+  "langsmith_run_id": "3a21433d-3bb8-4cbb-b3ea-7319b67a8587",
+  "evaluated_at": "2026-08-27T19:11:16.667284"
 }

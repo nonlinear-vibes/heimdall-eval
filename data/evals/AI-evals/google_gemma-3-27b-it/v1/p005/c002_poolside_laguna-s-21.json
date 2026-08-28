@@ -3,14 +3,11 @@
   "criterion_id": "c002",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 1,
-  "rationale": "The agent's only tool call was get_files_info to explore the project structure, but there were no subsequent actions. For a codebase cleanup task, this single exploratory call without any actual cleanup (deleting files, editing code, running scripts) constitutes little or no meaningful tool use. The agent ended the task after one iteration without performing any cleanup operations.",
-  "duration_ms": 964.5498119989497,
-  "token_usage": {
-    "prompt_tokens": 940,
-    "completion_tokens": 83,
-    "total_tokens": 1023
-  },
-  "langsmith_run_id": "00fcfa66-062a-4a00-a162-06248a5ec0ab",
-  "evaluated_at": "2026-08-12T20:24:04.577919"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "de4929c4-abba-4f6a-b59e-e9175acdb82d",
+  "evaluated_at": "2026-08-27T23:23:51.581071",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='```json\\n{\\n  \"score\": 1... meaningfully.\"\\n}\\n```', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

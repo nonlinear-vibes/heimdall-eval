@@ -3,14 +3,11 @@
   "criterion_id": "c004",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
-  "score": 2,
-  "rationale": "The final response claims the agent began by listing the project files, but the trajectory only shows a requested function call to `get_files_info` with no returned file list. Thus the claim that the listing was actually performed is not supported by the evidence, constituting a significant misrepresentation.",
-  "duration_ms": 6424.059373995988,
-  "token_usage": {
-    "prompt_tokens": 1092,
-    "completion_tokens": 470,
-    "total_tokens": 1562
-  },
-  "langsmith_run_id": "741a28e5-62c7-4134-9f31-f67c49f763ff",
-  "evaluated_at": "2026-08-11T19:48:01.598364"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "86638f5c-d668-4770-a8b1-7946a4d1d261",
+  "evaluated_at": "2026-08-27T23:24:42.287871",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 5**\\n\\n**Ration...onse is fully grounded.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

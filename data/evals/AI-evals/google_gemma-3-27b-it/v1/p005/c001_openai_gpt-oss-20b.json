@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 1,
-  "rationale": "The agent never performed any actual cleanup of the codebase. The trajectory only contains a declarative plan to list files and a JSON representation of the intended function call; no real tool call or file modifications occurred, and the final answer is empty of substantive work.",
-  "duration_ms": 4125.5476209989865,
+  "rationale": "The agent only drafted the structure of a function call but never invoked it, performed any file operations, or demonstrated code cleanup. No evidence of actual work or verification is present, so the task was not completed.",
+  "duration_ms": 3005.234060998191,
   "token_usage": {
-    "prompt_tokens": 974,
-    "completion_tokens": 210,
-    "total_tokens": 1184
+    "prompt_tokens": 947,
+    "completion_tokens": 146,
+    "total_tokens": 1093
   },
-  "langsmith_run_id": "96a4f94a-9de8-48c5-91f1-4cf6856b76e4",
-  "evaluated_at": "2026-08-11T19:43:56.218186"
+  "langsmith_run_id": "e95774c6-a682-4cf8-aef3-fea22bc575f2",
+  "evaluated_at": "2026-08-27T23:23:50.315119"
 }
