@@ -3,14 +3,11 @@
   "criterion_id": "c004",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "All claims in the final response are directly supported by the tool trajectory. The agent accurately identified the bug (line 5 of inventory.py missing quantity multiplication), applied the fix via write_file, and verified the result by running report.py which output $176.50. The manual calculation breakdown in the final response matches the values shown in the data, and the agent correctly noted low stock reporting was already working. No claims are fabricated or unverified.",
-  "duration_ms": 1175.7452160018147,
-  "token_usage": {
-    "prompt_tokens": 2769,
-    "completion_tokens": 105,
-    "total_tokens": 2874
-  },
-  "langsmith_run_id": "18fa2638-d3ca-469e-bec0-d3bc34933b68",
-  "evaluated_at": "2026-08-11T23:14:17.853265"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "4dfcb5f8-8f9a-4068-bf07-5a54ea4613f7",
+  "evaluated_at": "2026-08-27T22:32:50.102287",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Score: 5\\n\\nThe agent\\'s...brications are present.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

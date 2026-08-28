@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "No tool errors or unexpected results occurred during the agent’s trajectory. All calls succeeded, so there was nothing to recover from. By default, this earns a score of 5.",
-  "duration_ms": 2780.7183769982657,
+  "rationale": "The agent's tool calls succeeded without errors; there was nothing to recover from. Therefore, per the rubric, it receives a perfect score and we note that no errors occurred.",
+  "duration_ms": 2245.6201819986745,
   "token_usage": {
-    "prompt_tokens": 1717,
-    "completion_tokens": 157,
-    "total_tokens": 1874
+    "prompt_tokens": 1858,
+    "completion_tokens": 118,
+    "total_tokens": 1976
   },
-  "langsmith_run_id": "5874a22f-b88b-4323-aecd-681d73c92a85",
-  "evaluated_at": "2026-08-11T17:00:54.264591"
+  "langsmith_run_id": "7e47eb04-9967-4eec-812a-1dbdd7ebeb29",
+  "evaluated_at": "2026-08-27T16:43:36.066795"
 }

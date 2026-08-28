@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent recognized that the requested file `calculator.py` was missing from the accessible directory and explicitly asked the user for clarification about its location or existence, making the ambiguity explicit.",
-  "duration_ms": 4492.918831998395,
+  "rationale": "The request to fix a bug in *calculator.py* is ambiguous because the file does not appear to exist in the current directory, leaving a key piece of information missing. The agent recognized this uncertainty and explicitly asked the user for clarification before proceeding, satisfying the rubric's definition of actively surfacing the ambiguity.",
+  "duration_ms": 9870.971304000705,
   "token_usage": {
-    "prompt_tokens": 2438,
-    "completion_tokens": 320,
-    "total_tokens": 2758
+    "prompt_tokens": 2532,
+    "completion_tokens": 396,
+    "total_tokens": 2928
   },
-  "langsmith_run_id": "8fca7dfd-a63a-4b84-bde6-c81692d5caa4",
-  "evaluated_at": "2026-08-11T16:57:05.891034"
+  "langsmith_run_id": "31a9562b-5a3b-41d3-a1a4-379de9ebd4c6",
+  "evaluated_at": "2026-08-27T16:41:25.899499"
 }

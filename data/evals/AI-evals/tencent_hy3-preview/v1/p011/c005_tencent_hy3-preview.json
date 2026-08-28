@@ -4,13 +4,13 @@
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The trajectory contains no tool errors or unexpected results — both get_files_info and get_file_content calls succeeded on their first attempt. Since there was nothing to recover from, this criterion defaults to a 5.",
-  "duration_ms": 22033.73562500201,
+  "rationale": ": No tool errors or unexpected results occurred in the trajectory; both tool calls (get_files_info and get_file_content) were marked successful. Since there was nothing to recover from, the criterion defaults to a score of 5.",
+  "duration_ms": 11197.24766699801,
   "token_usage": {
-    "prompt_tokens": 1673,
-    "completion_tokens": 1281,
-    "total_tokens": 2954
+    "prompt_tokens": 1820,
+    "completion_tokens": 900,
+    "total_tokens": 2720
   },
-  "langsmith_run_id": "75d6afa6-ded8-4b00-aa0e-618e165282d0",
-  "evaluated_at": "2026-08-11T17:01:28.324949"
+  "langsmith_run_id": "09b6b1c2-dcdb-45c9-a162-fdc4fa10ab3e",
+  "evaluated_at": "2026-08-27T16:43:45.020778"
 }
