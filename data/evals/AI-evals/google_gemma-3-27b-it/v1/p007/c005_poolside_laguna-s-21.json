@@ -3,14 +3,11 @@
   "criterion_id": "c005",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "No tool errors or unexpected results occurred during the trajectory. The agent made a single tool call to explore the directory structure and exited with a final answer, indicating the task was completed successfully without any errors to recover from.",
-  "duration_ms": 660.0695460001589,
-  "token_usage": {
-    "prompt_tokens": 1003,
-    "completion_tokens": 56,
-    "total_tokens": 1059
-  },
-  "langsmith_run_id": "9347cfbf-7ef4-4fcf-88d7-c5ae85576068",
-  "evaluated_at": "2026-08-11T21:02:48.967439"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "e5c9c215-a586-4061-af85-3d8c1fb47833",
+  "evaluated_at": "2026-08-27T23:45:32.670003",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected ident at line 1 column 2 [type=json_invalid, input_value=\"No errors occurred in th...the default score is 5.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

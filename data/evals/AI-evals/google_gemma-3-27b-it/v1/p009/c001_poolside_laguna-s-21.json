@@ -3,14 +3,11 @@
   "criterion_id": "c001",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 1,
-  "rationale": "The task required writing a function to fib.py and verifying it returns 54 for n=10, but the agent only emitted a tool call schema as JSON text without actually invoking any tool. No files were listed, fib.py was not created, and no verification was performed — none of the necessary work was done.",
-  "duration_ms": 1293.556805998378,
-  "token_usage": {
-    "prompt_tokens": 984,
-    "completion_tokens": 84,
-    "total_tokens": 1068
-  },
-  "langsmith_run_id": "61659c39-23c3-4d8a-a4d2-3a660bf96bde",
-  "evaluated_at": "2026-08-12T00:20:22.771598"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "3e18903d-6173-4148-b3e7-5abe0321cda2",
+  "evaluated_at": "2026-08-27T23:20:54.536039",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 1**\\n\\nThe agen...t was not accomplished.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

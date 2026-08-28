@@ -3,14 +3,11 @@
   "criterion_id": "c007",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 1,
-  "rationale": "The task contains a contradiction: it asks to write a function in `fib.py` but then verify it returns 54 for n=10, when the 10th Fibonacci number (0-indexed) is actually 55, not 54. The agent did not acknowledge or address this discrepancy at all — it simply proceeded with listing files as if the request were unambiguous. No mention was made of the incorrect expected value or any assumption about how to handle it.",
-  "duration_ms": 1035.6956430005084,
-  "token_usage": {
-    "prompt_tokens": 1135,
-    "completion_tokens": 116,
-    "total_tokens": 1251
-  },
-  "langsmith_run_id": "e14eb1f7-c179-4bf6-ad4e-221d31d4cc64",
-  "evaluated_at": "2026-08-11T19:33:53.460208"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "e48ee859-8cb5-474e-9940-f4c2be399652",
+  "evaluated_at": "2026-08-27T23:23:08.817012",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"## Evaluation\\n\\n**Score...tion requirement unmet.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

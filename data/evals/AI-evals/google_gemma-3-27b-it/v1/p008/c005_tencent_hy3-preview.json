@@ -3,14 +3,11 @@
   "criterion_id": "c005",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
-  "score": 1,
-  "rationale": "The agent emitted a malformed tool call, outputting the get_file_content function's parameter schema instead of actual arguments (missing the required file_path value), which constitutes an error. It made no subsequent attempts to recover, exiting as final answer without addressing the task or the error.",
-  "duration_ms": 24586.33618500062,
-  "token_usage": {
-    "prompt_tokens": 1017,
-    "completion_tokens": 4107,
-    "total_tokens": 5124
-  },
-  "langsmith_run_id": "38bf1111-a058-417c-850a-a477b7e29faf",
-  "evaluated_at": "2026-08-12T20:42:45.196230"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "dfdb6ef2-8a19-42b2-8644-5576c4615819",
+  "evaluated_at": "2026-08-27T23:35:06.674814",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this trajecto...ult score of 5 applies.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

@@ -3,14 +3,11 @@
   "criterion_id": "c002",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent made a single, well‑targeted call to `get_files_info` to locate `shipping_utils.py`, which is exactly the right first step for this task. No redundant listings, reads, or writes were performed, and the call used the appropriate tool with valid arguments, demonstrating efficient tool use.",
-  "duration_ms": 10187.666983998497,
-  "token_usage": {
-    "prompt_tokens": 1038,
-    "completion_tokens": 553,
-    "total_tokens": 1591
-  },
-  "langsmith_run_id": "3ee42b4a-1dfc-4e4d-936a-1391f037171c",
-  "evaluated_at": "2026-08-11T20:59:34.462426"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "0c7bc055-cda8-4afc-83ed-097ea3bf62ef",
+  "evaluated_at": "2026-08-27T23:43:02.439819",
+  "error": "'NoneType' object has no attribute 'score'"
 }

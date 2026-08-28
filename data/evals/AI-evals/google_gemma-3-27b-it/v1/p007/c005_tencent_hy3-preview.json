@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "32c18e38-f007-46a3-8c8d-36ff3223153d",
-  "evaluated_at": "2026-08-13T01:33:35.967406",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this trajecto...ng the task unresolved.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "d12b94aa-3fa0-4e3d-af74-5b0d73b797ea",
+  "evaluated_at": "2026-08-27T23:59:58.863346",
+  "error": "Could not parse response content as the length limit was reached - CompletionUsage(completion_tokens=65536, prompt_tokens=1129, total_tokens=66665, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=65536, rejected_prediction_tokens=None, image_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cache_write_tokens=0, cached_tokens=640, video_tokens=0), cost=0.03944802, is_byok=False, cost_details={'upstream_inference_cost': 0.03944802, 'upstream_inference_prompt_cost': 0.00012642, 'upstream_inference_completions_cost': 0.0393216})"
 }
