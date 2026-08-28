@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "618212e5-c898-4be1-a16e-ed277fedb53a",
-  "evaluated_at": "2026-08-13T00:40:40.513956",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 4**\\n\\nThe agen...d Fibonacci definition.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "d3ce28ac-c2e9-4ab4-8bea-e628b3ee26a5",
+  "evaluated_at": "2026-08-27T22:34:51.945999",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"## Score: 5\\n\\nThe agent..., correct verification.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

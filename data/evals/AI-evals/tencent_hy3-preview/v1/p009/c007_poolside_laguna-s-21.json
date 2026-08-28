@@ -3,14 +3,11 @@
   "criterion_id": "c007",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The user's request contained an internal contradiction: they specified a standard Fibonacci sequence (fib(0)=0, fib(1)=1) but expected fib(10)=54, which is mathematically incorrect for that definition (fib(10)=55). The agent explicitly recognized and surfaced this contradiction in its final response, explaining the discrepancy with the mathematical calculation and noting the correct value, rather than silently proceeding with an incorrect implementation or ignoring the issue.",
-  "duration_ms": 1343.167232000269,
-  "token_usage": {
-    "prompt_tokens": 4283,
-    "completion_tokens": 107,
-    "total_tokens": 4390
-  },
-  "langsmith_run_id": "d0b735e3-2522-4bd8-8f0e-dc4783a01800",
-  "evaluated_at": "2026-08-12T18:51:25.955554"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "1e118fd3-e154-49f2-a525-18a1571a0329",
+  "evaluated_at": "2026-08-27T22:34:58.257833",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: key must be a string at line 1 column 2 [type=json_invalid, input_value='{score: 5, rationale: \"T...on-standard sequence.\"}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

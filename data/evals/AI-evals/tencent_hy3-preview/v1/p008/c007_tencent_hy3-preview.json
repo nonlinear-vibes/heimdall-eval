@@ -3,14 +3,11 @@
   "criterion_id": "c007",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
-  "score": 4,
-  "rationale": "The agent fixed all clear issues in broken.py, including the underspecified behavior for averaging an empty list (original code did not define expected empty list behavior). It mentioned adding a check to handle empty lists to avoid division by zero, but did not explicitly state that returning 0 was a judgment call or explain why that value was chosen, providing only partial detail on the assumption made.",
-  "duration_ms": 33360.37863399997,
-  "token_usage": {
-    "prompt_tokens": 2244,
-    "completion_tokens": 5850,
-    "total_tokens": 8094
-  },
-  "langsmith_run_id": "03e16c41-4eb3-48fa-b9cd-2c840cff5840",
-  "evaluated_at": "2026-08-12T18:55:29.712884"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "bfa79b6e-236e-4b18-8457-1b00b040e121",
+  "evaluated_at": "2026-08-27T22:41:41.650566",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this task, I ...the rubric\\'s guidance.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

@@ -3,14 +3,11 @@
   "criterion_id": "c007",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The request was straightforward with no inherent ambiguity to surface. The agent correctly located the function, thoroughly analyzed its parameters and logic, and provided a clear, well-structured response. While there's no ambiguity to address per se, the response is complete and accurate.",
-  "duration_ms": 887.45192100032,
-  "token_usage": {
-    "prompt_tokens": 3510,
-    "completion_tokens": 64,
-    "total_tokens": 3574
-  },
-  "langsmith_run_id": "bcd08bd1-201d-4f3f-9d7d-aab75adba64a",
-  "evaluated_at": "2026-08-13T00:46:07.649646"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "304d107c-406a-46ad-bb03-10d8bdb49c17",
+  "evaluated_at": "2026-08-27T22:45:52.073073",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: trailing characters at line 3 column 1 [type=json_invalid, input_value='5\\n\\n**Rationale:** The ... Score is 5 by default.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

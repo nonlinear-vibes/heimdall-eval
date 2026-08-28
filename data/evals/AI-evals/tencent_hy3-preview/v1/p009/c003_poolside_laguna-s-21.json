@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "1b5aa681-2c92-41a4-af2f-4d35a352ed91",
-  "evaluated_at": "2026-08-13T00:40:42.957562",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: trailing characters at line 1 column 3 [type=json_invalid, input_value=\"5 — Appropriately conc...ical detail is omitted.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "cf876e8b-2fe4-40f2-b3ff-22d2221a37f2",
+  "evaluated_at": "2026-08-27T22:34:55.014737",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 5 — Appropria...ll-judged for the task.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

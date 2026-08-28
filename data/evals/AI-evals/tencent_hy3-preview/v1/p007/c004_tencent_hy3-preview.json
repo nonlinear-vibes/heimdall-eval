@@ -4,13 +4,13 @@
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent's final response accurately describes the `calculate_shipping_cost` function based on the file content retrieved via get_file_content. All substantive claims about the function's purpose, parameters (weight_kg, distance_km, is_express, is_fragile), calculation logic ($2.50/kg base rate, distance charging after 50km, 1.75x express multiplier, $4.00 fragile fee), return value, and error handling are directly supported by the tool result. The line number reference and example calculation are reasonable inferences from the data retrieved.",
-  "duration_ms": 118224.40335800275,
+  "rationale": "The final response accurately describes the calculate_shipping_cost function's parameters (weight_kg, distance_km, is_express, is_fragile), calculation logic (base rate $2.50/kg, first 50km free then $0.05/km, 1.75x express multiplier, $4.00 fragile fee), return value (rounded to 2 decimals), and error handling (ValueError for negatives) — all directly supported by the get_file_content tool result showing the actual function code and docstring. The example calculation is presented as an illustration, not a verified execution result, and the core claims are all grounded in the tool output.",
+  "duration_ms": 121901.65326200076,
   "token_usage": {
-    "prompt_tokens": 3522,
-    "completion_tokens": 7215,
-    "total_tokens": 10737
+    "prompt_tokens": 3449,
+    "completion_tokens": 8314,
+    "total_tokens": 11763
   },
-  "langsmith_run_id": "ae802bc2-900b-4285-a053-651854fa3827",
-  "evaluated_at": "2026-08-11T18:09:45.747863"
+  "langsmith_run_id": "ccecc267-4cb7-4b7b-af7c-a01a6a25795c",
+  "evaluated_at": "2026-08-27T17:23:34.925735"
 }
