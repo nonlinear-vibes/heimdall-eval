@@ -3,14 +3,11 @@
   "criterion_id": "c004",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
-  "score": 4,
-  "rationale": "We have solved; original last? Let's…….",
-  "duration_ms": 5956.266360000882,
-  "token_usage": {
-    "prompt_tokens": 3348,
-    "completion_tokens": 138,
-    "total_tokens": 3486
-  },
-  "langsmith_run_id": "41dc02b8-b212-45d7-89bd-48895f7bbaa2",
-  "evaluated_at": "2026-08-13T00:57:51.914174"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "8854b501-feb2-4c24-b25b-3446d86e6cd9",
+  "evaluated_at": "2026-08-27T22:48:50.511917",
+  "error": "'NoneType' object has no attribute 'score'"
 }

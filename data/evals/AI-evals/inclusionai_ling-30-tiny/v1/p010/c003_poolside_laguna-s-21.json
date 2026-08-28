@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "1a2d4126-6a43-4019-a416-30201c2f9cdf",
-  "evaluated_at": "2026-08-13T00:57:35.047503",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected ident at line 1 column 2 [type=json_invalid, input_value='I don\\'t have access to ...to the rubric criteria.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "dcf0d026-5b50-458e-b692-c104f3d75973",
+  "evaluated_at": "2026-08-27T22:48:28.200387",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: trailing characters at line 1 column 3 [type=json_invalid, input_value=\"5 — Appropriately conc...pts to locate the file.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

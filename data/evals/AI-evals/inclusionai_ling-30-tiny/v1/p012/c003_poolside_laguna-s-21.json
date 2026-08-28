@@ -3,14 +3,11 @@
   "criterion_id": "c003",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The final response is appropriately concise — it clearly states the corrected total ($176.50), the location and nature of the bug (missing quantity multiplication in inventory.py line 6), and includes a brief manual verification of the math. No unnecessary padding is present, and all key information the user would need is included without verbose step-by-step narration.",
-  "duration_ms": 1163.738095001463,
-  "token_usage": {
-    "prompt_tokens": 2310,
-    "completion_tokens": 86,
-    "total_tokens": 2396
-  },
-  "langsmith_run_id": "2983cf08-c935-4841-a611-6d1c498f7f0c",
-  "evaluated_at": "2026-08-13T00:48:40.999104"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "a369cf65-776b-4c41-8f3c-9b0445feccff",
+  "evaluated_at": "2026-08-27T22:46:25.881966",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"**Score: 3**\\n\\nThe resp...a single-line fix task.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

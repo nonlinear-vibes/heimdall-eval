@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "b66abfbb-0138-4f67-84b1-a92158ecf4fa",
-  "evaluated_at": "2026-08-13T00:57:32.631823",
+  "langsmith_run_id": "bf33a14e-ce0c-43e5-afb4-a569ffd582c4",
+  "evaluated_at": "2026-08-27T22:48:41.882436",
   "error": "'NoneType' object has no attribute 'score'"
 }
