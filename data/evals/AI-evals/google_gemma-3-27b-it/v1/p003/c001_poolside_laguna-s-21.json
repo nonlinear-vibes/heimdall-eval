@@ -3,14 +3,11 @@
   "criterion_id": "c001",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 1,
-  "rationale": "The agent only made a single planning statement about exploring the directory and never actually invoked any tools (no `get_files_info`, no file writing, no verification script execution). The trajectory shows no code was written to `fib.py` and no verification that `fib(10) == 55` was performed, so the task was not accomplished at all.",
-  "duration_ms": 1132.2615179997229,
-  "token_usage": {
-    "prompt_tokens": 959,
-    "completion_tokens": 86,
-    "total_tokens": 1045
-  },
-  "langsmith_run_id": "637bf436-c661-41a9-880c-43ab82a786d7",
-  "evaluated_at": "2026-08-13T01:24:48.368211"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "e6aa68f8-4167-4913-a8cc-8967da2915ed",
+  "evaluated_at": "2026-08-27T23:23:32.727493",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this trajecto...entation work was done.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

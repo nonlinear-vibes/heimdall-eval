@@ -3,14 +3,11 @@
   "criterion_id": "c002",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent made a single, well‑targeted `get_files_info` call to check the existing files before proceeding, avoiding redundant directory listings or unnecessary file reads/writes. No superfluous or repeated tool calls are present, reflecting an efficient tool‑use pattern.",
-  "duration_ms": 2924.690007999743,
-  "token_usage": {
-    "prompt_tokens": 1054,
-    "completion_tokens": 280,
-    "total_tokens": 1334
-  },
-  "langsmith_run_id": "7bccbae5-1fe4-42b9-b1f7-ca240c598e24",
-  "evaluated_at": "2026-08-11T19:19:27.452406"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "a2deeaa4-b69d-4c44-8317-0fd508ea67f4",
+  "evaluated_at": "2026-08-27T23:19:49.092063",
+  "error": "'NoneType' object has no attribute 'score'"
 }

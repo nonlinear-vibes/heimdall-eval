@@ -4,13 +4,13 @@
   "judge_id": "google/gemini-2.5-flash",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "No errors occurred in the trajectory.",
-  "duration_ms": 1152.7627909963485,
+  "rationale": "There were no tool errors or unexpected results in the provided trajectory. The agent made a valid tool call to list files.",
+  "duration_ms": 892.8582799999276,
   "token_usage": {
-    "prompt_tokens": 1016,
-    "completion_tokens": 25,
-    "total_tokens": 1041
+    "prompt_tokens": 1167,
+    "completion_tokens": 42,
+    "total_tokens": 1209
   },
-  "langsmith_run_id": "f229f452-0c27-4033-becf-ca0ee9e8791e",
-  "evaluated_at": "2026-08-11T19:43:00.431572"
+  "langsmith_run_id": "a9efec2a-c392-4230-b554-d0f215c9ddbb",
+  "evaluated_at": "2026-08-27T19:01:22.963563"
 }

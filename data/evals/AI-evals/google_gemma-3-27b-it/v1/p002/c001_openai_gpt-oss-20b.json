@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 1,
-  "rationale": "The agent only outlined the steps (listing files, creating a script, running it) and provided a JSON description of a function call, but never actually executed any tool calls, nor created or ran the hello world script. No evidence of file creation or execution verification is present.",
-  "duration_ms": 3244.4489350018557,
+  "rationale": "The agent only outlined a plan and displayed a JSON describing a function call, but did not actually invoke the tool, create the script, or execute it. No evidence of a hello‑world script being built or verified is present.",
+  "duration_ms": 3236.8049189972226,
   "token_usage": {
-    "prompt_tokens": 1007,
-    "completion_tokens": 174,
-    "total_tokens": 1181
+    "prompt_tokens": 963,
+    "completion_tokens": 241,
+    "total_tokens": 1204
   },
-  "langsmith_run_id": "c7daa33e-9714-46ba-94d5-6f6efc1ec2de",
-  "evaluated_at": "2026-08-11T20:38:14.186618"
+  "langsmith_run_id": "776481e0-ef8b-4c03-b9b7-6ca0d7a930d6",
+  "evaluated_at": "2026-08-27T19:18:37.133899"
 }

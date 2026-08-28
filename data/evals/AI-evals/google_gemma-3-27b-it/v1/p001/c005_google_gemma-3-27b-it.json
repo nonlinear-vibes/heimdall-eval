@@ -4,13 +4,13 @@
   "judge_id": "google/gemma-3-27b-it",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent's trajectory shows no tool calls or errors. It outlines a plan to create a file but does not actually execute it within this trajectory, so there’s nothing to evaluate for error recovery—it cleanly planned the task.",
-  "duration_ms": 1673.176299998886,
+  "rationale": "The agent's trajectory contains no tool calls or errors. It outlined a plan to write a haiku to a file, starting with listing existing files, and there were no failures in this initial planning phase – therefore, there was nothing to recover from.",
+  "duration_ms": 25559.786454999994,
   "token_usage": {
-    "prompt_tokens": 1064,
-    "completion_tokens": 60,
-    "total_tokens": 1124
+    "prompt_tokens": 1215,
+    "completion_tokens": 64,
+    "total_tokens": 1279
   },
-  "langsmith_run_id": "67b704a1-cf0a-497c-b6eb-d477148fbd06",
-  "evaluated_at": "2026-08-11T19:25:44.265462"
+  "langsmith_run_id": "43eb4361-b4dd-408a-b5c8-7f9e8eb733d5",
+  "evaluated_at": "2026-08-27T18:52:02.274708"
 }

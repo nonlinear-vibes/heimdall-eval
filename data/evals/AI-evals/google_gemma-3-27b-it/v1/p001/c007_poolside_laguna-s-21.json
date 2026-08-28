@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "0d59c059-38ae-4818-bcdb-d04ee30b8d5d",
-  "evaluated_at": "2026-08-13T01:24:39.474997",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected `,` or `}` at line 1 column 406 [type=json_invalid, input_value='{\"score\": 5, \"rationale\"...element warrants a 5.\"]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "f23de211-2ec3-49bb-8d8f-86d594f58b44",
+  "evaluated_at": "2026-08-27T23:20:53.435623",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='## Score: 5/5\\n\\n**Ratio...re of 5 is the default.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
