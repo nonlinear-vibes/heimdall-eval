@@ -4,13 +4,13 @@
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent successfully wrote a `fib` function to `fib.py` that correctly implements 0-indexed Fibonacci numbers (fib(0)=0, fib(1)=1). The agent then verified the implementation by creating and running `temp.py`, which imported the function and printed the result of `fib(10)`, with the output confirmed as 55 in the STDOUT.",
-  "duration_ms": 22107.010038000226,
+  "rationale": "The agent fully completed the task: it wrote a correct `fib` function to `fib.py` (verified via write_file tool result showing 189 characters written), and then verified the function returns 55 for n=10 by running `temp.py` which printed '55' to stdout (confirmed via run_python_file tool result).",
+  "duration_ms": 31328.023694997682,
   "token_usage": {
-    "prompt_tokens": 1303,
-    "completion_tokens": 1257,
-    "total_tokens": 2560
+    "prompt_tokens": 1273,
+    "completion_tokens": 1909,
+    "total_tokens": 3182
   },
-  "langsmith_run_id": "3d670d3b-0259-4926-b8ee-bd5fcd8cfa7a",
-  "evaluated_at": "2026-08-11T14:39:56.194304"
+  "langsmith_run_id": "ba9a23f2-132b-4a72-945b-d9f9124795a3",
+  "evaluated_at": "2026-08-27T15:34:25.623681"
 }

@@ -3,14 +3,14 @@
   "criterion_id": "c005",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
-  "score": 4,
-  "rationale": "...",
-  "duration_ms": 15956.875545000003,
+  "score": 5,
+  "rationale": "No tool calls failed or produced unexpected results in the trajectory. All file writes and the Python execution succeeded, so there was nothing for the agent to recover from. Per the rubric, this earns a perfect score of 5.",
+  "duration_ms": 2584.25019599963,
   "token_usage": {
-    "prompt_tokens": 1353,
-    "completion_tokens": 1141,
-    "total_tokens": 2494
+    "prompt_tokens": 1499,
+    "completion_tokens": 130,
+    "total_tokens": 1629
   },
-  "langsmith_run_id": "be729887-c606-47e1-9a38-118c02f3569e",
-  "evaluated_at": "2026-08-11T14:42:24.782017"
+  "langsmith_run_id": "dfdb0215-d795-47aa-b93e-71a9bd602f67",
+  "evaluated_at": "2026-08-27T15:35:32.267958"
 }

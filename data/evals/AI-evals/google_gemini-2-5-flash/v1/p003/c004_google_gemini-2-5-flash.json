@@ -4,13 +4,13 @@
   "judge_id": "google/gemini-2.5-flash",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent successfully created the `fib.py` file and then verified its correctness by running a test script that imported and executed the `fib` function with `n=10`, which returned the expected value of 55. All claims are directly supported by the trajectory.",
-  "duration_ms": 9926.003074000619,
+  "rationale": "The agent claims that 'fib.py' was created and its correctness verified for n=10, returning 55. The trajectory shows the agent wrote 'fib.py', then wrote and ran 'temp.py' which printed '55' to STDOUT, directly supporting all claims.",
+  "duration_ms": 1375.9907159983413,
   "token_usage": {
-    "prompt_tokens": 1495,
-    "completion_tokens": 74,
-    "total_tokens": 1569
+    "prompt_tokens": 1418,
+    "completion_tokens": 79,
+    "total_tokens": 1497
   },
-  "langsmith_run_id": "ee309471-6805-4b17-8a77-1ebd85591c58",
-  "evaluated_at": "2026-08-11T14:41:40.459153"
+  "langsmith_run_id": "d9e92d78-b87b-4b41-b98a-61c1c0564203",
+  "evaluated_at": "2026-08-27T15:35:16.004462"
 }

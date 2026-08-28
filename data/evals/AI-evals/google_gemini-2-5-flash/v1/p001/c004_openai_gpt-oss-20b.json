@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The final response says the agent wrote a haiku to `haiku.txt`. In the trajectory, the `write_file` function call with that file path succeeded and returned a success message. Thus every claim is fully supported by tool evidence.",
-  "duration_ms": 1391.8927329996222,
+  "rationale": "The final response states only that a haiku was written and stored in `haiku.txt`. The trajectory shows a successful `write_file` call with that file path and content, so the claim is fully supported by evidence. No unverified or fabricated statements are present.",
+  "duration_ms": 3456.3290660007624,
   "token_usage": {
-    "prompt_tokens": 1082,
-    "completion_tokens": 144,
-    "total_tokens": 1226
+    "prompt_tokens": 1009,
+    "completion_tokens": 162,
+    "total_tokens": 1171
   },
-  "langsmith_run_id": "5b7e20d6-72c5-498a-8e8c-b5cc3a8d3e42",
-  "evaluated_at": "2026-08-11T14:28:03.285014"
+  "langsmith_run_id": "f53ed764-0f1c-4768-a751-d44d354a813c",
+  "evaluated_at": "2026-08-27T15:27:42.344770"
 }

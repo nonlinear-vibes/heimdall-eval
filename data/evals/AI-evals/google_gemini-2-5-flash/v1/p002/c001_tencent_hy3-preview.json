@@ -4,13 +4,13 @@
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent fully completed the task by creating `hello_world.py` with `print('Hello, world!')` (confirmed via successful `write_file` result) and then executing it with `run_python_file`, which produced the expected 'Hello, world!' output in STDOUT, verifying proper execution.",
-  "duration_ms": 20109.762590000173,
+  "rationale": "The agent fully completed the task by creating `hello_world.py` with `print('Hello, world!')` (confirmed via `write_file` result) and then executing it with `run_python_file`, which successfully produced the expected 'Hello, world!' output in STDOUT.",
+  "duration_ms": 16271.519973997783,
   "token_usage": {
-    "prompt_tokens": 1127,
-    "completion_tokens": 1093,
-    "total_tokens": 2220
+    "prompt_tokens": 1097,
+    "completion_tokens": 1201,
+    "total_tokens": 2298
   },
-  "langsmith_run_id": "ebe00b7d-8dee-4149-9e3a-029d7574e99c",
-  "evaluated_at": "2026-08-11T15:00:50.266017"
+  "langsmith_run_id": "9d221d56-4854-4820-8a01-57a336dcb607",
+  "evaluated_at": "2026-08-27T15:43:37.407074"
 }
