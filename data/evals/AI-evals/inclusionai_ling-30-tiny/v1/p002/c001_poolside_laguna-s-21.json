@@ -3,14 +3,11 @@
   "criterion_id": "c001",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent successfully created a 'hello_world.py' script with the content `print(\"Hello, World!\")` and verified its execution by running it, which produced the expected output 'Hello, World!' in STDOUT. All steps were completed correctly and confirmed via tool results.",
-  "duration_ms": 642.8314099975978,
-  "token_usage": {
-    "prompt_tokens": 1113,
-    "completion_tokens": 67,
-    "total_tokens": 1180
-  },
-  "langsmith_run_id": "e33c5f60-5cdb-48b9-a5e9-818077c70658",
-  "evaluated_at": "2026-08-11T18:26:14.930922"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "59f05f1e-2bc2-492c-9428-8e785892df8c",
+  "evaluated_at": "2026-08-27T23:04:10.714469",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='## Score: 5\\n\\nThe task ...t were fully addressed.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

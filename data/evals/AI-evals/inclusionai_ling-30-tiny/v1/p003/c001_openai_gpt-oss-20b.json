@@ -3,14 +3,11 @@
   "criterion_id": "c001",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent created a `fib.py` file containing a correct `fib(n)` implementation, ran the file with `run_python_file`, and the output shows `fib(10) = 55` along with an assertion confirming the result. All requested steps were performed and verified.",
-  "duration_ms": 2182.6889270014362,
-  "token_usage": {
-    "prompt_tokens": 1450,
-    "completion_tokens": 229,
-    "total_tokens": 1679
-  },
-  "langsmith_run_id": "a15472f1-d5ab-46b3-8441-00eef17519e2",
-  "evaluated_at": "2026-08-11T18:20:01.110091"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "93787100-0d69-40b6-8c83-0a0e5d46f46d",
+  "evaluated_at": "2026-08-27T22:54:24.310652",
+  "error": "'NoneType' object has no attribute 'score'"
 }

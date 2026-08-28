@@ -3,14 +3,11 @@
   "criterion_id": "c005",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "No tool errors or unexpected results occurred in the trajectory. The agent successfully checked the directory, wrote fib.py, ran it to verify fib(10) == 55, and provided a final summary — all without encountering any errors to recover from.",
-  "duration_ms": 809.2474579989357,
-  "token_usage": {
-    "prompt_tokens": 1451,
-    "completion_tokens": 64,
-    "total_tokens": 1515
-  },
-  "langsmith_run_id": "13050401-e735-4029-ab45-2656276ad265",
-  "evaluated_at": "2026-08-12T19:32:33.534622"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "aacd28bc-b2ec-4327-9e91-fdd2fb4b1d91",
+  "evaluated_at": "2026-08-27T22:54:34.277160",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Score: 5  \\nRationale: N...ult score of 5 applies.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The final response claims that the function `fib` was written, that it correctly returns 0 for `fib(0)`, 1 for `fib(1)`, and 55 for `fib(10)`. The trajectory shows the file was created, the code written exactly as described, and run with a successful assertion that `fib(10)` is 55. All claims are directly supported by the tool calls; no unverified or fabricated statements are present.",
-  "duration_ms": 3222.1253429997887,
+  "rationale": "...",
+  "duration_ms": 6827.281421996304,
   "token_usage": {
-    "prompt_tokens": 1568,
-    "completion_tokens": 415,
-    "total_tokens": 1983
+    "prompt_tokens": 1508,
+    "completion_tokens": 196,
+    "total_tokens": 1704
   },
-  "langsmith_run_id": "9ab4fef6-9537-4d0d-a79c-bebb441b329a",
-  "evaluated_at": "2026-08-11T18:22:19.741108"
+  "langsmith_run_id": "e8a964b2-713c-4ed0-9793-f173fef0218b",
+  "evaluated_at": "2026-08-27T22:54:33.369746"
 }

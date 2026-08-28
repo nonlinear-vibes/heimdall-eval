@@ -3,14 +3,11 @@
   "criterion_id": "c005",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "No tool errors or unexpected results occurred during the entire trajectory. The agent successfully explored the directory, created the hello world script, and verified its execution without any failures to recover from.",
-  "duration_ms": 711.8567500001518,
-  "token_usage": {
-    "prompt_tokens": 1131,
-    "completion_tokens": 49,
-    "total_tokens": 1180
-  },
-  "langsmith_run_id": "38b9bf3d-9039-4881-a175-3453a9d97521",
-  "evaluated_at": "2026-08-11T18:28:32.932715"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "56ce8592-c711-450b-94ba-4a4075f29d02",
+  "evaluated_at": "2026-08-27T23:05:02.135417",
+  "error": "'NoneType' object is not iterable"
 }
