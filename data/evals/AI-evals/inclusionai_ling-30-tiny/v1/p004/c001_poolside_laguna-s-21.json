@@ -3,14 +3,11 @@
   "criterion_id": "c001",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 1,
-  "rationale": "The task was to fix a bug in calculator.py, but the agent never found or created the file. The directory listing consistently showed only requirements.txt, README.md, sample.csv, notes.txt, and test_math.py — no calculator.py. The agent repeatedly called get_files_info, get_file_content, and run_python_file (incorrectly using shell commands as file paths), but never successfully located or created calculator.py. At the end, the agent asked the user to provide the file rather than completing the fix. No bug was identified or fixed, and no verification of any fix occurred.",
-  "duration_ms": 1393.6220610048622,
-  "token_usage": {
-    "prompt_tokens": 3017,
-    "completion_tokens": 130,
-    "total_tokens": 3147
-  },
-  "langsmith_run_id": "ceafb4d2-f9ef-4a3c-8b80-3091986732f6",
-  "evaluated_at": "2026-08-12T00:12:52.131086"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "4d2a4cfd-9c75-4c0b-b93d-1d4132e848a9",
+  "evaluated_at": "2026-08-27T23:05:54.156861",
+  "error": "'NoneType' object is not iterable"
 }

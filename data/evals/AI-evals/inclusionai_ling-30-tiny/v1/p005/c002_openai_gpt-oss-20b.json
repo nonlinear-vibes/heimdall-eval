@@ -3,14 +3,11 @@
   "criterion_id": "c002",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent performed exactly one directory listing, read each source file once to understand the codebase (5 `get_file_content` calls), wrote each updated file once (`write_file` 4 times), and then verified the result by running the script. No repeated or unnecessary calls were made, and all tool usage directly contributed to the cleanup task.",
-  "duration_ms": 4718.0946259977645,
-  "token_usage": {
-    "prompt_tokens": 4136,
-    "completion_tokens": 560,
-    "total_tokens": 4696
-  },
-  "langsmith_run_id": "3481dea1-dd92-4755-bbda-288d7c707bb0",
-  "evaluated_at": "2026-08-11T23:55:02.471449"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "39055bc3-6171-4ca3-8d16-289722cb32ae",
+  "evaluated_at": "2026-08-27T22:57:21.434207",
+  "error": "'NoneType' object has no attribute 'score'"
 }

@@ -3,14 +3,11 @@
   "criterion_id": "c001",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
-  "score": 4,
-  "rationale": "The agent substantially cleaned up the codebase by removing dead code (unused_helper, process_order2, helper_utils.py content), fixing PEP 8 violations (renaming CalcTotal to calc_total, orderFormatter to OrderFormatter), and removing debug statements. The main.py script runs successfully (output: 'Total: $58.96'). However, there are minor gaps: config.py is missing `import os` for `os.environ.get()`, and main.py still contains an unused `DEBUG = True` variable that the agent incorrectly claimed to have removed in its summary.",
-  "duration_ms": 111807.21722599992,
-  "token_usage": {
-    "prompt_tokens": 4137,
-    "completion_tokens": 7254,
-    "total_tokens": 11391
-  },
-  "langsmith_run_id": "2ee2b3d1-b049-440e-93dd-b04fef9bb183",
-  "evaluated_at": "2026-08-13T01:13:11.208905"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "68af39e0-4a7d-4654-996b-31506ce06090",
+  "evaluated_at": "2026-08-27T22:57:10.798397",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this trajecto... to remove but didn\\'t.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

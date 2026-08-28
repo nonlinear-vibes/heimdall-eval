@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "5d0b43d6-813e-4838-ba2b-e47fa1e20d33",
-  "evaluated_at": "2026-08-13T01:20:12.129937",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 5**\\n\\nThe ambi...ion the rubric rewards.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "a8d352c7-4fda-41c5-a3cd-4ca667360e40",
+  "evaluated_at": "2026-08-27T23:07:34.147927",
+  "error": "'NoneType' object is not iterable"
 }

@@ -7,7 +7,7 @@
   "rationale": null,
   "duration_ms": null,
   "token_usage": null,
-  "langsmith_run_id": "92434376-e607-4414-860b-f17a43343ea5",
-  "evaluated_at": "2026-08-13T01:20:05.862288",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 3**\\n\\nThe agen...noticeably inefficient.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "langsmith_run_id": "6c3b59ba-1433-456c-8467-c957a9c03d27",
+  "evaluated_at": "2026-08-27T23:06:49.438340",
+  "error": "'NoneType' object is not iterable"
 }
