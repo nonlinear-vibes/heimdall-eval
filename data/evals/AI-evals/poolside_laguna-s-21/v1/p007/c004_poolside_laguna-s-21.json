@@ -3,14 +3,11 @@
   "criterion_id": "c004",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "All claims in the final response are directly supported by the tool results. The function signature, parameter descriptions, calculation logic, and ValueError validation are all accurately extracted from the file content retrieved via get_file_content calls. The response correctly notes the function was found and describes its behavior without overstating or fabricating any details.",
-  "duration_ms": 874.0647550002905,
-  "token_usage": {
-    "prompt_tokens": 2473,
-    "completion_tokens": 77,
-    "total_tokens": 2550
-  },
-  "langsmith_run_id": "7048b5f1-4eb4-4c58-a43a-488afd21d5e8",
-  "evaluated_at": "2026-08-11T16:27:00.549368"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "1611236e-3f21-40b4-bc75-11b700022e72",
+  "evaluated_at": "2026-08-27T22:32:28.135997",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"**Score: 5 — Fully gro...aims or overstatements.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

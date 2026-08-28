@@ -3,14 +3,11 @@
   "criterion_id": "c001",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The task was to find and analyze the `calculate_shipping_cost` function at the end of `shipping_utils.py`. The agent successfully used `get_files_info` to locate the file, then `get_file_content` twice to navigate through the file until reaching the function near the end. The final response accurately summarized the function's purpose, its parameters (weight_kg, distance_km, is_express, is_fragile), the calculation logic, and input validation. The agent provided a complete and correct analysis backed by actual file content retrieval.",
-  "duration_ms": 1633.8509649995103,
-  "token_usage": {
-    "prompt_tokens": 2318,
-    "completion_tokens": 123,
-    "total_tokens": 2441
-  },
-  "langsmith_run_id": "42a0dc45-7af1-43a2-b403-d8c21c578e13",
-  "evaluated_at": "2026-08-12T18:39:59.710436"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "26cdb423-6540-41fa-b418-27e2ecd1560b",
+  "evaluated_at": "2026-08-27T22:32:10.674689",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 5**\\n\\nThe agen...accuracies are present.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

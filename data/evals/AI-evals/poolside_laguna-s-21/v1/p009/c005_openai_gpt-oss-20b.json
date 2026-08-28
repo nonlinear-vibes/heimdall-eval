@@ -3,14 +3,14 @@
   "criterion_id": "c005",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
-  "score": 1,
-  "rationale": "The agent should \nWe have dumped this……",
-  "duration_ms": 2615.8120700019936,
+  "score": 5,
+  "rationale": "The trajectory contains no tool call failures or unexpected errors. All tool calls succeeded and produced the expected results, so no error‑recovery behavior needs to be evaluated.",
+  "duration_ms": 3639.6668999987014,
   "token_usage": {
-    "prompt_tokens": 3052,
-    "completion_tokens": 26,
-    "total_tokens": 3078
+    "prompt_tokens": 3198,
+    "completion_tokens": 193,
+    "total_tokens": 3391
   },
-  "langsmith_run_id": "6bca5084-1315-4ba2-9470-737e778f3f37",
-  "evaluated_at": "2026-08-11T15:44:32.765191"
+  "langsmith_run_id": "b5c6cf6d-3eec-49e3-b0b8-09d0f9055092",
+  "evaluated_at": "2026-08-27T16:12:32.383418"
 }

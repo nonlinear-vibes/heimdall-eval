@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent detected a syntax error reported by `run_python_file`, correctly diagnosed the missing colon, undefined variable, and division-by-zero issue, and then updated the file with a proper implementation. The subsequent run succeeded without repeating the faulty call, demonstrating full recovery.",
-  "duration_ms": 4602.41335200044,
+  "rationale": "No tool call actually failed due to an internal error; the `run_python_file` simply returned a SyntaxError, which is expected output from the script. The agent correctly diagnosed the source of the error (missing colon), adjusted the code, wrote the updated file, and re‑ran it successfully. Therefore it demonstrated full error recovery without repeating the mistake or wasting extra steps.",
+  "duration_ms": 12234.261639998294,
   "token_usage": {
-    "prompt_tokens": 1922,
-    "completion_tokens": 372,
-    "total_tokens": 2294
+    "prompt_tokens": 2081,
+    "completion_tokens": 245,
+    "total_tokens": 2326
   },
-  "langsmith_run_id": "a2509aef-2da3-40f8-9351-3e5760a44957",
-  "evaluated_at": "2026-08-11T16:11:44.475202"
+  "langsmith_run_id": "0b9152b9-059f-4702-9e19-0b9c693d1143",
+  "evaluated_at": "2026-08-27T16:26:30.750724"
 }

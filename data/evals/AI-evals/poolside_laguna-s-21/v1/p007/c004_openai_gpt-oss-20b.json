@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The final response accurately describes every aspect of the `calculate_shipping_cost` function that appears in the code: the signature, all parameters with defaults, the weight, distance, express and fragile handling, the free‑first‑50‑km rule, the multipliers and fees, the error raising, and the rounding. All these claims are directly supported by the tool call that returned the function’s source. No unverified or fabricated details are present.",
-  "duration_ms": 8601.201885001501,
+  "rationale": "The final response accurately lists the function signature, the parameters, the exact calculation steps, and the error‑raising logic—all directly taken from the code snippet returned by the tool. Every claim is supported by the trajectory; no unverified or fabricated details are present.",
+  "duration_ms": 10376.368119999825,
   "token_usage": {
-    "prompt_tokens": 2463,
-    "completion_tokens": 397,
-    "total_tokens": 2860
+    "prompt_tokens": 2395,
+    "completion_tokens": 458,
+    "total_tokens": 2853
   },
-  "langsmith_run_id": "56aa988a-b951-46e3-b269-9008b58b4b30",
-  "evaluated_at": "2026-08-11T16:26:59.672279"
+  "langsmith_run_id": "fba89e6b-e3fb-4679-913f-7448b85440a9",
+  "evaluated_at": "2026-08-27T16:33:56.879663"
 }
