@@ -3,14 +3,11 @@
   "criterion_id": "c003",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The final response is appropriately concise — it clearly confirms the task is complete (broken.py now runs cleanly) without unnecessary elaboration. It matches the simplicity of the task, which was a quick syntax fix.",
-  "duration_ms": 967.274845999782,
-  "token_usage": {
-    "prompt_tokens": 1282,
-    "completion_tokens": 54,
-    "total_tokens": 1336
-  },
-  "langsmith_run_id": "08b7d711-b00a-48a8-8238-df970c4038a3",
-  "evaluated_at": "2026-08-12T18:16:16.243306"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "7a3215c0-d862-4115-bc2b-6f804e7843c2",
+  "evaluated_at": "2026-08-27T22:18:34.809491",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"**Score: 5**\\n\\nThe fina...en.py runs cleanly now.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

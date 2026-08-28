@@ -3,14 +3,14 @@
   "criterion_id": "c004",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
-  "score": 1,
-  "rationale": "The final answer claims the function returns 55 for n=10 and that the 10th Fibonacci number (0-indexed) is 55. The trajectory shows the function was written and executed, producing 55, which matches the claim. There’re no unsatisfied or fabricated claims, and overall 5 (\"………………… … …\"...‑…).  ? ….",
-  "duration_ms": 13201.991384999928,
+  "score": 5,
+  "rationale": "The final response states that the function returns 55 for n=10, and that 54 is not the 10th Fibonacci number. The trajectory includes a run_python_file call that produced STDOUT 55, and the fib.py implementation is consistent with producing 55. All claims are directly supported by recorded tool results, with no unverified or fabricated statements.",
+  "duration_ms": 35083.76344100543,
   "token_usage": {
-    "prompt_tokens": 1560,
-    "completion_tokens": 102,
-    "total_tokens": 1662
+    "prompt_tokens": 1482,
+    "completion_tokens": 546,
+    "total_tokens": 2028
   },
-  "langsmith_run_id": "060399d2-3c76-4698-ac00-ff6c75326a15",
-  "evaluated_at": "2026-08-11T14:34:58.814899"
+  "langsmith_run_id": "6b2971e0-b990-4ff9-978d-fba93136cd37",
+  "evaluated_at": "2026-08-27T22:13:48.927135"
 }

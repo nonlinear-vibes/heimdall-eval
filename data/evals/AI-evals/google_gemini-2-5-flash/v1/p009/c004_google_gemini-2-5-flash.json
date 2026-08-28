@@ -4,13 +4,13 @@
   "judge_id": "google/gemini-2.5-flash",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent's response accurately states that the function returns 55 for n=10, which is directly supported by the `run_python_file` tool call result. It also correctly identifies that 54 was not the 10th Fibonacci number as per the original prompt, demonstrating accurate self-correction and groundedness.",
-  "duration_ms": 896.951684000669,
+  "rationale": "The agent's response accurately states that the function returns 55 for n=10, which is directly supported by the `run_python_file` tool call result (STDOUT: 55). It also correctly identifies that 54 was not the correct expected value for the 10th Fibonacci number.",
+  "duration_ms": 874.0561679987877,
   "token_usage": {
-    "prompt_tokens": 1612,
-    "completion_tokens": 87,
-    "total_tokens": 1699
+    "prompt_tokens": 1535,
+    "completion_tokens": 85,
+    "total_tokens": 1620
   },
-  "langsmith_run_id": "424c5e18-9585-4607-9c3f-8fdc1c4b8b4b",
-  "evaluated_at": "2026-08-11T14:35:31.413236"
+  "langsmith_run_id": "243eb897-0e53-41d8-83fc-9fa810098409",
+  "evaluated_at": "2026-08-27T15:31:21.582387"
 }

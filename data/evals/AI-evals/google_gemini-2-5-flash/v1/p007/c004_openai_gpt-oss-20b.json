@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The final response accurately describes the function signature, the base rate per kg, the per‑km surcharge beyond 50 km, the express multiplier, the fragile fee, the rounding, and the ValueError check—each detail is directly supported by the function code returned by `get_file_content`. No unverified or fabricated claims are present.",
-  "duration_ms": 5953.726686999289,
+  "rationale": "The final response accurately lists the function’s parameters and the logic described in the code: base rate per kg, distance fee beyond 50 km, express multiplier, fragile handling fee, rounding, and ValueError for negatives. All claims are directly supported by the function body shown in the trajectory.",
+  "duration_ms": 3740.6739379985083,
   "token_usage": {
-    "prompt_tokens": 2785,
-    "completion_tokens": 417,
-    "total_tokens": 3202
+    "prompt_tokens": 2704,
+    "completion_tokens": 281,
+    "total_tokens": 2985
   },
-  "langsmith_run_id": "233e2e56-6cb6-4d6b-b884-9f6281b0dd30",
-  "evaluated_at": "2026-08-11T15:11:34.842299"
+  "langsmith_run_id": "aff236f6-8327-46a9-b472-02f1fb449f20",
+  "evaluated_at": "2026-08-27T15:51:00.223782"
 }

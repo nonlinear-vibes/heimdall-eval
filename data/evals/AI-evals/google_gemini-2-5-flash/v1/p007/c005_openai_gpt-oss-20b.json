@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "No tool errors occurred during the trajectory; all calls succeeded and the agent provided correct information about the function. Therefore the error recovery criterion has no actions to evaluate.",
-  "duration_ms": 2696.9169639996835,
+  "rationale": "None of the tool calls failed or returned unexpected results. The agent successfully accessed the file, read its contents, and produced the correct answer without encountering any errors to recover from.",
+  "duration_ms": 2049.315184001898,
   "token_usage": {
-    "prompt_tokens": 2769,
-    "completion_tokens": 141,
-    "total_tokens": 2910
+    "prompt_tokens": 2826,
+    "completion_tokens": 123,
+    "total_tokens": 2949
   },
-  "langsmith_run_id": "4af5a131-2a22-435d-8351-72d62c348fe1",
-  "evaluated_at": "2026-08-11T15:12:29.302374"
+  "langsmith_run_id": "0aa55e94-04d9-401a-9b02-75ae82b1c31c",
+  "evaluated_at": "2026-08-27T15:51:35.053147"
 }

@@ -3,14 +3,11 @@
   "criterion_id": "c002",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent made two well-targeted tool calls: first, a directory/file listing to confirm the target file exists, then a full file read to retrieve its contents. Both calls were necessary and sufficient to locate and extract the `calculate_shipping_cost` function and its parameters. There was no redundancy or unnecessary exploration, and the workflow culminated in a clear, accurate response to the user's question.",
-  "duration_ms": 1083.9995339993038,
-  "token_usage": {
-    "prompt_tokens": 2651,
-    "completion_tokens": 92,
-    "total_tokens": 2743
-  },
-  "langsmith_run_id": "2d006f10-72ad-4c42-ab67-bdf67d50d1cd",
-  "evaluated_at": "2026-08-11T22:42:22.390133"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "07ee31b9-3ee2-47fe-9d36-4ee473d2fbb8",
+  "evaluated_at": "2026-08-27T22:19:32.104275",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='## Score: 4 — Mostly e...s a minor inefficiency.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

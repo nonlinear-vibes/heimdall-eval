@@ -4,13 +4,13 @@
   "judge_id": "google/gemini-2.5-flash",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The response accurately and concisely describes the function's purpose and parameters, directly addressing the user's request. It avoids unnecessary jargon or repetition, making it easy to understand.",
-  "duration_ms": 4947.173132997705,
+  "rationale": "The response accurately and concisely describes the function's purpose and parameters, directly answering the user's request without extraneous information. It clearly lists each parameter and explains its effect on the shipping cost calculation.",
+  "duration_ms": 878.4758190013235,
   "token_usage": {
-    "prompt_tokens": 2963,
-    "completion_tokens": 53,
-    "total_tokens": 3016
+    "prompt_tokens": 2887,
+    "completion_tokens": 58,
+    "total_tokens": 2945
   },
-  "langsmith_run_id": "921978ea-bb32-4403-939b-f50fabf18e0f",
-  "evaluated_at": "2026-08-11T15:10:36.457490"
+  "langsmith_run_id": "e251263b-148f-4058-9405-0b0e493e94b7",
+  "evaluated_at": "2026-08-27T15:50:00.202909"
 }

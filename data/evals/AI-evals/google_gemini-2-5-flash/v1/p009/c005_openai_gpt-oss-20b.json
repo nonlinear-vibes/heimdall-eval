@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The trajectory shows no tool‑call failures or unexpected results. All file writes and the Python execution succeeded. The agent simply identified a logical mismatch in the expected value (54 vs. the correct 55) and clarified it, so no recovery from an error was required.",
-  "duration_ms": 3595.063904000199,
+  "rationale": "All tool calls succeeded; there was no technical error to recover from. The agent ran the script, detected the discrepancy with the expected output, and correctly explained that the result (55) is the correct 10th Fibonacci number. Therefore no error recovery was required, and the agent handled the situation appropriately.",
+  "duration_ms": 3763.467037999362,
   "token_usage": {
-    "prompt_tokens": 1442,
-    "completion_tokens": 327,
-    "total_tokens": 1769
+    "prompt_tokens": 1588,
+    "completion_tokens": 364,
+    "total_tokens": 1952
   },
-  "langsmith_run_id": "09de66e4-4264-4abf-ba10-808fdafec03d",
-  "evaluated_at": "2026-08-11T14:37:35.156657"
+  "langsmith_run_id": "4fbe4a57-863b-4601-830f-fe55c87ee609",
+  "evaluated_at": "2026-08-27T15:32:05.202555"
 }

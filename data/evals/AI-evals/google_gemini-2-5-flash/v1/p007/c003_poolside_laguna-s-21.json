@@ -3,14 +3,11 @@
   "criterion_id": "c003",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The response is well-judged and concise: it lists exactly the four parameters and describes how each is accounted for in the calculation, plus notes the ValueError behavior, with no restatement of the request or unnecessary filler.",
-  "duration_ms": 831.0169690003022,
-  "token_usage": {
-    "prompt_tokens": 2715,
-    "completion_tokens": 57,
-    "total_tokens": 2772
-  },
-  "langsmith_run_id": "d2b97bb6-5c29-46e5-b968-36075385faab",
-  "evaluated_at": "2026-08-12T18:19:33.388158"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "22c7b105-bd8b-4020-8345-20a784028efe",
+  "evaluated_at": "2026-08-27T22:19:53.955672",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"**Score: 5**\\n\\nThe resp...or the user's question.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

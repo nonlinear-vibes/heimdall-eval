@@ -4,13 +4,13 @@
   "judge_id": "google/gemini-2.5-flash",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent's final response states that 'broken.py' now runs cleanly. The trajectory explicitly shows a successful execution of 'broken.py' with expected output in the last step, directly supporting this claim.",
-  "duration_ms": 4886.3777379992825,
+  "rationale": "The agent's response claims the file 'now runs cleanly', which is directly supported by the trajectory showing a successful execution of `broken.py` with no errors after the fix.",
+  "duration_ms": 746.8261180001718,
   "token_usage": {
-    "prompt_tokens": 1393,
-    "completion_tokens": 61,
-    "total_tokens": 1454
+    "prompt_tokens": 1316,
+    "completion_tokens": 55,
+    "total_tokens": 1371
   },
-  "langsmith_run_id": "f2e0fad7-439e-4d58-bc75-0c99b3eb322d",
-  "evaluated_at": "2026-08-11T14:58:01.928958"
+  "langsmith_run_id": "50eb8418-fbc4-418a-8cc2-b972ee7e12a9",
+  "evaluated_at": "2026-08-27T15:42:29.874403"
 }

@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "We need …... ...",
-  "duration_ms": 1343.8774440000998,
+  "rationale": "We are we need?The..???..“ …………",
+  "duration_ms": 2134.0445009991527,
   "token_usage": {
-    "prompt_tokens": 1343,
-    "completion_tokens": 16,
-    "total_tokens": 1359
+    "prompt_tokens": 1271,
+    "completion_tokens": 57,
+    "total_tokens": 1328
   },
-  "langsmith_run_id": "00fc2769-e768-47a7-976a-04797b6a9312",
-  "evaluated_at": "2026-08-11T14:57:40.056555"
+  "langsmith_run_id": "8642f77c-1931-473a-afa8-c027174964cb",
+  "evaluated_at": "2026-08-27T15:42:14.490415"
 }
