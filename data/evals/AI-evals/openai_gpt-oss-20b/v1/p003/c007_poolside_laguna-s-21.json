@@ -3,14 +3,11 @@
   "criterion_id": "c007",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The task was clear and unambiguous: write a Fibonacci function, verify fib(10)=55. The agent completed both requirements faithfully, and its final response confirmed the implementation matched the specification (0-indexed, fib(0)=0, fib(1)=1). No judgment calls or ambiguous interpretations were involved, so the agent appropriately did not surface any assumptions.",
-  "duration_ms": 1377.7031219942728,
-  "token_usage": {
-    "prompt_tokens": 1329,
-    "completion_tokens": 87,
-    "total_tokens": 1416
-  },
-  "langsmith_run_id": "d7c33d89-893a-480f-8f97-17b2568f5e07",
-  "evaluated_at": "2026-08-12T00:56:29.421265"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "1ad937a9-e7fa-440e-96f0-8eb7d3eda1e6",
+  "evaluated_at": "2026-08-28T00:01:58.705979",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 5**\\n\\n**Ration...erms of judgment calls.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

@@ -3,14 +3,14 @@
   "criterion_id": "c007",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
-  "score": 3,
-  "rationale": "The request was straightforward with no ambiguous or contradictory parts. The agent proceeded with a reasonable interpretation and performed the requested task, but did not need to surface or address any uncertainty. Consequently, it demonstrates a ready-to-act stance typical for a non-ambiguous prompt.",
-  "duration_ms": 12849.43242299778,
+  "score": 5,
+  "rationale": "The request was straightforward and unambiguous: create a `fib.py` defining `fib(n)` and confirm that `fib(10)` returns 55. There were no contradictory or multiple plausible interpretations to surface. The agent acted on the clear instructions without needing to ask for clarification or indicate assumptions.",
+  "duration_ms": 2948.940838999988,
   "token_usage": {
-    "prompt_tokens": 1354,
-    "completion_tokens": 639,
-    "total_tokens": 1993
+    "prompt_tokens": 1454,
+    "completion_tokens": 211,
+    "total_tokens": 1665
   },
-  "langsmith_run_id": "b3f77890-462a-4792-af0f-fbc9804f370b",
-  "evaluated_at": "2026-08-11T21:36:01.951153"
+  "langsmith_run_id": "390d3123-48ff-4390-9576-0049da569a14",
+  "evaluated_at": "2026-08-28T00:02:00.552945"
 }

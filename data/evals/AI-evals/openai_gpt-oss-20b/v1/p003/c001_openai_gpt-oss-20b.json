@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent created fib.py containing a correct Fibonacci implementation, then executed the file with n=10 and received STDOUT `55`, confirming the required output.",
-  "duration_ms": 2709.042722999584,
+  "rationale": "The agent wrote `fib.py` containing a correct Fibonacci implementation, then executed `fib.py` with argument `10` via `run_python_file`. The tool returned `STDOUT:\n55\n`, confirming `fib(10)` outputs 55 as required.",
+  "duration_ms": 4630.614617999527,
   "token_usage": {
-    "prompt_tokens": 1204,
-    "completion_tokens": 164,
-    "total_tokens": 1368
+    "prompt_tokens": 1172,
+    "completion_tokens": 171,
+    "total_tokens": 1343
   },
-  "langsmith_run_id": "74ba735c-00da-4bdc-88e5-bf5255e897c3",
-  "evaluated_at": "2026-08-11T21:32:58.307580"
+  "langsmith_run_id": "e62e7f7f-c632-43ed-9150-e12b5169ee5a",
+  "evaluated_at": "2026-08-27T19:55:40.924141"
 }

@@ -3,14 +3,11 @@
   "criterion_id": "c003",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The final response is appropriately concise, clearly confirming the task completion and presenting the haiku content without unnecessary elaboration or padding.",
-  "duration_ms": 687.438059001579,
-  "token_usage": {
-    "prompt_tokens": 1114,
-    "completion_tokens": 38,
-    "total_tokens": 1152
-  },
-  "langsmith_run_id": "5df43afa-cd15-461b-a0af-e261feca5a15",
-  "evaluated_at": "2026-08-12T00:55:16.726730"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "4a77356a-e11d-4524-b4d4-55e901a0f531",
+  "evaluated_at": "2026-08-28T00:00:59.684285",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 4** — The fin... is slightly redundant.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

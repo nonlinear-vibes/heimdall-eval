@@ -3,14 +3,11 @@
   "criterion_id": "c001",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The task was completed successfully. The agent wrote a haiku about bug fixing to `haiku.txt`, confirmed by the write_file tool result ('Successfully wrote to haiku.txt (72 characters written)') and verified by the haiku content meeting the 5-7-5 syllable structure.",
-  "duration_ms": 1118.116915000428,
-  "token_usage": {
-    "prompt_tokens": 1009,
-    "completion_tokens": 72,
-    "total_tokens": 1081
-  },
-  "langsmith_run_id": "3cfb6554-222d-4953-ad0f-41af2189cac5",
-  "evaluated_at": "2026-08-12T00:55:14.730397"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "03db4079-b7ee-41b9-ba50-e3b8a04ad5cb",
+  "evaluated_at": "2026-08-28T00:00:56.975735",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='The task was to write a ...hrough the tool result.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

@@ -3,14 +3,11 @@
   "criterion_id": "c005",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "No actual tool errors or unexpected failures occurred — the empty return from get_files_info was not an error, just an empty directory listing. The agent adapted sensibly by proceeding to write the file anyway, and all tool calls succeeded. There was nothing to recover from.",
-  "duration_ms": 966.9286280040978,
-  "token_usage": {
-    "prompt_tokens": 1027,
-    "completion_tokens": 66,
-    "total_tokens": 1093
-  },
-  "langsmith_run_id": "629e84b5-b649-4cf6-806f-a6a2e502783b",
-  "evaluated_at": "2026-08-12T00:55:17.701790"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "1dbdc4a0-a74a-42e2-b8d2-444dd300db08",
+  "evaluated_at": "2026-08-28T00:01:13.340576",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 5**\\n\\n**Ration...errors to recover from.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

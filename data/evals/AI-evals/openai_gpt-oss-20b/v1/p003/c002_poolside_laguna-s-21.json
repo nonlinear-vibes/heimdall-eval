@@ -3,14 +3,11 @@
   "criterion_id": "c002",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent's tool calls were each well-targeted and purposeful: get_files_info oriented in the workspace, write_file created fib.py with a clear implementation, and run_python_file verified fib(10) returned 55. No redundant or unnecessary calls were made.",
-  "duration_ms": 910.5734539989498,
-  "token_usage": {
-    "prompt_tokens": 1191,
-    "completion_tokens": 68,
-    "total_tokens": 1259
-  },
-  "langsmith_run_id": "03e9c263-53f9-46a1-b8ca-20c42cb66d97",
-  "evaluated_at": "2026-08-12T00:56:26.405798"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "7a68942b-453e-424d-95fc-3ef0624466a6",
+  "evaluated_at": "2026-08-28T00:01:33.079701",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 5**\\n\\nThe traj...nnecessary exploration.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
