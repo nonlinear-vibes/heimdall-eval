@@ -3,14 +3,11 @@
   "criterion_id": "c003",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 4,
-  "rationale": "The response appropriately asks for clarification given a genuine contradiction in the user's request (being asked to write to output.txt, which doesn't exist, while also being told not to create any new files). It's reasonably concise and not padded, though it does slightly over-explain by listing three numbered follow-up questions that could have been condensed into one request for clarification.",
-  "duration_ms": 1060.7435019992408,
-  "token_usage": {
-    "prompt_tokens": 2005,
-    "completion_tokens": 86,
-    "total_tokens": 2091
-  },
-  "langsmith_run_id": "9142e83d-7236-4d44-9b2f-9081ce8ba959",
-  "evaluated_at": "2026-08-13T00:45:17.889447"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "b8c80e1b-1ca9-4f38-a746-588dcc0d32a9",
+  "evaluated_at": "2026-08-27T22:38:10.995339",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: trailing characters at line 3 column 1 [type=json_invalid, input_value='3\\n\\nThe response correc... appropriately concise.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

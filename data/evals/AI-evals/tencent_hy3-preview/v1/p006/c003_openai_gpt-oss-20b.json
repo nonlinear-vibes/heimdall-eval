@@ -3,14 +3,11 @@
   "criterion_id": "c003",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The response gives a clear explanation of why it can’t proceed, lists the necessary clarifying questions, and invites the user to decide how to proceed—no extraneous commentary or raw tool output. It fully communicates the situation in a concise, easily digestible way.",
-  "duration_ms": 11196.128356998088,
-  "token_usage": {
-    "prompt_tokens": 2022,
-    "completion_tokens": 678,
-    "total_tokens": 2700
-  },
-  "langsmith_run_id": "11ab30d5-e27b-4789-bf8b-5cf4b5011864",
-  "evaluated_at": "2026-08-11T17:43:22.618209"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "5ec9e2b1-1718-48f8-98ba-a4ef41c32e0c",
+  "evaluated_at": "2026-08-27T22:38:20.491025",
+  "error": "'NoneType' object has no attribute 'score'"
 }

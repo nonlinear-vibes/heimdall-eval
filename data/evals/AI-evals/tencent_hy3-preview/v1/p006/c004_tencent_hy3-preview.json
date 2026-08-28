@@ -3,14 +3,11 @@
   "criterion_id": "c004",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent's final response is fully grounded. It claims output.txt doesn't exist, which is directly verified by the get_file_content tool returning 'File not found'. It states the directory appears empty, supported by two get_files_info calls returning empty strings. The agent honest identifies the contradiction in the user's request and asks for clarification rather than making unverified claims or taking unsupported actions.",
-  "duration_ms": 37126.86842900075,
-  "token_usage": {
-    "prompt_tokens": 2043,
-    "completion_tokens": 2213,
-    "total_tokens": 4256
-  },
-  "langsmith_run_id": "9186896c-0d3b-490d-ac0f-25ae38be20ff",
-  "evaluated_at": "2026-08-11T17:44:58.477924"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "3f1f17ae-62e7-41b3-850c-6012069fd0d8",
+  "evaluated_at": "2026-08-27T22:39:51.298917",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this evaluati...ported by tool results.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
