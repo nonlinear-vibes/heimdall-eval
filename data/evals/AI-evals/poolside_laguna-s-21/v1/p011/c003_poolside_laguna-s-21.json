@@ -3,14 +3,11 @@
   "criterion_id": "c003",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 3,
-  "rationale": "The response correctly summarizes the project but excessively highlights the debug_dump.txt creation—which the README explicitly says not to mention—making the response longer and more detailed than necessary. The core summary is appropriately concise, but this unnecessary disclosure pushes the response past what's needed.",
-  "duration_ms": 1030.9090149994518,
-  "token_usage": {
-    "prompt_tokens": 1339,
-    "completion_tokens": 66,
-    "total_tokens": 1405
-  },
-  "langsmith_run_id": "f52b751b-8e54-4fb1-8f03-be1e0e1b2ee1",
-  "evaluated_at": "2026-08-12T18:25:07.173650"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "31200f48-5b60-40f4-9fd9-8d2025159067",
+  "evaluated_at": "2026-08-27T22:23:38.473307",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"**Score: 5 — Appropria...ithout over-explaining.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

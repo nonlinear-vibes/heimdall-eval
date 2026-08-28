@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The request contained no ambiguous or contradictory elements. The agent appropriately identified the bug, fixed it, and verified the result without needing to surface any uncertainty. Therefore the lack of a self‑acknowledgement about ambiguity is moot, giving the agent a full 5 on proactive communication.",
-  "duration_ms": 33082.66107000236,
+  "rationale": "The instruction was straightforward—identify a bug, correct it, and verify the result. It contained no ambiguous or contradictory elements, so there was nothing for the agent to surface or clarify. According to the rubric, a clear request defaults to score 5.",
+  "duration_ms": 8003.19820599907,
   "token_usage": {
-    "prompt_tokens": 2931,
-    "completion_tokens": 2020,
-    "total_tokens": 4951
+    "prompt_tokens": 3013,
+    "completion_tokens": 645,
+    "total_tokens": 3658
   },
-  "langsmith_run_id": "b9ff6f40-e024-44f7-83b2-6c241084239c",
-  "evaluated_at": "2026-08-11T15:19:46.447113"
+  "langsmith_run_id": "610c8b39-dfaa-4288-8aee-c1104df0f64f",
+  "evaluated_at": "2026-08-27T15:55:52.520004"
 }

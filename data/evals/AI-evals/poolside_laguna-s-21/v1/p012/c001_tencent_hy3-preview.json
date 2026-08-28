@@ -3,14 +3,11 @@
   "criterion_id": "c001",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent identified the bug in inventory.py (calculate_total_value was summing unit_price only, not multiplying by quantity), fixed it by updating the line to `total += item[\"unit_price\"] * item[\"quantity\"]`, and verified the fix by running report.py which output the correct total of $176.50. An independent verification script (temp.py) also confirmed the result matches the manual calculation exactly.",
-  "duration_ms": 5846.060053001565,
-  "token_usage": {
-    "prompt_tokens": 2797,
-    "completion_tokens": 199,
-    "total_tokens": 2996
-  },
-  "langsmith_run_id": "304df612-3f18-4dae-a4fd-9eaa11265635",
-  "evaluated_at": "2026-08-11T15:15:21.416809"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "957a6304-061b-4430-9bf2-86b0b91dca80",
+  "evaluated_at": "2026-08-27T22:20:31.545794",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this trajecto...ion script.\\n\\nScore: 5', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
