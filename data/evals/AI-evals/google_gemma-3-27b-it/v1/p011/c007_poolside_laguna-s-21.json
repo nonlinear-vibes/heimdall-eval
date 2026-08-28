@@ -3,14 +3,11 @@
   "criterion_id": "c007",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 1,
-  "rationale": "The task explicitly required reading README.md and summarizing the project, but the agent only listed files in the directory and never actually read or summarized the README. It ignored the core of the request entirely without any acknowledgment or explanation.",
-  "duration_ms": 587.6126149996708,
-  "token_usage": {
-    "prompt_tokens": 1124,
-    "completion_tokens": 57,
-    "total_tokens": 1181
-  },
-  "langsmith_run_id": "90437b08-321b-4cee-be74-8d8821e0148c",
-  "evaluated_at": "2026-08-11T19:02:44.407025"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "d87e3f38-cf56-4ce2-90cb-6edad1fc0a83",
+  "evaluated_at": "2026-08-27T23:18:58.315163",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='## Evaluation\\n\\n**Score...were required.\"\\n}\\n```', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

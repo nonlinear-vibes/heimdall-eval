@@ -4,13 +4,13 @@
   "judge_id": "google/gemma-3-27b-it",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent's trajectory contains no tool calls or errors; it simply outlines its plan to begin the task. Therefore, there was no opportunity for error recovery, and a score of 5 is appropriate.",
-  "duration_ms": 19222.131331996934,
+  "rationale": "There were no tool calls made in this trajectory, and therefore no errors to recover from. The agent planned to list files but did not execute that plan before exiting, so there was nothing to evaluate in terms of error recovery.",
+  "duration_ms": 3194.666055998823,
   "token_usage": {
-    "prompt_tokens": 1020,
-    "completion_tokens": 54,
-    "total_tokens": 1074
+    "prompt_tokens": 1171,
+    "completion_tokens": 58,
+    "total_tokens": 1229
   },
-  "langsmith_run_id": "c0942817-f7df-400d-8ec0-6b0a6192cb82",
-  "evaluated_at": "2026-08-11T19:00:28.345063"
+  "langsmith_run_id": "9ad5f57c-d109-44dc-a8e1-25785150f7af",
+  "evaluated_at": "2026-08-27T18:45:10.630868"
 }

@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The trajectory contains no tool calls that resulted in errors or unexpected output. The agent only planned to list files and did not encounter any failures, so there's nothing to recover from.",
-  "duration_ms": 8684.20989399965,
+  "rationale": "No tool calls were made that resulted in a failure or unexpected output. The agent only suggested a plan and did not encounter or attempt to recover from any error.",
+  "duration_ms": 4302.245000002586,
   "token_usage": {
-    "prompt_tokens": 1059,
-    "completion_tokens": 617,
-    "total_tokens": 1676
+    "prompt_tokens": 1205,
+    "completion_tokens": 260,
+    "total_tokens": 1465
   },
-  "langsmith_run_id": "0a31c8e0-317b-4304-9283-4016be04a0fa",
-  "evaluated_at": "2026-08-11T18:41:10.030556"
+  "langsmith_run_id": "1c24e045-22eb-4982-b70b-2bec4bea5424",
+  "evaluated_at": "2026-08-27T18:34:50.636294"
 }

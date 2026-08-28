@@ -3,14 +3,11 @@
   "criterion_id": "c001",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 1,
-  "rationale": "The agent's trajectory shows only a single iteration where it stated its intent and proposed a tool call (get_files_info), but no actual tool was invoked — the response ended with 'Final answer' without executing any tool calls or producing any file contents. No files were examined, no bug was identified or fixed, and no script was run to verify anything. The task was not accomplished.",
-  "duration_ms": 1062.327178002306,
-  "token_usage": {
-    "prompt_tokens": 1001,
-    "completion_tokens": 96,
-    "total_tokens": 1097
-  },
-  "langsmith_run_id": "67edb5cf-08e4-49e0-b3a3-6078415153fd",
-  "evaluated_at": "2026-08-13T01:20:17.663576"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "3d24eb13-e056-4b44-9ee5-1454f6e130ff",
+  "evaluated_at": "2026-08-27T23:09:40.247868",
+  "error": "'NoneType' object is not iterable"
 }

@@ -3,14 +3,11 @@
   "criterion_id": "c003",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
-  "score": 3,
-  "rationale": "The response is noticeably too long for a final answer, padded with unnecessary step-by-step narration of the agent's plan instead of communicating the outcome. It leaves the user unsure whether the bug was actually fixed or what was done, as it only describes intended actions rather than reporting results.",
-  "duration_ms": 140222.9603070009,
-  "token_usage": {
-    "prompt_tokens": 1095,
-    "completion_tokens": 8915,
-    "total_tokens": 10010
-  },
-  "langsmith_run_id": "7f477d83-e9ae-4ce7-864a-ff1b042f5479",
-  "evaluated_at": "2026-08-11T18:48:31.726879"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "cb48e884-40ad-43dd-9276-08c8c01c6a93",
+  "evaluated_at": "2026-08-27T23:14:31.552268",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this response...her the task succeeded.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

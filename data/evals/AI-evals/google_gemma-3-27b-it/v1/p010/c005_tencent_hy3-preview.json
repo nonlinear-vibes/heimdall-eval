@@ -3,11 +3,14 @@
   "criterion_id": "c005",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
-  "score": null,
-  "rationale": null,
-  "duration_ms": null,
-  "token_usage": null,
-  "langsmith_run_id": "965ddcfe-aae8-4ef7-bb11-1c60c7235d03",
-  "evaluated_at": "2026-08-13T01:23:13.577039",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this trajecto...ete the requested task.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "score": 5,
+  "rationale": "The provided agent trajectory contains no tool call results or indications of tool errors/unexpected results. The JSON block in the AI response is part of the text content rather than an executed tool call, so no tools were run and no errors occurred. There was nothing to recover from.",
+  "duration_ms": 38560.57147199681,
+  "token_usage": {
+    "prompt_tokens": 1158,
+    "completion_tokens": 6397,
+    "total_tokens": 7555
+  },
+  "langsmith_run_id": "7f215b4f-8709-4559-b890-adef3fe6ad50",
+  "evaluated_at": "2026-08-27T18:41:38.987506"
 }

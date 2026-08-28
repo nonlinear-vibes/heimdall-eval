@@ -3,14 +3,14 @@
   "criterion_id": "c004",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
-  "score": 1,
-  "rationale": "Requires;2..? …",
-  "duration_ms": 3352.9855089982448,
+  "score": 2,
+  "rationale": "The final response claims the agent will list files, read `calculator.py`, fix the bug, and test it. The trajectory shows only a planned function call; no file listing, reading, editing, or execution actually took place, so these claims are not supported by any evidence in the trajectory.",
+  "duration_ms": 7340.672898997582,
   "token_usage": {
-    "prompt_tokens": 1162,
-    "completion_tokens": 107,
-    "total_tokens": 1269
+    "prompt_tokens": 1084,
+    "completion_tokens": 505,
+    "total_tokens": 1589
   },
-  "langsmith_run_id": "31b25715-d023-46c6-9f68-6d5071993961",
-  "evaluated_at": "2026-08-11T18:48:37.008823"
+  "langsmith_run_id": "2c841d4a-7a6f-4e82-9ed3-f1b8a60eaf25",
+  "evaluated_at": "2026-08-27T18:40:50.476271"
 }

@@ -3,14 +3,11 @@
   "criterion_id": "c007",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent has not yet produced a final response or addressed the bug; it only began by listing files. Per the rubric's guidance, when no valid final response is produced, the default score is 5, as this type of failure is evaluated elsewhere.",
-  "duration_ms": 5820.578857001237,
-  "token_usage": {
-    "prompt_tokens": 1150,
-    "completion_tokens": 158,
-    "total_tokens": 1308
-  },
-  "langsmith_run_id": "5681da76-b27d-483b-b80d-81f81deafe97",
-  "evaluated_at": "2026-08-11T18:44:22.012551"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "4364d379-f5b0-4e7a-a293-d68578a5ae1f",
+  "evaluated_at": "2026-08-27T23:13:13.187172",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this task and...faults to a score of 1.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

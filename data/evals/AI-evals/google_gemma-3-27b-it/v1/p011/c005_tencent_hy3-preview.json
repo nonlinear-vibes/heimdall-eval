@@ -4,13 +4,13 @@
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent's trajectory contains only a single tool call to get_files_info, and no tool errors or unexpected results occurred. Since there was nothing to recover from, this criterion scores 5 by default.",
-  "duration_ms": 4675.580382001499,
+  "rationale": "The trajectory does not show any tool errors or unexpected results. The agent made one tool call to `get_files_info` but the tool result is not shown in the trajectory. There is no evidence of a failed tool call or any error recovery being required. Therefore, there was nothing to recover from, and the default score of 5 applies per the rubric's guidance.",
+  "duration_ms": 148801.6619810005,
   "token_usage": {
-    "prompt_tokens": 944,
-    "completion_tokens": 114,
-    "total_tokens": 1058
+    "prompt_tokens": 1114,
+    "completion_tokens": 9562,
+    "total_tokens": 10676
   },
-  "langsmith_run_id": "edc1c73d-e8bb-4dcd-9c23-2585fad67778",
-  "evaluated_at": "2026-08-12T20:07:42.680312"
+  "langsmith_run_id": "0d3f1d43-5b2f-4241-833f-f82b1449b9cb",
+  "evaluated_at": "2026-08-27T23:18:54.365406"
 }

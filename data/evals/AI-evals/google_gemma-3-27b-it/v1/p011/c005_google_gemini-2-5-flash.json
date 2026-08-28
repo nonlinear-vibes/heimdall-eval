@@ -4,13 +4,13 @@
   "judge_id": "google/gemini-2.5-flash",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "No errors occurred in the trajectory, so this criterion does not apply. The agent correctly planned to use `get_files_info`.",
-  "duration_ms": 716.2794940013555,
+  "rationale": "There were no tool errors or unexpected results in the provided trajectory. The agent successfully called the `get_files_info` function and the trajectory ended after the first iteration.",
+  "duration_ms": 910.9723620022123,
   "token_usage": {
-    "prompt_tokens": 1010,
-    "completion_tokens": 46,
-    "total_tokens": 1056
+    "prompt_tokens": 1161,
+    "completion_tokens": 53,
+    "total_tokens": 1214
   },
-  "langsmith_run_id": "3abdf782-ea82-4aad-b90f-c7a6d85492c7",
-  "evaluated_at": "2026-08-11T19:00:32.682329"
+  "langsmith_run_id": "2d7baf6a-cc4e-470f-a6a3-f117f4d95533",
+  "evaluated_at": "2026-08-27T18:45:08.349201"
 }

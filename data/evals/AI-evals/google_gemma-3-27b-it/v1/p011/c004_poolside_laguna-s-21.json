@@ -3,14 +3,11 @@
   "criterion_id": "c004",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 1,
-  "rationale": "The task asks to read README.md in the workspace and summarize it. The agent instead only described its intent to list files and read the README, and the provided trajectory shows only a single iteration where the agent output a tool-use-format JSON for 'get_files_info' rather than actually calling any tool or producing a summary. There is no evidence that any file-listing or README-reading tool was actually invoked and returned results, and no final summary was ever produced. Therefore the final response describes actions and outcomes (reading the README, summarizing it) for which the trajectory provides no supporting evidence — it is fabricated.",
-  "duration_ms": 1395.9702440006367,
-  "token_usage": {
-    "prompt_tokens": 1075,
-    "completion_tokens": 134,
-    "total_tokens": 1209
-  },
-  "langsmith_run_id": "e0f2fb4c-461f-409b-a196-d45163f33cf0",
-  "evaluated_at": "2026-08-12T20:07:37.995688"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "8b1a48f0-633b-4e4a-a823-a3eb62b123da",
+  "evaluated_at": "2026-08-27T23:16:25.561982",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected ident at line 1 column 2 [type=json_invalid, input_value='I\\'ll analyze the agent ...y to complete the task.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

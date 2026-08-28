@@ -3,14 +3,11 @@
   "criterion_id": "c005",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "No errors or unexpected results occurred in the trajectory - the agent's single tool call to list files succeeded, though the task was not completed (README was never read or summarized). Since the rubric specifies scoring 5 when no errors are encountered, this trajectory receives the maximum score for error recovery.",
-  "duration_ms": 970.4249709975556,
-  "token_usage": {
-    "prompt_tokens": 991,
-    "completion_tokens": 78,
-    "total_tokens": 1069
-  },
-  "langsmith_run_id": "794ead01-4134-4ef8-9acf-1e60fa45933b",
-  "evaluated_at": "2026-08-12T00:16:07.054400"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "05b1c6f0-2df9-4ab0-8d70-79e01a7ea107",
+  "evaluated_at": "2026-08-27T23:16:28.733928",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected ident at line 1 column 2 [type=json_invalid, input_value='I need to analyze the ag...alformed tool call.\"\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
