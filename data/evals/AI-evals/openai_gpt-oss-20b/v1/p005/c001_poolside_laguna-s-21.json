@@ -3,14 +3,14 @@
   "criterion_id": "c001",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 2,
-  "rationale": "The agent only explored the codebase by reading files (main.py, helpers.py, helper_utils.py, config.py, sample_order.json) but never made any modifications. The task \"Clean up this codebase\" requires actual code cleanup actions such as removing unused code, consolidating duplicate logic, or removing dead imports, none of which were performed. The trajectory ends after file inspection with no cleanup operations executed, resulting in an unchanged codebase that scores low on completion.",
-  "duration_ms": 1565.9943630016642,
+  "score": 1,
+  "rationale": "The agent never actually performed any cleanup — it only read files (main.py, helpers.py, helper_utils.py, config.py) and listed the directory, then stopped without making any edits, deletions, or verifications. The task required modifying files (removing dead code like duplicate `CalcTotal`/`calc_total`, deleting unused imports/functions, merging duplicate `process_order` functions, and replacing the hard-coded tax rate with `config.TAX_RATE`), but no `write_file` or `delete_file` calls were ever made, and no verification was attempted.",
+  "duration_ms": 2020.489002999966,
   "token_usage": {
-    "prompt_tokens": 1865,
-    "completion_tokens": 103,
-    "total_tokens": 1968
+    "prompt_tokens": 1831,
+    "completion_tokens": 125,
+    "total_tokens": 1956
   },
-  "langsmith_run_id": "b1830ec9-8d7a-465b-8636-097fb91d6484",
-  "evaluated_at": "2026-08-12T00:56:30.994676"
+  "langsmith_run_id": "027749d2-c267-4c31-b28e-ffb2f6cdcfcb",
+  "evaluated_at": "2026-08-28T00:02:02.574918"
 }

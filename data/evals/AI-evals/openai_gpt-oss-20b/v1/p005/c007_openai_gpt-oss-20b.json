@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 1,
-  "rationale": "The request to 'Clean up this codebase' is ambiguous – it could mean removing unused code, renaming functions, re‑ordering imports, etc. The agent never asked for clarification nor did it state what it assumed. It proceeded to inspect files but produced no mandated cleanup rationale or self‑noting of assumptions, and the final response was empty.}",
-  "duration_ms": 7369.437528999697,
+  "rationale": "We see used?… …”??……??…………………………………..…………",
+  "duration_ms": 5185.91778499831,
   "token_usage": {
-    "prompt_tokens": 2022,
-    "completion_tokens": 468,
-    "total_tokens": 2490
+    "prompt_tokens": 2117,
+    "completion_tokens": 247,
+    "total_tokens": 2364
   },
-  "langsmith_run_id": "1c153990-419c-445e-ba95-6d8693f8a29c",
-  "evaluated_at": "2026-08-11T21:43:53.453925"
+  "langsmith_run_id": "c80a4d5e-ea9b-42c5-a715-71184cc34520",
+  "evaluated_at": "2026-08-27T20:03:05.263187"
 }

@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The user’s trajectory shown has no tool call errors or an unexpected result – in the sole get_files_info call the result was successful and all further steps were just reasoning. The question asks to give a score for how the agent recovered from errors. Since no error occurred, we need to “SCORE 5 by default”. We’ll provide – … The ? … ... sound… ……  … … …?",
-  "duration_ms": 4817.865077995521,
+  "rationale": "The agent made no tool calls that failed or produced an unexpected result. The only tool invocation returned a successful directory listing that simply did not contain `calculator.py`; this is normal behavior, not an error to recover from. Hence the trajectory contains no recovery scenario, so the default score is 5.",
+  "duration_ms": 2830.223755001498,
   "token_usage": {
-    "prompt_tokens": 966,
-    "completion_tokens": 102,
-    "total_tokens": 1068
+    "prompt_tokens": 1107,
+    "completion_tokens": 195,
+    "total_tokens": 1302
   },
-  "langsmith_run_id": "e776d00c-4303-45dd-958e-c741e73df7db",
-  "evaluated_at": "2026-08-11T22:01:29.796131"
+  "langsmith_run_id": "1c3919c6-bcbd-4a05-bacc-898bbd51868d",
+  "evaluated_at": "2026-08-27T20:15:09.546421"
 }

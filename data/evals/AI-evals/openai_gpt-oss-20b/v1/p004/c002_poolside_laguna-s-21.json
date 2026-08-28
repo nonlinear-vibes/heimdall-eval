@@ -3,14 +3,11 @@
   "criterion_id": "c002",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 1,
-  "rationale": "The agent made only one tool call (a directory listing) and never actually located or read `calculator.py`, despite the task requiring it. After receiving a file list that did not include `calculator.py`, the agent gave up instead of searching for it or taking further action, resulting in no meaningful tool use toward fixing the bug.",
-  "duration_ms": 1309.1714230031357,
-  "token_usage": {
-    "prompt_tokens": 942,
-    "completion_tokens": 79,
-    "total_tokens": 1021
-  },
-  "langsmith_run_id": "cc8fc24f-29e8-4092-8a45-7022cd313e17",
-  "evaluated_at": "2026-08-11T21:59:16.155365"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "303913ad-437e-40c9-a118-2cc79a2d04f7",
+  "evaluated_at": "2026-08-28T00:03:00.045969",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='## Score: 1\\n\\nThe agent...at plainly required it.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

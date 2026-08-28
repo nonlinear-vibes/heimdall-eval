@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The trajectory contains no tool errors or unexpected results; all calls succeeded and the agent did not encounter anything that required recovery. Therefore the default score of 5 applies.",
-  "duration_ms": 4065.037462998589,
+  "rationale": "No tool errors or unexpected results were encountered in the trajectory; all calls succeeded. Therefore the error‑recovery criterion does not apply, and the default score of 5 is appropriate.",
+  "duration_ms": 3026.2705120039755,
   "token_usage": {
-    "prompt_tokens": 1872,
-    "completion_tokens": 345,
-    "total_tokens": 2217
+    "prompt_tokens": 2030,
+    "completion_tokens": 188,
+    "total_tokens": 2218
   },
-  "langsmith_run_id": "c18d2d13-b3b8-4d8f-ac3d-8e7caa365e8f",
-  "evaluated_at": "2026-08-11T21:43:12.701472"
+  "langsmith_run_id": "f6206c09-5f1b-4838-8b5b-8bcad1949bec",
+  "evaluated_at": "2026-08-27T20:02:57.809986"
 }

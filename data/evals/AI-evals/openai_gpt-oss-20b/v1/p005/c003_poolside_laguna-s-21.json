@@ -3,14 +3,11 @@
   "criterion_id": "c003",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent's trajectory shows thorough code exploration and cleanup, which is appropriate given the task's complexity of cleaning up a multi-file codebase. The final response likely summarizes changes concisely while covering what was done across the relevant files. Despite the extensive tool usage during analysis, the final communication remains proportional to the multi-file refactoring task performed.",
-  "duration_ms": 937.4653840004612,
-  "token_usage": {
-    "prompt_tokens": 1942,
-    "completion_tokens": 79,
-    "total_tokens": 2021
-  },
-  "langsmith_run_id": "b93d8c57-4c48-42d3-ae22-b0d43eeb740b",
-  "evaluated_at": "2026-08-12T20:50:48.910400"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "61000171-aef2-4ddc-8ed2-da5f4081853c",
+  "evaluated_at": "2026-08-28T00:02:05.617895",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 5**\\n\\nThe fina...pe of the cleanup task.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
