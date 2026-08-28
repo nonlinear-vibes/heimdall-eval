@@ -3,14 +3,11 @@
   "criterion_id": "c005",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "No tool errors or unexpected results occurred in the trajectory; the only issue was that the target file 'calculator.py' was not found in the directory listing, which is not a tool failure but rather a task setup issue. The agent correctly reported this finding to the user without any errors.",
-  "duration_ms": 1189.907978005067,
-  "token_usage": {
-    "prompt_tokens": 1032,
-    "completion_tokens": 70,
-    "total_tokens": 1102
-  },
-  "langsmith_run_id": "54dc9a4b-b5d8-45f5-bbce-71c73c614800",
-  "evaluated_at": "2026-08-11T22:19:21.081810"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "8a3b6773-82b5-48d1-b038-d25ca29d4e9e",
+  "evaluated_at": "2026-08-27T22:08:35.559870",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected ident at line 1 column 2 [type=json_invalid, input_value=\"No errors occurred durin...ult score of 5 applies.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
