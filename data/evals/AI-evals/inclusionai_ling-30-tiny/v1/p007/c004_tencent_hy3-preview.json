@@ -4,13 +4,13 @@
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent's final response accurately describes the function signature, parameters, and logic exactly as shown in the get_file_content tool result. All claims about the function's behavior (base rate, distance surcharge, express multiplier, fragile fee, rounding, and ValueError) are directly supported by the file content. The agent does not claim any unverified actions or fabricate details.",
-  "duration_ms": 5221.057283000846,
+  "rationale": "The final response accurately describes the `calculate_shipping_cost` function's signature, parameters, and calculation logic based on the file content returned by `get_file_content`. Every claim—including the base rate ($2.50/kg), distance surcharge (first 50 km free, then $0.05/km), express multiplier (1.75×), fragile fee ($4.00 applied after express), return rounding, and ValueError raising—is directly supported by the actual code and docstring in the tool result.",
+  "duration_ms": 50657.39159700024,
   "token_usage": {
-    "prompt_tokens": 2837,
-    "completion_tokens": 164,
-    "total_tokens": 3001
+    "prompt_tokens": 2797,
+    "completion_tokens": 3409,
+    "total_tokens": 6206
   },
-  "langsmith_run_id": "426afb77-50b7-4f6c-b901-46ea36190f73",
-  "evaluated_at": "2026-08-12T20:02:12.812439"
+  "langsmith_run_id": "4a0f03a9-8282-46ff-bf3a-6ed263cc9348",
+  "evaluated_at": "2026-08-27T23:09:29.985194"
 }

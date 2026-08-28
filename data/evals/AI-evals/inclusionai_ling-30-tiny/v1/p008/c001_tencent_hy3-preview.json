@@ -3,14 +3,11 @@
   "criterion_id": "c001",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent fully completed the task: it ran the original broken.py (which failed with a SyntaxError), identified all issues (missing colon, undefined variable empty_scores, potential ZeroDivisionError), fixed them by writing a corrected version, and verified the fix by running the file again. The final run_python_file call returned clean output with 'Average score: 87.6' and 'Average of empty list: 0' and no errors.",
-  "duration_ms": 33988.72342499999,
-  "token_usage": {
-    "prompt_tokens": 2115,
-    "completion_tokens": 2051,
-    "total_tokens": 4166
-  },
-  "langsmith_run_id": "8f856b33-8771-4aae-a1c0-a7481c45ece5",
-  "evaluated_at": "2026-08-12T19:53:06.364757"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "d9978447-108d-4b72-8ffa-62dd765e1428",
+  "evaluated_at": "2026-08-27T23:03:57.446568",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 5**\\n\\n**Ration...ist: 0\" with no errors.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

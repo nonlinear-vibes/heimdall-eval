@@ -3,14 +3,11 @@
   "criterion_id": "c002",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent made only two essential calls — first to list the workspace and locate `shipping_utils.py`, then to read its content in full. No redundant or unnecessary reads, writes, or runs were performed, and each call directly served the goal. Hence the tool‑use pattern is perfectly efficient.",
-  "duration_ms": 3626.66517100115,
-  "token_usage": {
-    "prompt_tokens": 2746,
-    "completion_tokens": 179,
-    "total_tokens": 2925
-  },
-  "langsmith_run_id": "b7a31df4-81d3-4c12-9a13-6f644cb1c116",
-  "evaluated_at": "2026-08-12T19:59:21.386064"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "feeae25a-404c-4f52-a2e8-bcd6cf5ed353",
+  "evaluated_at": "2026-08-27T23:08:16.553129",
+  "error": "'NoneType' object has no attribute 'score'"
 }

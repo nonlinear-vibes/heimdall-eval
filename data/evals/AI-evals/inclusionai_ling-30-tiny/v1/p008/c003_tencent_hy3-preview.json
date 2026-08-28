@@ -3,14 +3,11 @@
   "criterion_id": "c003",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The response appropriately confirms the task is complete, summarizes the fixes concisely, and shows the output for verification. The length is proportionate to fixing a multi-issue script, with no padding or missing details.",
-  "duration_ms": 52192.28418199782,
-  "token_usage": {
-    "prompt_tokens": 2200,
-    "completion_tokens": 3552,
-    "total_tokens": 5752
-  },
-  "langsmith_run_id": "013be807-7f93-44d8-89f4-34e0f31a98d1",
-  "evaluated_at": "2026-08-13T01:19:59.847246"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "05f9beae-d855-45eb-b1b5-4682248bdcc6",
+  "evaluated_at": "2026-08-27T23:04:03.431581",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='```json\\n{\\n  \"score\": 5... successfully.\"\\n}\\n```', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

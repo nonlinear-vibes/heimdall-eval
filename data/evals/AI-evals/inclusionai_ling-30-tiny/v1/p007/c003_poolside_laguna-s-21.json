@@ -3,14 +3,11 @@
   "criterion_id": "c003",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The final response is well-structured and appropriately detailed for the task. It concisely explains what the function does, lists all parameters with their types, defaults, and descriptions, and breaks down the cost calculation logic into clear steps. There's no unnecessary verbosity or padding, and all the information a reader would need is present.",
-  "duration_ms": 989.2633179988479,
-  "token_usage": {
-    "prompt_tokens": 2791,
-    "completion_tokens": 83,
-    "total_tokens": 2874
-  },
-  "langsmith_run_id": "8e1bc167-b5a5-4f34-9093-a01696e0901d",
-  "evaluated_at": "2026-08-13T01:20:14.286355"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "782d5f1e-c97d-45b2-9569-dace88c3b9d3",
+  "evaluated_at": "2026-08-27T23:08:39.326668",
+  "error": "'NoneType' object is not iterable"
 }

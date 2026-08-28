@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "5",
-  "duration_ms": 14914.197893000164,
+  "rationale": "The agent located `shipping_utils.py`, retrieved its full content, identified the `calculate_shipping_cost` function, and provided a comprehensive summary of its behavior and parameters. All requested information is accurately presented, satisfying the task.",
+  "duration_ms": 3391.344362997188,
   "token_usage": {
-    "prompt_tokens": 2720,
-    "completion_tokens": 106,
-    "total_tokens": 2826
+    "prompt_tokens": 2707,
+    "completion_tokens": 193,
+    "total_tokens": 2900
   },
-  "langsmith_run_id": "5726ef34-d2fc-4a79-9baa-ec9a1b47233c",
-  "evaluated_at": "2026-08-12T19:58:22.609650"
+  "langsmith_run_id": "ba671a53-b00b-4343-903c-6fd30acd631e",
+  "evaluated_at": "2026-08-27T18:26:10.804724"
 }

@@ -3,14 +3,11 @@
   "criterion_id": "c001",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent successfully located shipping_utils.py using get_files_info, read the full file content with get_file_content, and found the calculate_shipping_cost function at the end of the file. The final response accurately describes what the function does (calculates shipping cost) and correctly identifies all four parameters (weight_kg, distance_km, is_express, is_fragile) along with their roles, matching the actual code shown in the tool results.",
-  "duration_ms": 41407.68893799941,
-  "token_usage": {
-    "prompt_tokens": 2731,
-    "completion_tokens": 2544,
-    "total_tokens": 5275
-  },
-  "langsmith_run_id": "aceb0489-7862-49be-8144-043a4d4d8497",
-  "evaluated_at": "2026-08-12T19:59:06.768038"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "863fcfc6-f64a-4183-a5b4-67a89f62c16d",
+  "evaluated_at": "2026-08-27T23:08:06.083245",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this task and...affect the calculation.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

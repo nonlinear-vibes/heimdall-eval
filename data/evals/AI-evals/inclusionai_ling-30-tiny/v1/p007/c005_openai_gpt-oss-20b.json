@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The trajectory shows no tool errors or unexpected results; all tool calls succeeded. Therefore there was nothing to recover from, and the agent behaved flawlessly, warranting the default maximum score.",
-  "duration_ms": 3112.876627999867,
+  "rationale": "No tool calls failed or returned unexpected results in this trajectory, so there was nothing to recover from. The agent successfully located and read the file, identified the function, and provided a correct summary, thereby meeting the criteria for a perfect score.",
+  "duration_ms": 3078.5556100017857,
   "token_usage": {
-    "prompt_tokens": 2729,
-    "completion_tokens": 185,
-    "total_tokens": 2914
+    "prompt_tokens": 2898,
+    "completion_tokens": 189,
+    "total_tokens": 3087
   },
-  "langsmith_run_id": "95c12d86-4f81-42ca-bccd-2785bd8a3bd2",
-  "evaluated_at": "2026-08-12T20:02:21.011894"
+  "langsmith_run_id": "96293231-06ee-463e-a64c-c3b03422e65f",
+  "evaluated_at": "2026-08-27T18:29:51.643106"
 }

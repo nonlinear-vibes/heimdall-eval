@@ -4,13 +4,13 @@
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The response directly answers the user's question with a clear function signature, a well-formatted parameter table, and a concise step-by-step explanation of the logic. It includes all relevant details (parameters, defaults, calculation rules, error handling) without unnecessary padding or verbosity, and the structure allows the user to quickly absorb the information.",
-  "duration_ms": 65756.68538299942,
+  "rationale": "The final response fully and concisely addresses the user's request, clearly listing all function parameters with relevant details (type, default, role) and explaining the calculation logic and key caveats (negative input error, fragile fee application order, rounding) without unnecessary padding or missing critical information, and is well-structured for easy absorption.",
+  "duration_ms": 21953.23583500067,
   "token_usage": {
-    "prompt_tokens": 2816,
-    "completion_tokens": 3796,
-    "total_tokens": 6612
+    "prompt_tokens": 2773,
+    "completion_tokens": 4386,
+    "total_tokens": 7159
   },
-  "langsmith_run_id": "baf357de-68ee-476c-bd91-be8828c58b6e",
-  "evaluated_at": "2026-08-12T20:01:44.217698"
+  "langsmith_run_id": "2e423e9f-237e-490d-b6a4-1aec024b4783",
+  "evaluated_at": "2026-08-27T18:28:01.230662"
 }

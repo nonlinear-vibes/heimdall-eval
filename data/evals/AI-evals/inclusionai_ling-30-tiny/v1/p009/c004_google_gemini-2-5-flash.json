@@ -4,13 +4,13 @@
   "judge_id": "google/gemini-2.5-flash",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent correctly states that it created `fib.py` and that `fib(10)` returns 55, which is directly supported by the `run_python_file` tool output. It also accurately explains why 55 is the correct 10th Fibonacci number according to the standard 0-indexed definition.",
-  "duration_ms": 1309.5458570005576,
+  "rationale": "The agent accurately reported that it created the `fib.py` file, and that when run, `fib(10)` returned 55, not 54. All claims are directly supported by the tool outputs.",
+  "duration_ms": 1160.8293169992976,
   "token_usage": {
-    "prompt_tokens": 2285,
-    "completion_tokens": 86,
-    "total_tokens": 2371
+    "prompt_tokens": 2236,
+    "completion_tokens": 64,
+    "total_tokens": 2300
   },
-  "langsmith_run_id": "e2d827d6-e2e0-4e16-a25f-515f1779e629",
-  "evaluated_at": "2026-08-12T19:29:14.367795"
+  "langsmith_run_id": "30e0d512-7906-4ddb-91ad-6b444d92d1cc",
+  "evaluated_at": "2026-08-27T17:47:18.415392"
 }

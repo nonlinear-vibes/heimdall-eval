@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The final response accurately states that fib.py was created (supported by the write_file call), that running the file produced 55 for fib(10) (supported by the run_python_file output), and that the standard 0‑indexed Fibonacci sequence yields 55, not 54. All claims are directly corroborated by the trajectory, with no unverified or contradictory statements.",
-  "duration_ms": 7273.395321999487,
+  "rationale": "The agent’s final response accurately states that it created a `fib.py` file containing the iteratively implemented Fibonacci function and that running this file produced a result of 55 for `fib(10)`. Both statements are directly supported by the recorded `write_file` and `run_python_file` tool calls. No additional claims are made beyond what the trajectory documents. Therefore the response is fully grounded.",
+  "duration_ms": 2486.1025600002904,
   "token_usage": {
-    "prompt_tokens": 2153,
-    "completion_tokens": 419,
-    "total_tokens": 2572
+    "prompt_tokens": 2109,
+    "completion_tokens": 190,
+    "total_tokens": 2299
   },
-  "langsmith_run_id": "e543ef86-e68b-46c5-a5a3-63ea0a39aaee",
-  "evaluated_at": "2026-08-12T19:29:11.807880"
+  "langsmith_run_id": "a4f7d055-3850-4ec9-91a1-aa874a5c08d0",
+  "evaluated_at": "2026-08-27T17:47:19.739452"
 }
