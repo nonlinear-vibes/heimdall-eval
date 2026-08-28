@@ -1,9 +1,9 @@
-import asyncio
 import os
 import yaml
 import json
 import time
 import uuid
+import asyncio
 from datetime import datetime
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
@@ -127,40 +127,26 @@ def load_trajectory(log_path: str) -> list[dict]:
     return events
 
 
-def build_judge_trace(trajectory_events: list[dict], required_fields: list[str] | None = None) -> dict:
+def build_judge_trace(trajectory_events: list[dict]) -> dict:
     """Builds the judge-facing view: task + iteration_data only.
-    Skips 'start' (run_id, prompt metadata — kept out to avoid judge
+    Skips 'start' (run_id, prompt metadata — kept out to mitigate judge
     self-preference bias) and iteration_metadata (duration, tokens —
     same reasoning: could let a judge infer model size/cost)."""
 
-    full_trace = {"task": None, "iterations": []}
+    trace = {"task": None, "iterations": []}
 
     for event in trajectory_events:
         if event["event"] == "Task":
-            full_trace["task"] = event["data"]
+            trace["task"] = event["data"]
 
         elif event["event"] == "LLM run":
-            full_trace["iterations"] = [it["iteration_data"] for it in event["data"]]
+            trace["iterations"] = [it["iteration_data"] for it in event["data"]]
 
         elif event["event"] == "Run complete":
-            full_trace["exit_reason"] = event["data"]["exit_reason"]
-            full_trace["total_iterations"] = event["data"]["total_iterations"]
+            trace["exit_reason"] = event["data"]["exit_reason"]
+            trace["total_iterations"] = event["data"]["total_iterations"]
 
-    if not required_fields:
-        return full_trace
-
-    # restrict to a specific subset
-    restricted = {}
-    if "task" in required_fields:
-        restricted["task"] = full_trace["task"]
-    if "final_response" in required_fields:
-        last_iter = full_trace["iterations"][-1] if full_trace["iterations"] else {}
-        restricted["final_response"] = last_iter.get("ai_response")
-    if "function_calls" in required_fields:
-        restricted["function_calls"] = [
-            fc for it in full_trace["iterations"] for fc in it.get("function_calls", [])
-        ]
-    return restricted
+    return trace
 
 
 def extract_field(trajectory_events: list[dict], field: str):
@@ -179,10 +165,10 @@ def write_json(path: str, data: dict):
 
 
 # --- single judge, scheduled as a task alongside its sibling judges ---
-async def run_judge_eval(run_id: str, agent_version: str, trajectory_events: list[dict], required_fields: list[str] | None, criterion: dict, judge: dict, eval_path: str, api_key: str):
+async def run_judge_eval(run_id: str, agent_version: str, trajectory_events: list[dict], criterion: dict, judge: dict, eval_path: str, api_key: str):
     langsmith_trace_id = str(uuid.uuid4())  # for LangSmith
     try:
-        judge_trace = build_judge_trace(trajectory_events, required_fields)
+        judge_trace = build_judge_trace(trajectory_events)
         result = await run_single_evaluation(run_id, agent_version, langsmith_trace_id, criterion, judge, judge_trace, api_key)
         write_json(eval_path, result)
     except Exception as e:
@@ -229,7 +215,6 @@ async def main():
             applicable = criterion.get("applicable_categories")
             if applicable and extract_field(trajectory_events, "category") not in applicable:
                 continue
-            required_fields = criterion.get("required_fields")
 
             tasks = []
             for judge in judges:
@@ -238,7 +223,7 @@ async def main():
                 if is_evaluated(eval_path):
                     continue
 
-                tasks.append(run_judge_eval(run_id, agent_version, trajectory_events, required_fields, criterion, judge, eval_path, api_key))
+                tasks.append(run_judge_eval(run_id, agent_version, trajectory_events, criterion, judge, eval_path, api_key))
 
             if tasks:
                 await asyncio.gather(*tasks)  # resync before moving to the next criterion
