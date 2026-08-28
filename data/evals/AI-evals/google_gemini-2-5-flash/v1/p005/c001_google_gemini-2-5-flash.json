@@ -4,13 +4,13 @@
   "judge_id": "google/gemini-2.5-flash",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent successfully cleaned up the codebase by refactoring `main.py`, `helpers.py`, and `helper_utils.py`. It consolidated redundant functions, removed unused imports and code, and verified the changes by running the `main.py` script, which executed successfully and produced the expected output.",
-  "duration_ms": 5344.670653001231,
+  "rationale": "The agent successfully cleaned up the codebase by refactoring `main.py` to use a single calculation function and `config.TAX_RATE`, removing redundant debug flags and imports. It also cleaned `helpers.py` by removing unused functions and imports and emptied `helper_utils.py`, then verified the changes by running `main.py` successfully.",
+  "duration_ms": 1036.0541810005088,
   "token_usage": {
-    "prompt_tokens": 3152,
-    "completion_tokens": 80,
-    "total_tokens": 3232
+    "prompt_tokens": 3118,
+    "completion_tokens": 90,
+    "total_tokens": 3208
   },
-  "langsmith_run_id": "6255e8ad-f3e9-4019-92e3-24a4f51dcbc1",
-  "evaluated_at": "2026-08-11T14:45:37.786790"
+  "langsmith_run_id": "eb395056-05dc-44b7-9919-7530f5d350ad",
+  "evaluated_at": "2026-08-27T15:36:14.725327"
 }

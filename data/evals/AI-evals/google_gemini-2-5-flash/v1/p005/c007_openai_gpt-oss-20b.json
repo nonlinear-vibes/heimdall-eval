@@ -3,14 +3,11 @@
   "criterion_id": "c007",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
-  "score": 3,
-  "rationale": "The request to \"clean up\" the codebase is inherently ambiguous—whether it means removing unused code, refactoring logic, improving naming, etc. The agent chose a reasonable interpretation by eliminating duplicate functions and unused code and simplifying the flow. However, it did not explicitly acknowledge that it was making judgment calls about the scope of \"cleanup\" or ask clarifying questions before proceeding. The final response describes the changes made but does not indicate any assumptions or uncertainty. }",
-  "duration_ms": 8845.387401001062,
-  "token_usage": {
-    "prompt_tokens": 2996,
-    "completion_tokens": 477,
-    "total_tokens": 3473
-  },
-  "langsmith_run_id": "5dd09220-f96d-40ad-b188-f7700a066a1a",
-  "evaluated_at": "2026-08-11T14:50:29.659907"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "b28c6e9a-3695-4ada-937a-3697e3990b63",
+  "evaluated_at": "2026-08-27T22:17:49.594210",
+  "error": "'NoneType' object has no attribute 'score'"
 }

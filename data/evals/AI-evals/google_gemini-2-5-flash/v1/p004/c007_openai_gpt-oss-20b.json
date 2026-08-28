@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The request implied that `calculator.py` existed but the agent could not locate it, so the file path was ambiguous. The agent explicitly recognized the ambiguity and asked the user for clarification, satisfying the rubric for proactive communication.",
-  "duration_ms": 6244.488061000084,
+  "rationale": "The user’s request was ambiguous—the assistant could not find `calculator.py`, implying either the file was missing or mis‑named. The assistant explicitly acknowledged this uncertainty by asking the user to clarify the file’s location, thereby surfacing the ambiguity.",
+  "duration_ms": 2840.5017839977518,
   "token_usage": {
-    "prompt_tokens": 1197,
-    "completion_tokens": 336,
-    "total_tokens": 1533
+    "prompt_tokens": 1279,
+    "completion_tokens": 209,
+    "total_tokens": 1488
   },
-  "langsmith_run_id": "dfa71fbf-4ef8-4a78-a5d9-be6aad39b4a5",
-  "evaluated_at": "2026-08-11T15:08:20.239390"
+  "langsmith_run_id": "f4988980-a023-4c99-926e-d32749b8e3b3",
+  "evaluated_at": "2026-08-27T15:48:24.243066"
 }

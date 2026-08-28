@@ -3,14 +3,11 @@
   "criterion_id": "c001",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 1,
-  "rationale": "The agent did not accomplish the task. It checked for the existence of output.txt, found it missing, and then stopped to ask for clarification instead of attempting to complete the requested work. No result was ever written to output.txt, and no meaningful progress toward the actual task was made.",
-  "duration_ms": 1944.5370670000557,
-  "token_usage": {
-    "prompt_tokens": 1126,
-    "completion_tokens": 76,
-    "total_tokens": 1202
-  },
-  "langsmith_run_id": "d6434010-450f-4677-a38d-4b2b2f5cb18b",
-  "evaluated_at": "2026-08-11T14:51:08.723233"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "a5bd77c0-7333-45bd-8132-823924e70e76",
+  "evaluated_at": "2026-08-27T22:18:27.133050",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 1**\\n\\n**Ration...ng `output.txt` itself.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

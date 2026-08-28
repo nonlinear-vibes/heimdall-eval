@@ -3,11 +3,14 @@
   "criterion_id": "c005",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": null,
-  "rationale": null,
-  "duration_ms": null,
-  "token_usage": null,
-  "langsmith_run_id": "460f1b21-9b27-45df-9019-87c1ef88f020",
-  "evaluated_at": "2026-08-13T00:10:54.563621",
-  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**Score: 5**\\n\\n**Ration...riterion defaults to 5.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
+  "score": 5,
+  "rationale": "No tool errors occurred in the trajectory. The agent accurately reported the absence of `calculator.py` in the directory, which is the tool performing its job correctly rather than a failure to recover from. There was no error to recover from.",
+  "duration_ms": 881.5124870016007,
+  "token_usage": {
+    "prompt_tokens": 1189,
+    "completion_tokens": 60,
+    "total_tokens": 1249
+  },
+  "langsmith_run_id": "80f3b596-2105-44fa-8415-c195fb79b07d",
+  "evaluated_at": "2026-08-27T22:18:58.777649"
 }

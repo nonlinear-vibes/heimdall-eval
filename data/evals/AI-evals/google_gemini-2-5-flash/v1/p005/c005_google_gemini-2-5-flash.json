@@ -4,13 +4,13 @@
   "judge_id": "google/gemini-2.5-flash",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent encountered no errors during its execution. It successfully completed the task by refactoring the codebase as intended.",
-  "duration_ms": 932.4670890000561,
+  "rationale": "No errors occurred in the trajectory, so the agent had nothing to recover from.",
+  "duration_ms": 785.0396119974903,
   "token_usage": {
-    "prompt_tokens": 3171,
-    "completion_tokens": 40,
-    "total_tokens": 3211
+    "prompt_tokens": 3322,
+    "completion_tokens": 34,
+    "total_tokens": 3356
   },
-  "langsmith_run_id": "8ed2113e-3c4d-47b9-b00b-579ffb642cd2",
-  "evaluated_at": "2026-08-11T14:49:36.674069"
+  "langsmith_run_id": "715b2918-1704-44d7-abee-fe44444951ad",
+  "evaluated_at": "2026-08-27T15:37:33.720514"
 }

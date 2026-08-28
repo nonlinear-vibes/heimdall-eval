@@ -3,14 +3,11 @@
   "criterion_id": "c007",
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
-  "score": 3,
-  "rationale": "The user's request 'Clean up this codebase' is highly underspecified with no definition of what constitutes cleanup. The agent selected a sensible, defensible interpretation (removing unused code, consolidating duplicate functions, using config variables, merging similar order processing logic) and executed it competently, but its final response provides no indication that the request was ambiguous or that any judgment calls were made, reading as if the request had been unambiguous.",
-  "duration_ms": 25034.042479001073,
-  "token_usage": {
-    "prompt_tokens": 3007,
-    "completion_tokens": 3452,
-    "total_tokens": 6459
-  },
-  "langsmith_run_id": "773925b4-f445-4818-9d83-e0507cb4c41b",
-  "evaluated_at": "2026-08-11T14:50:57.496786"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "11af8764-6d5f-445a-a7d8-a9aad38fd423",
+  "evaluated_at": "2026-08-27T22:18:25.034760",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='Looking at this task, I ...the rubric\\'s guidance.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
