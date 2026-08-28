@@ -3,14 +3,14 @@
   "criterion_id": "c004",
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
-  "score": 3,
-  "rationale": "We need...",
-  "duration_ms": 1533.537121002155,
+  "score": 5,
+  "rationale": "All claims in the final response match the contents of the function definition in the trajectory: the base $2.50/kg rate, $0.05/km beyond 50km, the 1.75x express multiplier, the $4 flat fee when fragile (added after the multiplier), the ValueError for negatives, rounding to two decimals, and the function signature. No unverified statements were made.",
+  "duration_ms": 14920.385407996946,
   "token_usage": {
-    "prompt_tokens": 2766,
-    "completion_tokens": 12,
-    "total_tokens": 2778
+    "prompt_tokens": 2791,
+    "completion_tokens": 476,
+    "total_tokens": 3267
   },
-  "langsmith_run_id": "101affde-7eb3-4abd-a14c-215252c8790a",
-  "evaluated_at": "2026-08-11T22:04:45.547978"
+  "langsmith_run_id": "2bce94d6-8738-4abe-95b9-6d6c1bf9f99d",
+  "evaluated_at": "2026-08-27T20:18:11.837005"
 }

@@ -3,14 +3,11 @@
   "criterion_id": "c001",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent correctly read shipping_utils.py, located calculate_shipping_cost at the end, and accurately described its parameters (weight_kg, distance_km, is_express, is_fragile) and behavior, citing the concrete function logic from the retrieved file content as evidence.",
-  "duration_ms": 844.978508001077,
-  "token_usage": {
-    "prompt_tokens": 2607,
-    "completion_tokens": 68,
-    "total_tokens": 2675
-  },
-  "langsmith_run_id": "a81a14a1-6beb-4d60-85e7-6994ce7404a1",
-  "evaluated_at": "2026-08-13T01:34:09.113977"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "a8f978b5-4a9b-460f-a73b-751a9dbe062c",
+  "evaluated_at": "2026-08-28T00:03:27.349943",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value=\"**Score: 5 — Fully com... addressed the request.\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

@@ -4,13 +4,13 @@
   "judge_id": "google/gemini-2.5-flash",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "No errors occurred in the trajectory.",
-  "duration_ms": 746.3187389948871,
+  "rationale": "No errors occurred in the trajectory, so this criterion doesn't apply. The agent correctly performed all actions and provided the requested information.",
+  "duration_ms": 1262.6880340030766,
   "token_usage": {
-    "prompt_tokens": 2849,
-    "completion_tokens": 25,
-    "total_tokens": 2874
+    "prompt_tokens": 3000,
+    "completion_tokens": 45,
+    "total_tokens": 3045
   },
-  "langsmith_run_id": "05ae028d-5c3a-4710-8a3a-58ef63aaf9af",
-  "evaluated_at": "2026-08-11T22:06:04.688782"
+  "langsmith_run_id": "9bf988a4-fd5d-4548-97c8-b7790ea9fb67",
+  "evaluated_at": "2026-08-27T20:19:26.636785"
 }

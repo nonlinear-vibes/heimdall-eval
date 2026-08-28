@@ -4,13 +4,13 @@
   "judge_id": "google/gemini-2.5-flash",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "Every claim in the final response is directly supported by the content of `shipping_utils.py` that the agent retrieved. The agent accurately describes the function's purpose, parameters, and calculation logic based on the docstring and implementation.",
-  "duration_ms": 902.5861170011922,
+  "rationale": "Every claim in the final response is directly supported by the content of `shipping_utils.py` that the agent retrieved. The function's parameters, its logic, and its location are all accurately reported based on the file content.",
+  "duration_ms": 1214.038767000602,
   "token_usage": {
-    "prompt_tokens": 2959,
-    "completion_tokens": 66,
-    "total_tokens": 3025
+    "prompt_tokens": 2882,
+    "completion_tokens": 65,
+    "total_tokens": 2947
   },
-  "langsmith_run_id": "97773fc4-fd78-4f73-b9d8-d3602e51ca2a",
-  "evaluated_at": "2026-08-11T22:04:48.182594"
+  "langsmith_run_id": "2efbf5c1-cb4a-42dd-acc1-b90658e39b9e",
+  "evaluated_at": "2026-08-27T20:17:58.131883"
 }

@@ -4,13 +4,13 @@
   "judge_id": "tencent/hy3-preview",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "No tool errors or unexpected results occurred during the trajectory. The agent identified and fixed syntax errors in broken.py before execution, and all tool calls succeeded, so there was nothing to recover from.",
-  "duration_ms": 25635.0364500031,
+  "rationale": "No tool errors or unexpected results occurred in the trajectory; all tool calls were successful. The agent proactively identified and fixed the script's issues before execution, so there was no error to recover from.",
+  "duration_ms": 23353.830350999488,
   "token_usage": {
-    "prompt_tokens": 1389,
-    "completion_tokens": 1494,
-    "total_tokens": 2883
+    "prompt_tokens": 1536,
+    "completion_tokens": 1401,
+    "total_tokens": 2937
   },
-  "langsmith_run_id": "6d9d2bda-7f04-4050-86a4-e7d22d94a6af",
-  "evaluated_at": "2026-08-11T21:53:33.791635"
+  "langsmith_run_id": "77cc9d7b-1ac1-4ee1-b6c7-759653e9879a",
+  "evaluated_at": "2026-08-27T20:09:04.668713"
 }

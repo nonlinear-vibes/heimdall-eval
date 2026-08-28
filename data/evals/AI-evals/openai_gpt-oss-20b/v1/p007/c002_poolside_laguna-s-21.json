@@ -3,14 +3,11 @@
   "criterion_id": "c002",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The agent used tools efficiently and with clear purpose. First, it called `get_files_info` to confirm the existence of `shipping_utils.py`, then made a single targeted `get_file_content` call to read the entire file (only 164 lines), which contained the requested function. There was no redundancy — each call built naturally on the previous one, and the file was small enough to justify reading it fully rather than narrowing line ranges. The final response accurately summarized the function’s logic and parameters.",
-  "duration_ms": 1796.5779250007472,
-  "token_usage": {
-    "prompt_tokens": 2640,
-    "completion_tokens": 115,
-    "total_tokens": 2755
-  },
-  "langsmith_run_id": "ea5536f5-5f9e-4c36-a258-40a10e80a50b",
-  "evaluated_at": "2026-08-11T22:03:34.943378"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "2a74ae3d-df14-4f88-8628-10fb9d04d4c3",
+  "evaluated_at": "2026-08-28T00:03:29.993024",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='score: 4\\nrationale: \"Th...ly slow down the task.\"', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }

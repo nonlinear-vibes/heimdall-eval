@@ -4,13 +4,13 @@
   "judge_id": "openai/gpt-oss-20b",
   "agent_version": "v1",
   "score": 5,
-  "rationale": "The agent successfully located `shipping_utils.py`, displayed the full `calculate_shipping_cost` definition, and provided an accurate explanation of its behavior and parameters. All requested information was supplied, matching the source code.",
-  "duration_ms": 2473.2515330033493,
+  "rationale": "The agent successfully located the `calculate_shipping_cost` function in `shipping_utils.py`, displayed its code, and provided a clear explanation of its behavior, including all parameters affecting the calculation. The final response directly answers the user’s request.",
+  "duration_ms": 8517.801344001782,
   "token_usage": {
-    "prompt_tokens": 2647,
-    "completion_tokens": 178,
-    "total_tokens": 2825
+    "prompt_tokens": 2611,
+    "completion_tokens": 228,
+    "total_tokens": 2839
   },
-  "langsmith_run_id": "3946c370-5463-4c33-acd2-484a473b5ad5",
-  "evaluated_at": "2026-08-11T22:02:45.928791"
+  "langsmith_run_id": "1830e943-06d6-4ff1-8f4c-a909a491b233",
+  "evaluated_at": "2026-08-27T20:15:54.645749"
 }

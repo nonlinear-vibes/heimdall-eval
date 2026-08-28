@@ -3,14 +3,11 @@
   "criterion_id": "c002",
   "judge_id": "poolside/laguna-s-2.1",
   "agent_version": "v1",
-  "score": 5,
-  "rationale": "The trajectory is a model of efficiency: one `get_files_info` call to orient, one targeted `get_file_content` read of broken.py, one precise `write_file` fixing the syntax and logical issues, and one `run_python_file` verification. No redundant, repeated, or unnecessary tool calls were made; each call built directly on the previous result and was perfectly suited to its purpose.",
-  "duration_ms": 2139.5351419996587,
-  "token_usage": {
-    "prompt_tokens": 1403,
-    "completion_tokens": 93,
-    "total_tokens": 1496
-  },
-  "langsmith_run_id": "4faa307d-d838-4d34-b24f-f8bc97b38d8d",
-  "evaluated_at": "2026-08-11T21:50:59.892797"
+  "score": null,
+  "rationale": null,
+  "duration_ms": null,
+  "token_usage": null,
+  "langsmith_run_id": "0d713d50-d82e-4347-b782-409340cc3dcf",
+  "evaluated_at": "2026-08-28T00:02:37.307916",
+  "error": "1 validation error for JudgeVerdict\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='**5 — Efficient and we...confirming a clean run.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/json_invalid"
 }
